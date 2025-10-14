@@ -1,0 +1,312 @@
+.parts-footer {
+	min-width: 50%;
+	.wp-block-navigation-item__label {
+		color: white !important;
+	}
+	.wp-block-navigation__container {
+		display: flex;
+		flex-direction:column;
+	}
+}
+.hero-slider{
+  gap: 0 !important;
+}
+
+
+.hero-slider .wp-block-column:last-child {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .wp-block-image img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;                 
+  object-fit: cover;
+}
+.hero-slider .slide-card {
+  align-self: center;
+  margin-top: 50px;
+  margin-bottom: 50px !important;
+   @media (min-width: 1900px) {
+		 min-height: 380px;
+	}
+}
+
+.slide-card > .wp-block-buttons:first-child {
+  gap: 8px;
+  background: #fff;
+  border-radius: 50px;
+  margin: 0 25px 60px 25px;
+}
+.slide-card > .wp-block-buttons:first-child .wp-block-button {
+  flex: 1 1 0;
+}
+
+.slide-card > .wp-block-buttons:first-child .wp-block-button .wp-block-button__link {
+  display: block;
+  background: transparent;
+  color: #111;
+  border-radius: 26px;
+  line-height: 1;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 16px;
+  transition: transform .08s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.slide-card > .wp-block-buttons:first-child .wp-block-button .wp-block-button__link:hover,
+.slide-card > .wp-block-buttons:first-child .wp-block-button .wp-block-button__link:focus {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+  transform: translateY(-1px);
+}
+
+.floating-img {
+  position: absolute;               
+  right: -30px;                      
+  bottom: -40px;                   
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.18));
+}
+.floating-img img {
+  width: 340px;
+  height: auto;
+  background: #fff;
+}
+.hero-split {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 200px !important;
+  margin-bottom: 200px !important;
+	
+}
+
+.hero-split > .wp-block-columns {
+	@media (max-width: 1440px) {
+		gap: 15%;
+	}
+}
+
+.hero-left img {
+  display: block;
+  width: min(560px, 50vw);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transform: translateY(-5vw);
+}
+
+.hero-right {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right .wp-block-buttons .wp-block-button__link {
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero-float {
+  position: absolute;
+  z-index: 2;
+  left: 15%;
+  bottom: -25%;
+  width: min(560px, 45vw);
+  pointer-events: none;
+}
+
+.hero-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+}
+
+.mbfse-block-termine-template ul li:nth-child(odd) {
+  background: #FFDE10;
+}
+
+.mbfse-block-termine-template ul li:nth-child(even) {
+  background: #F4F4F4;
+}
+.termin {
+	min-width: 450px;
+	padding: 40px !important;
+	@media (min-width: 1200px) {
+		min-width: 550px;
+		padding: 60px !important;
+	}
+}
+
+/* customize normal post style */
+.posts-cover .wp-block-cover__inner-container{
+	width: 55% !important;
+}
+.posts-cover {
+	.wp-block-query .wp-block-post-template {
+		display: unset !important;
+	}
+}
+.posts-cover .wp-block-query{
+    margin-bottom: 0;
+	margin-left: 55px !important;
+	margin-right: 55px !important;
+}
+.posts-cover div ul li{
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #E0E0E0;
+	padding-left: 0 !important;
+	background-image: none !important;
+}
+.posts-cover .wp-block-query:nth-last-of-type(2) ul li{
+	border-bottom: 0 !important;
+}
+
+
+.posts-cover div ul li .query-text-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.posts-cover div ul li:hover .query-text-container {
+  transform: translateX(8px);
+}
+.posts-cover div ul li div{
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+	.wp-block-post-excerpt {
+		display: none;
+	}
+}
+
+.refrences-wrapper {
+	display: flex;	
+	gap: 48px;
+	
+	.wp-block-query {
+		position: relative;
+		overflow: visible;
+	}
+	.wp-block-query .wp-block-post-template {
+		display: flex !important;
+	}
+	.wp-block-query ul li {
+		background: transparent !important;
+		display: flex;
+		gap: 30px;
+		background-color: white;
+    	box-shadow: none !important;
+    	border-radius: 0 !important;
+		background-image: none !important; 
+		>div {
+			padding: 60px;
+		}
+	}
+}
+
+.ref-card {
+	overflow: visible;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+	clip-path: polygon(
+	  0 0, 100% 0,
+	  100% calc(100% - 18px),
+	  23%  calc(100% - 18px),  
+	  22% 100%,                
+	  15%  calc(100% - 18px),  
+	  0    calc(100% - 18px)
+	);
+
+	height: 450px;
+	>div:last-child {
+		margin-top: 120px;
+		>div >div a {
+			color: black !important;
+		}
+	}
+
+}
+
+.team-card{
+  max-width: 572px;
+  background: transparent;
+  overflow: hidden;  
+}
+.team-card figure {
+	margin-bottom: 0 !important;
+}
+.team-card figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+.team-card >div {
+  background:#F4F4F4;   
+  padding: 30px 40px 70px 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;                        
+  max-width: 1720px;                 
+  margin: 0 auto;
+  background: #fff;                
+}
+.submit-wrap .nf-field-element {
+		display: flex;
+		flex-direction:row-reverse;
+	>input {
+		border: 1px solid #000000 !important;
+    	border-radius: 50px;
+    	padding: 10px 50px;
+	}
+}
+
+form .nf-form-content {
+	
+	nf-fields-wrap > nf-field {	
+	  display: flex;
+	  width: 100%;
+	  background: transparent;
+	  border: 0;
+	  border-radius: 0;
+		>div { 
+			width: 100%;
+				
+			.nf-field >div .nf-field-element input:not([type="submit"]), select{
+				  border-bottom: 1px solid #e5e7eb !important;
+			}
+
+			.nf-field >div .nf-field-element input, textarea, select{
+				border: none;
+			}
+			.nf-field >div .nf-field-element input:focus, textarea:focus, select:focus{
+				outline: none;
+			}
+		}
+}
+}
+.contact-cover {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	> div {
+		width: 30% !important;
+		background: #ffffff;
+		padding: 60px;
+	}
+}
