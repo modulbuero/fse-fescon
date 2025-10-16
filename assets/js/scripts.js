@@ -61,6 +61,7 @@
                 nextEl: '.custom-next',
                 prevEl: '.custom-prev',
             },
+            slidesPerView: 2,
         });
     }
 
