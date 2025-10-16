@@ -33,7 +33,7 @@ function mbfse_child_style_Files(){
 	wp_enqueue_script(
 		'mb-child-script',
 		get_stylesheet_directory_uri().$f_JS.'scripts.js',
-		array('jquery', 'mbfse-main'),
+		array('jquery', 'mbfse-main', 'mbfse-libs-custom-swiper'),
 		wp_get_theme()->get( 'Version' )
 	);
 }
