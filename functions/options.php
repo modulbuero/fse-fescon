@@ -40,10 +40,9 @@ function register_referenzen(){
 	);
 }
 
-// CPT-Argumente ändern
-add_filter( 'register_post_type_args', 'my_child_change_cpt_args', 10, 2 );
-
-function my_child_change_cpt_args( $args, $post_type ) {
+// CPT-Name ändern
+add_filter( 'register_post_type_args', 'fescon_change_Termine_Name', 10, 2 );
+function fescon_change_Termine_Name( $args, $post_type ) {
     // Ersetze "mein_cpt" durch den Slug deines Parent-CPT
     if ( 'termin' === $post_type ) {
 
@@ -57,3 +56,9 @@ function my_child_change_cpt_args( $args, $post_type ) {
     }
     return $args;
 }
+
+// Init Category to Termin
+function addCategoryToWebinar(){
+	register_taxonomy_for_object_type('category', 'termin');
+}
+add_action('init', 'addCategoryToWebinar', 15);

@@ -81,5 +81,8 @@
 			"fontFamily": "var(--wp--preset--font-family--unineue)",
 			"lineHeight": "1.5"
 		}
-	}
+	},
+	"patterns" : [
+        "fse-fescon/query-loop-termine"
+    ]
 }
