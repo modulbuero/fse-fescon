@@ -145,48 +145,84 @@
 	}
 }
 
-/* customize normal post style */
-.posts-cover .wp-block-cover__inner-container{
-	width: 55% !important;
+/**
+*	home - Blog: 
+*	Customized Post-Loop
+*/
+@mixin postLoopTile() {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+	padding:0 0 20px;
+	border-radius:0;
+	border-bottom: 1px solid #E0E0E0;
+
+	&:last-child{
+		border-bottom:0;
+		padding:0;
+	}
 }
+
 .posts-cover {
-	.wp-block-query .wp-block-post-template {
-		display: unset !important;
-	}
-}
-.posts-cover .wp-block-query{
-    margin-bottom: 0;
-	margin-left: 55px !important;
-	margin-right: 55px !important;
-}
-.posts-cover div ul li{
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    border-bottom: 1px solid #E0E0E0;
-	padding-left: 0 !important;
-	background-image: none !important;
-}
-.posts-cover .wp-block-query:nth-last-of-type(2) ul li{
-	border-bottom: 0 !important;
-}
+	.wp-block-cover__inner-container{
+		width: 55% !important;
 
+		ul.wp-block-post-template{
+			grid-template-columns: 1fr;
 
-.posts-cover div ul li .query-text-container {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.posts-cover div ul li:hover .query-text-container {
-  transform: translateX(8px);
-}
-.posts-cover div ul li div{
-	display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-	.wp-block-post-excerpt {
-		display: none;
+			li{
+				@include postLoopTile;
+				
+				.query-text-container{
+					justify-content: space-between;
+					
+					.wp-block-group{
+						transition: transform 0.3s ease;
+						h2{
+							font-weight: 900;
+						}
+					}
+					.wp-block-post-excerpt {
+						display: none;
+					}
+				}
+
+				&:hover{
+					.query-text-container .wp-block-group{
+						transform: translateX(8px);
+					}
+				}
+			}
+		}
 	}
 }
 
+/*
+	Category-Label
+*/
+.taxonomy-category.wp-block-post-terms{
+	margin-bottom:5px;
+
+	a{
+		background-color: var(--wp--preset--color--tertiary);
+		color: var(--wp--preset--color--contrast);
+		display: inline-flex;
+		gap: 7px;
+		padding: 5px 10px;
+		line-height: 1;
+
+		&:before{
+			content: '\F3D1';
+			font-family: 'bootstrap-icons';
+			position: relative;
+			top:2px;
+		}
+	}
+}
+
+/*
+	Referenzberichte
+*/
 .refrences-wrapper {
 	display: flex;	
 	gap: 48px;
