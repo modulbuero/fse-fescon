@@ -1,3 +1,11 @@
+/*Container*/
+.home .wp-site-blocks > main {
+  margin-top: 0;
+}
+.home .wp-site-blocks > main .mbfse-hero {
+  height: 100vh;
+}
+
 .floating-img {
   position: absolute;
   right: -30px;

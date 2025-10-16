@@ -1,5 +1,6 @@
 (($) => {
 	$(document).ready(()=>{
+        detectScrollPosition()
         leistungenSwiper()
         refSlider()
         webinarSlider()
@@ -79,4 +80,21 @@
         })
     }
 
+    function detectScrollPosition(){
+        const targetScroll = window.innerHeight * 0.9;
+        let hasReached = false;
+        $('header').addClass('isSpecialHeader')
+        $(window).on('scroll', function() {
+            const scrollPosition = $(window).scrollTop();
+            if (scrollPosition >= targetScroll && !hasReached) {
+                hasReached = true;
+                $('header').removeClass('isSpecialHeader')
+            }
+            
+            if (scrollPosition < targetScroll && hasReached) {
+                hasReached = false;
+                $('header').addClass('isSpecialHeader')
+            }
+        });
+    }
 })(jQuery)
