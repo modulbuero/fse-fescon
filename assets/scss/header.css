@@ -1,5 +1,16 @@
 header > div.has-primary-background-color {
-  background-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.8431372549) !important;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+}
+
+.parts-footer {
+  min-width: 50%;
+}
+.parts-footer .wp-block-navigation-item__label {
+  color: white !important;
+}
+.parts-footer .wp-block-navigation__container {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=header.css.map */
