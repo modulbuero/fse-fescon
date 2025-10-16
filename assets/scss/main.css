@@ -135,23 +135,14 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-.mbfse-block-termine-template ul li:nth-child(odd) {
-  background: #FFDE10;
+/*
+	Webinar Slider
+*/
+.home .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
+  background-color: var(--wp--preset--color--quaternary);
 }
-
-.mbfse-block-termine-template ul li:nth-child(even) {
-  background: #F4F4F4;
-}
-
-.termin {
-  min-width: 450px;
-  padding: 40px !important;
-}
-@media (min-width: 1200px) {
-  .termin {
-    min-width: 550px;
-    padding: 60px !important;
-  }
+.home .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
+  background-color: var(--wp--preset--color--tertiary);
 }
 
 /**
@@ -216,46 +207,96 @@
 /*
 	Referenzberichte
 */
-.refrences-wrapper {
-  display: flex;
-  gap: 48px;
+.refrences-wrapper > h2.wp-block-heading {
+  padding: 0;
 }
 .refrences-wrapper .wp-block-query {
-  position: relative;
-  overflow: visible;
+  --triangle-height:40px;
 }
-.refrences-wrapper .wp-block-query .wp-block-post-template {
-  display: flex !important;
+.refrences-wrapper .wp-block-query ul.wp-block-post-template {
+  display: block; /*if Swiper*/
 }
-.refrences-wrapper .wp-block-query ul li {
-  background: transparent !important;
-  display: flex;
-  gap: 30px;
+.refrences-wrapper .wp-block-query ul.wp-block-post-template .swiper-wrapper {
+  margin-bottom: calc(var(--triangle-height) + 20px);
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li {
   background-color: white;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background-image: none !important;
-}
-.refrences-wrapper .wp-block-query ul li > div {
+  box-shadow: none;
+  border-radius: 0;
+  background-image: none;
   padding: 60px;
+  overflow: initial;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .query-text-container {
+  margin-bottom: 30px;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap {
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap .wp-block-post-featured-image {
+  overflow: visible;
+  top: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100px;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap .wp-block-post-featured-image img {
+  transform: scale(1) !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap .mbgi-block-bootstrap-icon {
+  border: 1px solid #000;
+  border-radius: 55%;
+  width: 100%;
+  max-height: 43px;
+  max-width: 43px;
+  transition: var(--mbfse--transition);
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap .mbgi-block-bootstrap-icon i {
+  padding-left: 6px;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li .bild-details-wrap .mbgi-block-bootstrap-icon p {
+  position: absolute;
+  opacity: 0.3;
+  min-width: 55px;
+  top: -14px;
+  color: white;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 var(--triangle-height) var(--triangle-height) 0;
+  border-color: transparent #fff transparent transparent;
+  transform: rotate(0deg);
+  bottom: calc(var(--triangle-height) * -1);
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li:hover {
+  filter: drop-shadow(7px 9px 8px rgba(0, 0, 0, 0.1254901961));
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li:hover .mbgi-block-bootstrap-icon {
+  max-width: 100px;
+  border-radius: 30px;
+  background-color: #000;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li:hover .mbgi-block-bootstrap-icon .bi-plus::before {
+  color: #fff;
+}
+.refrences-wrapper .wp-block-query ul.wp-block-post-template li:hover .mbgi-block-bootstrap-icon p {
+  opacity: 1;
 }
 
-.ref-card {
-  overflow: visible;
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 0;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), 23% calc(100% - 18px), 22% 100%, 15% calc(100% - 18px), 0 calc(100% - 18px));
-  height: 450px;
-}
-.ref-card > div:last-child {
-  margin-top: 120px;
-}
-.ref-card > div:last-child > div > div a {
-  color: black !important;
+/* Swiper */
+.webinar-slider .swiper-button-prev,
+.webinar-slider .swiper-button-next,
+.referenz-slider .swiper-button-prev,
+.referenz-slider .swiper-button-next,
+.swiper-pagination {
+  display: none;
 }
 
 .team-card {

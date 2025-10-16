@@ -1,7 +1,7 @@
 (($) => {
 	$(document).ready(()=>{
         leistungenSwiper()
-
+        refSlider()
         webinarSlider()
     })
 
@@ -13,15 +13,11 @@
      */
     function leistungenSwiper(index='.leistungen-slider', spv=1){
         if($(index).length){
-            console.log(index)
             let slideNames = ['Set', 'Grow', 'Lead', 'Elevate'];
             let slidesPerView = spv;
     
             let cSwiperParams ={
                 loop: true,
-                keyboard: {
-                    enabled: true,
-                },
                 navigation: {
                     nextEl: index + ' .swiper-button-next',
                     prevEl: index + ' .swiper-button-prev',
@@ -56,13 +52,31 @@
      * CustomSwiper with outofthebox Navigation
      */
     function webinarSlider(){
-        new Swiper('.webinar-slider', {
+        new Swiper('.swiper.webinar-slider', {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            
+            slidesPerGroup: 1,
+  
             navigation: {
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev',
+                nextEl: '.webinar-arrows .custom-next',
+                prevEl: '.webinar-arrows .custom-prev',
             },
-            slidesPerView: 2,
-        });
+        })
+    }
+
+    function refSlider(){
+        new Swiper('.referenz-slider',{
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            slidesPerGroup: 1,
+  
+            navigation: {
+                nextEl: '.referenz-arrows .custom-next',
+                prevEl: '.referenz-arrows .custom-prev',
+            },
+        })
     }
 
 })(jQuery)

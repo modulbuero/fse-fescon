@@ -26,7 +26,7 @@ function register_referenzen(){
 			'show_in_rest'		  => true,
 			'has_archive'         => true,
 			'rewrite'             => array( 'slug' => 'referenz', 'with_front' => false ),			
-			'supports'            => array( 'title', 'revisions' ),
+			'supports'            => array( 'title', 'revisions', 'editor', 'thumbnail', 'excerpt'),
 			'menu_position'       => 9,
 			'menu_icon'           => 'dashicons-editor-table',
 			'template'     => array(),
