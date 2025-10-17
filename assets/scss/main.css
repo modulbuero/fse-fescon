@@ -8,7 +8,7 @@
 .home .wp-site-blocks > main .wp-block-button__link {
   font-size: 18px;
   line-height: 34px;
-  padding: 0 !important;
+  padding: 0px 50px !important;
 }
 @media (max-width: 1024px) {
   .home .wp-site-blocks > main .wp-block-button__link {
@@ -109,6 +109,7 @@
   padding: 0;
 }
 .posts-cover .wp-block-cover__inner-container ul.wp-block-post-template li .query-text-container {
+  height: 100% !important;
   justify-content: space-between;
 }
 .posts-cover .wp-block-cover__inner-container ul.wp-block-post-template li .query-text-container .wp-block-group {
@@ -427,4 +428,41 @@ form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-
   .leistungen-slider .swiper-button-prev {
     left: 46%;
   }
+}
+
+/* Webinar Cards */
+.termine-infos {
+  color: var(--wp--preset--color--base);
+}
+.termine-infos > div > p::before {
+  display: none !important;
+}
+.termine-infos > div > p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1px !important;
+  margin-block-end: 1px !important;
+  padding: 10px 15px;
+  background-color: var(--wp--preset--color--contrast);
+}
+.termine-infos .ortschaft {
+  display: none;
+}
+
+.webinars-wrapper div ul div li {
+  padding: 30px 30px 70px 30px !important;
+}
+.webinars-wrapper .query-text-container {
+  height: 100% !important;
+}
+
+.webinar-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -50px;
+}
+.webinar-btns > div {
+  margin: 0 !important;
 }/*# sourceMappingURL=main.css.map */
