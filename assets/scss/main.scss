@@ -4,56 +4,53 @@
 	.mbfse-hero{
 		height: 100vh;
 	}
+	.wp-block-button__link {
+		font-size: 18px;
+		line-height: 34px;
+		padding: 0 !important;
+		@media (max-width: 1024px) {
+            font-size: 15px;
+        }
+	}
+	.custom-line-height {
+		line-height: 40px;
+		font-size: 28px;
+	}
 }
-
-.floating-img {
-  position: absolute;               
-  right: -30px;                      
-  bottom: -40px;                   
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,.18));
-}
-.floating-img img {
-  width: 340px;
-  height: auto;
-  background: #fff;
-}
+/* 
+	Floating image Container
+*/
 .hero-split {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   margin-top: 200px !important;
   margin-bottom: 200px !important;
+  > .wp-block-columns {
+    @media (max-width: 1440px) {
+        gap: 15%;
+        padding: 0 !important;
+    }
+	   .wp-block-column:first-child{
+			img {
+			display: block;
+			width: min(560px, 50vw);
+			height: auto;
+			border-radius: 12px;
+			box-shadow: 0 10px 30px rgba(0,0,0,.08);
+			transform: translateY(-5vw);
+			}
+		}
+		.wp-block-column:nth-child(2) {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	
+  }	
 	
 }
-
-.hero-split > .wp-block-columns {
-	@media (max-width: 1440px) {
-		gap: 15%;
-	}
-}
-
-.hero-left img {
-  display: block;
-  width: min(560px, 50vw);
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  transform: translateY(-5vw);
-}
-
-.hero-right {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-right .wp-block-buttons .wp-block-button__link {
-  padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
 .hero-float {
   position: absolute;
   z-index: 2;
@@ -61,13 +58,19 @@
   bottom: -25%;
   width: min(560px, 45vw);
   pointer-events: none;
-}
+  @media (max-width: 1024px) {
+    width: min(360px, 45vw);
+  }
+  @media (min-width: 2000px) {
+    left: 20%;
+  }
 
-.hero-float img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+  img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 12px 40px rgba(0,0,0,.12);
+  }
 }
 
 /*
@@ -206,7 +209,7 @@
 						}
 					}
 					.mbgi-block-bootstrap-icon{
-						border: 1px solid #000;
+						border: 1px solid var(--wp--preset--color--contrast);
 						border-radius: 55%;
 						width: 100%;
 						max-height: 43px;
@@ -232,7 +235,7 @@
 					height: 0px;
 					border-style: solid;
 					border-width: 0 var(--triangle-height) var(--triangle-height) 0;
-					border-color: transparent #fff transparent transparent;
+					border-color: transparent var(--wp--preset--color--base) transparent transparent;
 					transform: rotate(0deg);
 					bottom:calc(var(--triangle-height) * (-1));
 				}
@@ -242,9 +245,9 @@
 					.mbgi-block-bootstrap-icon{
 						max-width: 100px;
     					border-radius: 30px;
-						background-color: #000;
+						background-color: var(--wp--preset--color--contrast);
 						.bi-plus::before{
-							color:#fff;
+							color:var(--wp--preset--color--base);
 						}
 						p{
 							opacity: 1;
@@ -270,20 +273,19 @@
   max-width: 572px;
   background: transparent;
   overflow: hidden;  
-}
-.team-card figure {
+  figure {
 	margin-bottom: 0 !important;
-}
-.team-card figure img{
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:cover;
-}
-
-.team-card >div {
-  background:#F4F4F4;   
-  padding: 30px 40px 70px 40px;
+	img{
+		display:block;
+		width:100%;
+		height:auto;
+		object-fit:cover;
+		}
+	}
+	>div {
+		background:#F4F4F4;   
+		padding: 30px 40px 70px 40px;
+	}	
 }
 
 .team-grid {
@@ -292,13 +294,14 @@
   gap: 60px;                        
   max-width: 1720px;                 
   margin: 0 auto;
-  background: #fff;                
+  background: var(--wp--preset--color--base);                
 }
+
 .submit-wrap .nf-field-element {
 		display: flex;
 		flex-direction:row-reverse;
 	>input {
-		border: 1px solid #000000 !important;
+		border: 1px solid var(--wp--preset--color--contrast) !important;
     	border-radius: 50px;
     	padding: 10px 50px;
 	}
@@ -333,7 +336,121 @@ form .nf-form-content {
 	padding-bottom: 140px;
 	> div {
 		width: 30% !important;
-		background: #ffffff;
+		background: var(--wp--preset--color--base);
 		padding: 60px;
 	}
+}
+
+/* Leistungen Slider */
+.leistungen-slider {
+     .swiper-wrapper {
+        .wp-block-columns {
+            gap: 0 !important;
+            margin-bottom: 50px !important;
+            .has-background {
+                margin-bottom: 20px;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+                .wp-block-buttons {
+                    .wp-block-button {
+                        position: absolute;
+                        top: 60px;
+						width: 180px;
+						@media (min-width: 1200px) and (max-width: 1600px) {
+                            top: 20px;
+                        }
+                        @media (max-width: 1199px) {
+                            top: -10px;
+                        }
+                    }
+                    
+                }
+				/* Handle responsive font sizes */
+                .wp-block-heading {
+					@media (min-width: 1200px) and (max-width: 1440px)  {
+						font-size: 24px;
+						line-height: 40px;
+					}
+                    @media (max-width: 1200px) {
+						margin-block-end: 0;
+                        font-size: 18px;
+						line-height: 35px;
+                	}   
+                }
+                @media (max-width: 1200px) {
+					line-height: 25px;
+                    font-size: 14px;
+                }
+            }
+        }
+     }
+
+     .fescon-bulletpoints {
+        background-color: transparent;
+     }
+     .swiper-pagination{
+        position: absolute;
+        background: var(--wp--preset--color--base);
+        top: 50px;
+        font-size: 18px;
+        padding: 0 40px;
+        height: 60px;
+        @media (max-width: 1200px) {
+            top: 30px;
+            font-size: 13px;
+            height: unset;
+            padding: 5px 40px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        left: 50px;
+        border-radius: 50px;
+        line-height: 24px;
+        width: fit-content;
+        min-width: 25%;
+        
+        
+        > span{
+            width: 25%;
+            padding-bottom: 22px;
+            padding-top: 10px;
+            @media (max-width: 1024px) {
+                padding-bottom: 18px;
+                padding-top: 5px;
+            }
+        }
+     }
+     .swiper-pagination-bullet-active {
+        background-color: var(--wp--preset--color--contrast);
+        color: var(--wp--preset--color--base);
+        border-radius: 26px;
+     }
+     .swiper-button-prev::after {
+            font-family: "bootstrap-icons";
+            content: "\F12F";
+    }
+    .swiper-button-next::after {
+            font-family: "bootstrap-icons";
+            content: "\F138";
+    }
+    .swiper-button-next {
+        top: 100%;
+        right: 47%;
+		@media (max-width: 1300px) {
+            right: 46%;
+        }
+    }
+    .swiper-button-prev {
+        top: 100%;
+        left: 47%;
+		@media (max-width: 1300px) {
+            left: 46%;
+        }
+    }
+
 }
