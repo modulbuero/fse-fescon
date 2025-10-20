@@ -1,6 +1,7 @@
 /*Container*/
 .home .wp-site-blocks > main {
   margin-top: 0;
+  /*  Buttons General style */
 }
 .home .wp-site-blocks > main .mbfse-hero {
   height: 100vh;
@@ -8,12 +9,17 @@
 .home .wp-site-blocks > main .wp-block-button__link {
   font-size: 18px;
   line-height: 34px;
-  padding: 0px 50px !important;
+  min-width: 160px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 @media (max-width: 1024px) {
   .home .wp-site-blocks > main .wp-block-button__link {
     font-size: 15px;
   }
+}
+.home .wp-site-blocks > main .mb-button-outline .wp-element-button {
+  border: 1px solid var(--wp--preset--color--contrast);
 }
 .home .wp-site-blocks > main .custom-line-height {
   line-height: 40px;
@@ -270,6 +276,9 @@
   background: var(--wp--preset--color--base);
 }
 
+/* 
+	Contact Form
+*/
 .submit-wrap .nf-field-element {
   display: flex;
   flex-direction: row-reverse;
