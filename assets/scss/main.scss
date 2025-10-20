@@ -12,7 +12,8 @@
 		padding-top: 5px !important;
 		padding-bottom: 5px !important;
 		@media (max-width: 1024px) {
-            font-size: 15px;
+            font-size: 12px;
+			padding: 0  !important;
         }
 	}
 	.mb-button-outline .wp-element-button {
@@ -361,6 +362,10 @@ form .nf-form-content {
             .has-background {
                 margin-bottom: 20px;
                 margin-top: 20px;
+				@media (max-width: 1024px) {
+                    margin-bottom: 5px;
+                	margin-top: 5px;
+                }
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -370,10 +375,10 @@ form .nf-form-content {
                         position: absolute;
                         top: 60px;
 						width: 180px;
-						@media (min-width: 1200px) and (max-width: 1600px) {
-                            top: 20px;
+						@media (min-width: 1300px) and (max-width: 1600px) {
+                            top: 10px;
                         }
-                        @media (max-width: 1199px) {
+                        @media (max-width: 1300px) {
                             top: -10px;
                         }
                     }
@@ -382,19 +387,27 @@ form .nf-form-content {
 				/* Handle responsive font sizes */
                 .wp-block-heading {
 					@media (min-width: 1200px) and (max-width: 1440px)  {
-						font-size: 24px;
+						font-size: 22px;
 						line-height: 40px;
 					}
-                    @media (max-width: 1200px) {
+                    @media (min-width: 1024px) and (max-width: 1200px) {
 						margin-block-end: 0;
                         font-size: 18px;
 						line-height: 35px;
-                	}   
+                	}  
+					@media (max-width: 1024px) {
+						margin-block-end: 0;
+                        font-size: 15px;
+						line-height: 30px;
+                	}  
                 }
-                @media (max-width: 1200px) {
-					line-height: 25px;
-                    font-size: 14px;
-                }
+				@media (min-width: 1024px) and (max-width: 1200px) {
+						line-height: 25px;
+                    	font-size: 14px;
+                }  
+				@media (max-width: 1024px) {
+						font-size: 12px;
+                }  
             }
         }
      }
@@ -409,11 +422,17 @@ form .nf-form-content {
         font-size: 18px;
         padding: 0 40px;
         height: 60px;
-        @media (max-width: 1200px) {
-            top: 30px;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+			top: 30px;
+			height: unset;
             font-size: 13px;
-            height: unset;
             padding: 5px 40px;
+        }
+		@media (max-width: 1024px) {
+			top: 15px;
+			height: unset;
+            font-size: 11px;
+			padding: 5px 20px;
         }
         display: flex;
         align-items: center;
@@ -430,6 +449,7 @@ form .nf-form-content {
             width: 25%;
             padding-bottom: 22px;
             padding-top: 10px;
+			opacity: 1;
             @media (max-width: 1024px) {
                 padding-bottom: 18px;
                 padding-top: 5px;
@@ -453,14 +473,14 @@ form .nf-form-content {
         top: 100%;
         right: 47%;
 		@media (max-width: 1300px) {
-            right: 46%;
+            right: 45%;
         }
     }
     .swiper-button-prev {
         top: 100%;
         left: 47%;
 		@media (max-width: 1300px) {
-            left: 46%;
+            left: 45%;
         }
     }
 
