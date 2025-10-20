@@ -1,7 +1,39 @@
+header {
+  transition: all 0.3s ease;
+}
+
 header > div.has-primary-background-color {
+  padding-top: 45px;
   background-color: rgba(255, 255, 255, 0.8431372549) !important;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+}
+
+header figure {
+  filter: invert(1);
+}
+
+.isSpecialHeader > div.has-primary-background-color {
+  background-color: transparent !important;
+  -webkit-backdrop-filter: unset;
+          backdrop-filter: unset;
+}
+
+.isSpecialHeader ul {
+  background-color: rgba(255, 255, 255, 0.8431372549);
+  border-radius: 50px;
+}
+.isSpecialHeader figure {
+  filter: none;
+}
+.isSpecialHeader p {
+  display: none;
+}
+
+header .wp-block-navigation__responsive-container-content {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
 }
 
 .parts-footer {

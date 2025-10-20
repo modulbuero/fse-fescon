@@ -1,6 +1,35 @@
+header{
+  	transition: all 0.3s ease;
+}
 header > div.has-primary-background-color{
+	padding-top: 45px;
     background-color: #ffffffd7 !important;
     backdrop-filter: blur(3px);
+}
+header figure{
+	filter: invert(1);
+}
+.isSpecialHeader > div.has-primary-background-color{
+    background-color: transparent !important;
+	backdrop-filter: unset;
+}
+.isSpecialHeader {
+	ul {
+		background-color: #ffffffd7;
+		border-radius: 50px;
+	}
+	figure {
+		filter: none;
+	}
+	p {
+		display: none;
+	}
+	
+}
+header .wp-block-navigation__responsive-container-content {
+		display: flex;
+		justify-content: center !important;
+		align-items: center;
 }
 
 .parts-footer {
