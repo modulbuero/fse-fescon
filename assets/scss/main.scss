@@ -180,6 +180,13 @@
 	>h2.wp-block-heading{
 		padding:0
 	}
+	.referenz-arrows {
+		display: flex;
+		gap: 15px;
+	}
+	.wp-block-group {
+		padding: 0;
+	}
 	
 	.wp-block-query {
 		--triangle-height:40px;
@@ -188,7 +195,7 @@
 			display: block; /*if Swiper*/
 			
 			.swiper-wrapper{
-				margin-bottom:calc(var(--triangle-height) + 20px)
+				margin-bottom:calc(var(--triangle-height) + 20px);
 			}
 			li {
 				background-color: white;
@@ -197,6 +204,7 @@
 				background-image: none;
 				padding: 60px;
 				overflow: initial;
+				margin-right: 40px !important;
 				
 				.query-text-container{
 					margin-bottom:30px;
@@ -205,6 +213,7 @@
 				.bild-details-wrap{
 					justify-content: space-between;
 					margin-bottom: 0;
+					margin-top: 100px;
 					.wp-block-post-featured-image{
 						overflow: visible;
 						top:auto;
@@ -231,8 +240,13 @@
 							position: absolute;
 							opacity: 0.3;
 							min-width: 55px;
+							width: max-content;
+							font-size: 15px;
 							top:-14px;
 							color:white
+						}
+						div {
+							height: 6px;
 						}
 					}
 				}
