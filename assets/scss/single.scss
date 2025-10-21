@@ -1,8 +1,9 @@
 /*
-*	Referenzen
+*	Single Content / Metabox
+*	Used in Referenzen, Webinare
 */
-.referenzen-content-fields{
-	.fescon-ref-info-fields{
+.referenzen-webinar-content-fields{
+	.fescon-meta-fields{
 		div{
 			display:flex;
 			flex-direction: column;
@@ -12,6 +13,14 @@
 		}
 	}
 }
+
+.single{
+	
+}
+
+/*
+*   Referenzen
+*/
 
 /*
 *   Webinare

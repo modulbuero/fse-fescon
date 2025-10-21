@@ -7,7 +7,7 @@
  * Benutzt in Single-Referenzen
  */
 ?>
-<div class="fescon-ref-info-fields">
+<div class="fescon-meta-fields">
     <?php if(get_field('branche')) : ?>
     <div>
         <label>Branche</label>    
