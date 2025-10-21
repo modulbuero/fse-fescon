@@ -25,6 +25,12 @@
 		font-size: 28px;
 	}
 }
+
+/*Fonts*/
+body:not(.home) h1{
+	font-size: 56px;
+}
+
 /* 
 	Floating image Container
 */
@@ -153,23 +159,29 @@
 /*
 	Category-Label
 */
+@mixin taxitem(){
+	background-color: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--contrast);
+	display: inline-flex;
+	gap: 7px;
+	padding: 5px 10px;
+	line-height: 1;
+
+	&:before{
+		content: '\F3D1';
+		font-family: 'bootstrap-icons';
+		position: relative;
+		top:2px;
+	}
+}
+.taxonomy-item{
+	@include taxitem;
+}
 .taxonomy-category.wp-block-post-terms{
 	margin-bottom:5px;
 
 	a{
-		background-color: var(--wp--preset--color--tertiary);
-		color: var(--wp--preset--color--contrast);
-		display: inline-flex;
-		gap: 7px;
-		padding: 5px 10px;
-		line-height: 1;
-
-		&:before{
-			content: '\F3D1';
-			font-family: 'bootstrap-icons';
-			position: relative;
-			top:2px;
-		}
+		@include taxitem;
 	}
 }
 
@@ -537,4 +549,3 @@ form .nf-form-content {
 		margin: 0 !important;
 	}
 }
-

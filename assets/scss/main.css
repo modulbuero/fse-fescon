@@ -27,6 +27,11 @@
   font-size: 28px;
 }
 
+/*Fonts*/
+body:not(.home) h1 {
+  font-size: 56px;
+}
+
 /* 
 	Floating image Container
 */
@@ -135,6 +140,21 @@
 /*
 	Category-Label
 */
+.taxonomy-item {
+  background-color: var(--wp--preset--color--tertiary);
+  color: var(--wp--preset--color--contrast);
+  display: inline-flex;
+  gap: 7px;
+  padding: 5px 10px;
+  line-height: 1;
+}
+.taxonomy-item:before {
+  content: "\f3d1";
+  font-family: "bootstrap-icons";
+  position: relative;
+  top: 2px;
+}
+
 .taxonomy-category.wp-block-post-terms {
   margin-bottom: 5px;
 }
