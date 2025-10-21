@@ -62,3 +62,28 @@ function addCategoryToWebinar(){
 	register_taxonomy_for_object_type('category', 'termin');
 }
 add_action('init', 'addCategoryToWebinar', 15);
+
+
+/**
+ * 	Referenz-Bild in Loop
+ */
+function get_referenz_logo_func(){
+    register_block_type('fse-fescon/referenz-logo-function', array(
+        'render_callback' => 'ref_logo_id',
+        'uses_context' => array('postId', 'postType'),
+    ));
+}
+add_action('init', 'get_referenz_logo_func', 1);
+function ref_logo_id($block) {
+        $post_id = isset($block->context['postId']) ? $block->context['postId'] : get_the_ID();
+        return referenzLogo($post_id);
+}
+function referenzLogo($pID){
+    $logourl = get_field('firmen-logo', $pID);
+    $html = "<figure class='wp-block-post-featured-image'>";
+    if($logourl){
+        $html .= '<img src="'.$logourl.'" alt="Referenz Logo"/>';
+    }
+    $html .= "</figure>";
+    return $html;
+}
