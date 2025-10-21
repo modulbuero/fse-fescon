@@ -83,7 +83,7 @@
     function detectScrollPosition(){
         const targetScroll = window.innerHeight * 0.9;
         let hasReached = false;
-        $('header').addClass('isSpecialHeader')
+        $('.home header').addClass('isSpecialHeader')
         $(window).on('scroll', function() {
             const scrollPosition = $(window).scrollTop();
             if (scrollPosition >= targetScroll && !hasReached) {
