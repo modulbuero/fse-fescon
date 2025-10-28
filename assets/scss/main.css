@@ -400,7 +400,7 @@ form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-
   top: 60px;
   width: 180px;
 }
-@media (min-width: 1300px) and (max-width: 1600px) {
+@media (min-width: 1300px) and (max-width: 1700px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-buttons .wp-block-button {
     top: 10px;
   }
@@ -408,6 +408,11 @@ form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-
 @media (max-width: 1300px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-buttons .wp-block-button {
     top: -10px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
+    font-size: 28px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1440px) {

@@ -417,7 +417,7 @@ form .nf-form-content {
                         position: absolute;
                         top: 60px;
 						width: 180px;
-						@media (min-width: 1300px) and (max-width: 1600px) {
+						@media (min-width: 1300px) and (max-width: 1700px) {
                             top: 10px;
                         }
                         @media (max-width: 1300px) {
@@ -428,6 +428,9 @@ form .nf-form-content {
                 }
 				/* Handle responsive font sizes */
                 .wp-block-heading {
+					@media (min-width: 1440px) and (max-width: 1600px)  {
+						font-size: 28px;
+					}
 					@media (min-width: 1200px) and (max-width: 1440px)  {
 						font-size: 22px;
 						line-height: 40px;
