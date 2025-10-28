@@ -24,32 +24,35 @@
 }
 
 /*Fonts*/
-body:not(.home) h1 {
-  font-size: 56px;
+body {
+  /*  Global font defaults  */
+  /* Specific Overwrites  */
 }
-
 body h1 {
   font-size: 180px;
+  line-height: 243px;
 }
-
 body h2 {
   font-size: 96px;
   line-height: 130px;
 }
-
 body h3 {
   font-size: 40px;
   line-height: 54px;
 }
-
 body .custom-p {
   font-size: 28px;
   line-height: 40px;
 }
-
 body .wp-block-post-excerpt__excerpt {
   font-size: 22px;
   line-height: 34px;
+}
+body.home h1 {
+  font-size: 180px;
+}
+body:not(.home) h1 {
+  font-size: 56px;
 }
 
 /* 
@@ -345,23 +348,23 @@ body .wp-block-post-excerpt__excerpt {
   padding: 10px 50px;
 }
 
-form .nf-form-content nf-fields-wrap > nf-field {
+form .nf-form-content .nf-fields-wrap > .nf-field {
   display: flex;
   width: 100%;
   background: transparent;
   border: 0;
   border-radius: 0;
 }
-form .nf-form-content nf-fields-wrap > nf-field > div {
+form .nf-form-content .nf-fields-wrap > .nf-field > div {
   width: 100%;
 }
-form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-element input:not([type=submit]), form .nf-form-content nf-fields-wrap > nf-field > div select {
+form .nf-form-content .nf-fields-wrap > .nf-field > div .nf-field > div .nf-field-element input:not([type=submit]), form .nf-form-content .nf-fields-wrap > .nf-field > div select {
   border-bottom: 1px solid #e5e7eb !important;
 }
-form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-element input, form .nf-form-content nf-fields-wrap > nf-field > div textarea, form .nf-form-content nf-fields-wrap > nf-field > div select {
+form .nf-form-content .nf-fields-wrap > .nf-field > div .nf-field > div .nf-field-element input, form .nf-form-content .nf-fields-wrap > .nf-field > div textarea, form .nf-form-content .nf-fields-wrap > .nf-field > div select {
   border: none;
 }
-form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-element input:focus, form .nf-form-content nf-fields-wrap > nf-field > div textarea:focus, form .nf-form-content nf-fields-wrap > nf-field > div select:focus {
+form .nf-form-content .nf-fields-wrap > .nf-field > div .nf-field > div .nf-field-element input:focus, form .nf-form-content .nf-fields-wrap > .nf-field > div textarea:focus, form .nf-form-content .nf-fields-wrap > .nf-field > div select:focus {
   outline: none;
 }
 
@@ -546,7 +549,7 @@ form .nf-form-content nf-fields-wrap > nf-field > div .nf-field > div .nf-field-
   display: none;
 }
 
-.webinars-wrapper div ul div li {
+.webinars-wrapper li {
   padding: 30px 30px 70px 30px !important;
 }
 .webinars-wrapper .query-text-container {
