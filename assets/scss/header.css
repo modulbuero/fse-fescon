@@ -17,6 +17,12 @@ header > div .wp-block-navigation__responsive-container-content {
   justify-content: center !important;
   align-items: center;
 }
+header > div ul {
+  padding: 5px !important;
+}
+header > div ul li a {
+  padding: 5px 20px !important;
+}
 header.isSpecialHeader > div {
   padding-top: 30px;
   background-color: transparent;
@@ -24,6 +30,21 @@ header.isSpecialHeader > div {
 header.isSpecialHeader > div ul {
   background-color: #ffffff;
   border-radius: 50px;
+  /*  Add hovered animated mode style */
+}
+header.isSpecialHeader > div ul li {
+  border-radius: 50px;
+  background: linear-gradient(to right, #ffdc0b 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: none;
+}
+header.isSpecialHeader > div ul li:hover {
+  transition: background-position 0.5s ease;
+  background-position: left bottom;
+}
+header.isSpecialHeader > div ul li:hover span {
+  color: var(--wp--preset--color--contrast);
 }
 header.isSpecialHeader > div figure {
   max-width: 160px;

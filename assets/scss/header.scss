@@ -18,6 +18,13 @@ header{
 			justify-content: center !important;
 			align-items: center;
 		}
+
+		ul {
+			padding: 5px !important;
+			li a {
+				padding: 5px 20px !important;
+			}
+		}
 	}
 
 &.isSpecialHeader {
@@ -28,6 +35,24 @@ header{
 		ul {
 			background-color: #ffffff;
 			border-radius: 50px;
+
+			/*  Add hovered animated mode style */
+			li {
+				border-radius: 50px;
+				background: linear-gradient(to right, #ffdc0b 50%, transparent 50%);
+				background-size: 200% 100%;
+				background-position: right bottom;
+				transition: none;
+
+				&:hover {
+					transition: background-position 0.5s ease;
+					background-position: left bottom;
+
+					span {
+						color: var(--wp--preset--color--contrast);
+					}
+				}
+			}
 		}
 		figure {
 			max-width: 160px;
