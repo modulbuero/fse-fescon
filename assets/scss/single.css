@@ -17,6 +17,9 @@
   /* Fazit */
   /* Webinare */
 }
+.single h1 {
+  font-size: 96px;
+}
 .single h2 {
   line-height: 120px !important;
 }
