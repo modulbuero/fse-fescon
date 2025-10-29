@@ -2,20 +2,26 @@
 *	Single Content / Metabox
 *	Used in Referenzen, Webinare
 */
+.referenzen-webinar-content-fields {
+  padding-right: var(--wp--style--root--padding-right) !important;
+  padding-left: var(--wp--style--root--padding-right) !important;
+}
 .referenzen-webinar-content-fields .fescon-meta-fields div {
   display: flex;
   flex-direction: column;
 }
 
 .single {
+  /* Referenzen */
   /* BreadCrumb */
-  /* Fazit section */
+  /* Fazit */
+  /* Webinare */
 }
 .single h2 {
   line-height: 120px !important;
 }
 .single .fescon-ref-info-fields {
-  background-color: #F4F4F4;
+  background-color: var(--wp--preset--color--quaternary);
   padding: 60px;
 }
 .single .fescon-ref-info-fields > div {
@@ -37,8 +43,8 @@
   margin-bottom: 0;
 }
 .single .entry-content {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .single .entry-content details {
   border: 0 !important;
@@ -90,7 +96,7 @@
 .single .fazit-wrap div > blockquote.wp-block-quote {
   flex: 1;
   border: none;
-  background-color: #FFDE10;
+  background-color: var(--wp--preset--color--tertiary);
   padding: 65px;
   margin-left: -170px;
   max-height: 430px;
@@ -118,17 +124,14 @@
   bottom: -35px;
   border-width: 35px 40px 0 0;
   border-style: solid;
-  border-color: #ffdc0b transparent transparent transparent;
+  border-color: var(--wp--preset--color--tertiary) transparent transparent transparent;
 }
 @media (max-width: 1000px) {
   .single .fazit-wrap div {
     flex-direction: column;
   }
 }
-
-/*
-*   Referenzen
-*/
-/*
-*   Webinare
-*//*# sourceMappingURL=single.css.map */
+.single .refrences-wrapper {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}/*# sourceMappingURL=single.css.map */
