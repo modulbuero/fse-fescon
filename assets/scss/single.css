@@ -3,8 +3,9 @@
 *	Used in Referenzen, Webinare
 */
 .referenzen-webinar-content-fields {
-  padding-right: var(--wp--style--root--padding-right) !important;
-  padding-left: var(--wp--style--root--padding-right) !important;
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+  gap: 100px !important;
 }
 .referenzen-webinar-content-fields .fescon-meta-fields div {
   display: flex;
@@ -74,6 +75,7 @@
 .single .breadcrumb {
   display: flex;
   gap: 15px;
+  padding-inline-start: 0;
 }
 .single .breadcrumb li::marker {
   display: none;
