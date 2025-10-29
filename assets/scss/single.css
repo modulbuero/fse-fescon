@@ -9,6 +9,7 @@
 
 .single {
   /* BreadCrumb */
+  /* Fazit section */
 }
 .single h2 {
   line-height: 120px !important;
@@ -74,6 +75,55 @@
 }
 .single .breadcrumb .bi-chevron-right::before {
   font-size: 10px;
+}
+.single .fazit-wrap {
+  margin-bottom: 100px;
+}
+.single .fazit-wrap div {
+  display: flex;
+  gap: 0;
+  margin-top: 40px;
+}
+.single .fazit-wrap div > figure.wp-block-image {
+  flex: 1;
+}
+.single .fazit-wrap div > blockquote.wp-block-quote {
+  flex: 1;
+  border: none;
+  background-color: #FFDE10;
+  padding: 65px;
+  margin-left: -170px;
+  max-height: 430px;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .single .fazit-wrap div > blockquote.wp-block-quote {
+    padding: 25px;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .single .fazit-wrap div > blockquote.wp-block-quote {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  .single .fazit-wrap div > blockquote.wp-block-quote {
+    margin-left: 0;
+  }
+}
+.single .fazit-wrap div > blockquote.wp-block-quote::after {
+  content: "";
+  position: absolute;
+  right: clamp(22px, 4vw, 55px);
+  bottom: -35px;
+  border-width: 35px 40px 0 0;
+  border-style: solid;
+  border-color: #ffdc0b transparent transparent transparent;
+}
+@media (max-width: 1000px) {
+  .single .fazit-wrap div {
+    flex-direction: column;
+  }
 }
 
 /*

@@ -17,7 +17,7 @@
 
 .single {
   h2 {
-		line-height: 120px !important;
+	line-height: 120px !important;
   }
   .fescon-ref-info-fields {
     background-color: #F4F4F4;
@@ -84,6 +84,52 @@
 	.bi-chevron-right::before {
 		font-size: 10px;
   	}
+}
+
+/* Fazit section */
+.fazit-wrap  {
+	margin-bottom: 100px;
+	div {
+		display: flex;
+  		gap: 0;
+		margin-top: 40px;
+
+		> figure.wp-block-image {
+			flex: 1;
+		}
+
+		> blockquote.wp-block-quote {
+			flex: 1;
+			border: none;
+			background-color: #FFDE10;
+			padding: 65px;
+			margin-left: -170px;
+			max-height: 430px;
+			@media (min-width: 1200px) and (max-width: 1440px)  {
+				padding: 25px;
+			}
+			@media (min-width: 1001px) and (max-width: 1200px) {
+				padding: 10px 30px;
+				font-size: 16px;
+			}
+			@media (max-width: 1000px) {
+				margin-left: 0;
+			}
+			
+			&::after {
+				content: "";
+				position: absolute;
+				right: clamp(22px, 4vw, 55px);
+				bottom: -35px; 
+				border-width: 35px 40px 0 0; 
+				border-style: solid;
+				border-color: #ffdc0b transparent transparent transparent;
+			}
+		}
+		@media (max-width: 1000px) {
+			flex-direction: column;
+		}
+	}
 }
 }
 
