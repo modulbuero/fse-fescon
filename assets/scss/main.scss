@@ -252,10 +252,13 @@ body {
 	In Row Blogs
 */
 .blogs-wrapper {
+	padding-right: 150px !important;
+	padding-left: 150px !important;
 	ul {
 		display: flex !important;
 		flex-direction: column !important;
 		row-gap: 0 !important;
+		margin-bottom: 0 !important;
 	}
 	.wp-block-post-date {
 		min-width: 120px;
@@ -270,6 +273,7 @@ body {
 	}
 }
 .wp-block-search__inside-wrapper {
+	margin-bottom: 100px !important;
 	button {
 		display: none;
 	}
@@ -663,5 +667,34 @@ form .nf-form-content {
 	}
 	.query-text-container{
 		height: 100% !important;
+	}
+}
+
+
+@mixin paginationButton() {
+	border-radius: 50px;
+	width:35px;
+	text-align: center;
+	border: 1px solid var(--wp--preset--color--contrast);
+}
+
+.wp-block-query-pagination {
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
+	.page-numbers {
+		@include paginationButton;
+	}
+	.current {
+		background-color: var(--wp--preset--color--tertiary);	
+		border: none;	
+	}
+	.wp-block-query-pagination-numbers a {
+		color: var(--wp--preset--color--contrast);
+	}
+	.wp-block-query-pagination-previous,
+	.wp-block-query-pagination-next {
+		@include paginationButton;
+		color: var(--wp--preset--color--contrast) !important;
 	}
 }

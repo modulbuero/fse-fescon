@@ -45,3 +45,18 @@ function mbfse_child_style_Files(){
 	);
 }
 add_action('wp_enqueue_scripts', 'mbfse_child_style_Files', 999);
+add_filter( 'render_block', function( $block_content, $block ) {
+    if ( empty( $block['blockName'] ) ) {
+        return $block_content;
+    }
+    // Next Page
+    if ( $block['blockName'] === 'core/query-pagination-next' ) {
+        $block_content = str_replace( 'Nächste Seite', '>', $block_content );
+    }
+    // Previous Page
+    if ( $block['blockName'] === 'core/query-pagination-previous' ) {
+        $block_content = str_replace( 'Vorherige Seite', '<', $block_content );
+    }
+    return $block_content;
+
+}, 10, 3 );
