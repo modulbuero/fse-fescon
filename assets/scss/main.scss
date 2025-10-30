@@ -123,14 +123,45 @@ body {
 /*
 	Webinar Slider
 */
-.home .query-loop-termine{
+.query-loop-termine{
 	.webinar-slider{
 		.swiper-wrapper{
 			.swiper-slide{
 				background-color: var(--wp--preset--color--quaternary);
+				.wp-block-post-excerpt {
+					margin-bottom: 50px;
+				}
+				.taxonomy-category {
+					display: flex;
+					flex-direction: row-reverse;
+					gap: 5px;
+					flex-wrap: wrap;
+					flex: 2;
+				}
+				.wp-block-buttons {
+					flex: 1;
+				}
+				.wp-block-post-terms__separator {
+					display: none;
+				}
+				.webinar-btns {
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					justify-items: center;
+					align-items: center;
+					position: absolute;
+					bottom: -50px;
+					> div {
+						margin: 0 !important;
+					}
+				}
 			}
 			.swiper-slide-active{
 				background-color: var(--wp--preset--color--tertiary);
+				.taxonomy-category.wp-block-post-terms a {
+					background-color: var(--wp--preset--color--quaternary);
+				}
 			}
 		}
 	}
@@ -236,6 +267,11 @@ body {
 		border-top: 1px solid var(--wp--preset--color--cyan-bluish-gray);
 		padding: 60px var(--mbfse--margin-bottom-inline) !important;
 		border-radius: 0 !important;
+	}
+}
+.wp-block-search__inside-wrapper {
+	button {
+		display: none;
 	}
 }
 
@@ -627,15 +663,5 @@ form .nf-form-content {
 	}
 	.query-text-container{
 		height: 100% !important;
-	}
-}
-.webinar-btns {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	position: absolute;
-	bottom: -50px;
-	> div {
-		margin: 0 !important;
 	}
 }

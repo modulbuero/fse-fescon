@@ -114,11 +114,42 @@ body:not(.home) h1 {
 /*
 	Webinar Slider
 */
-.home .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
   background-color: var(--wp--preset--color--quaternary);
 }
-.home .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .wp-block-post-excerpt {
+  margin-bottom: 50px;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .taxonomy-category {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  flex-wrap: wrap;
+  flex: 2;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .wp-block-buttons {
+  flex: 1;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .wp-block-post-terms__separator {
+  display: none;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  bottom: -50px;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns > div {
+  margin: 0 !important;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
   background-color: var(--wp--preset--color--tertiary);
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active .taxonomy-category.wp-block-post-terms a {
+  background-color: var(--wp--preset--color--quaternary);
 }
 
 /**
@@ -214,6 +245,10 @@ body:not(.home) h1 {
   border-top: 1px solid var(--wp--preset--color--cyan-bluish-gray);
   padding: 60px var(--mbfse--margin-bottom-inline) !important;
   border-radius: 0 !important;
+}
+
+.wp-block-search__inside-wrapper button {
+  display: none;
 }
 
 /*
@@ -611,15 +646,4 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
 }
 .webinars-wrapper .query-text-container {
   height: 100% !important;
-}
-
-.webinar-btns {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  position: absolute;
-  bottom: -50px;
-}
-.webinar-btns > div {
-  margin: 0 !important;
 }/*# sourceMappingURL=main.css.map */
