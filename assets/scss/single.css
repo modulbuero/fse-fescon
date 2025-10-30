@@ -29,7 +29,7 @@
   padding: 60px;
 }
 .single .fescon-ref-info-fields > div {
-  border-bottom: 1px solid var(--mbfse--border-color) !important;
+  border-bottom: 1px solid var(var(--mbfse--border-color)) !important;
   padding: 20px 0;
 }
 .single .fescon-ref-info-fields > div:first-child {
@@ -54,7 +54,7 @@
   border: 0 !important;
   border-radius: 0 !important;
   margin-bottom: 0 !important;
-  border-bottom: 1px solid var(--mbfse--border-color) !important;
+  border-bottom: 1px solid var(var(--mbfse--border-color)) !important;
 }
 .single .entry-content details summary {
   width: 100% !important;

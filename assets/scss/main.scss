@@ -25,18 +25,18 @@
 body {
   /*  Global font defaults  */
   h1 {
-    font-size: 180px;
-    line-height: 243px;
+    font-size: 180px !important;
+    line-height: 243px !important;
   }
 
   h2 {
-    font-size: 96px;
-    line-height: 130px;
+    font-size: 96px !important;
+    line-height: 130px !important;
   }
 
   h3 {
-    font-size: 40px;
-    line-height: 54px;
+    font-size: 40px !important;
+    line-height: 54px !important;
   }
 
   .custom-p {
@@ -54,13 +54,13 @@ body {
   /* Specific Overwrites  */
   &.home {
     h1 {
-      font-size: 180px;
+      font-size: 180px !important;
     }
   }
 
   &:not(.home) {
     h1 {
-      font-size: 56px;
+      font-size: 56px !important;
     }
   }
 }
@@ -215,6 +215,27 @@ body {
 
 	a{
 		@include taxitem;
+	}
+}
+/*
+	In Row Blogs
+*/
+.blogs-wrapper {
+	ul {
+		display: flex !important;
+		flex-direction: column !important;
+		row-gap: 0 !important;
+	}
+	.wp-block-post-date {
+		min-width: 120px;
+	}
+	li {
+		box-shadow: none !important;
+		background-color: transparent !important;
+		background-image: none !important;
+		border-top: 1px solid var(--wp--preset--color--cyan-bluish-gray);
+		padding: 60px var(--mbfse--margin-bottom-inline) !important;
+		border-radius: 0 !important;
 	}
 }
 
@@ -391,7 +412,7 @@ form .nf-form-content {
       top: 20px;
       pointer-events: none;
       transition: top .18s ease, font-size .18s ease, color .18s ease, transform .18s ease;
-      background: var(--wp--preset--color--base); /* so it looks “tabbed” over borders */
+      background: var(--wp--preset--color--base);
       padding: 0 6px;
 	  z-index: 1000;
     }
