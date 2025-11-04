@@ -24,18 +24,6 @@ header{
 			li a {
 				padding: 5px 20px !important;
 			}
-		}
-	}
-
-&.isSpecialHeader {
-	> div{
-		padding-top: 30px;
-		background-color: transparent;
-		
-		ul {
-			background-color: #ffffff;
-			border-radius: 50px;
-
 			/*  Add hovered animated mode style */
 			li {
 				border-radius: 50px;
@@ -53,6 +41,17 @@ header{
 					}
 				}
 			}
+		}
+	}
+
+&.isSpecialHeader {
+	> div{
+		padding-top: 30px;
+		background-color: transparent;
+		
+		ul {
+			background-color: #ffffff;
+			border-radius: 50px;
 		}
 		figure {
 			max-width: 160px;
