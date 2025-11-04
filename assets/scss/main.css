@@ -2,6 +2,7 @@
 .home .wp-site-blocks > main {
   margin-top: 0;
   /*  Buttons General style */
+  /* hover buttons */
 }
 .home .wp-site-blocks > main .mbfse-hero {
   height: 100vh;
@@ -18,6 +19,14 @@
     font-size: 12px;
     padding: 0 !important;
   }
+}
+.home .wp-site-blocks > main .wp-element-button {
+  transition: all 0.3s ease;
+}
+.home .wp-site-blocks > main .wp-element-button:hover {
+  background-color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base) !important;
+  border: none;
 }
 .home .wp-site-blocks > main .mb-button-outline .wp-element-button {
   border: 1px solid var(--wp--preset--color--contrast);
@@ -534,43 +543,52 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
 }
 @media (max-width: 1300px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-buttons .wp-block-button {
-    top: -10px;
+    top: 0;
   }
 }
 @media (min-width: 1440px) and (max-width: 1600px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
-    font-size: 28px;
+    font-size: 28px !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1440px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
-    font-size: 22px;
-    line-height: 40px;
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
+    font-size: 21px !important;
+    line-height: 38px !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
     margin-block-end: 0;
-    font-size: 18px;
-    line-height: 35px;
+  }
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
+    font-size: 20px !important;
+    line-height: 38px !important;
   }
 }
 @media (max-width: 1024px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
     margin-block-end: 0;
-    font-size: 15px;
-    line-height: 30px;
+  }
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
+    font-size: 15px !important;
+    line-height: 30px !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
-    line-height: 25px;
-    font-size: 14px;
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background h3 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background p {
+    font-size: 14px !important;
+    line-height: 25px !important;
+    margin-bottom: 0 !important;
   }
 }
 @media (max-width: 1024px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
-    font-size: 12px;
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background p {
+    font-size: 12px !important;
   }
 }
 .leistungen-slider .fescon-bulletpoints {
@@ -581,7 +599,7 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
   background: var(--wp--preset--color--base);
   top: 50px;
   font-size: 18px;
-  padding: 0 40px;
+  padding: 0 5px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -596,10 +614,10 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .leistungen-slider .swiper-pagination {
-    top: 30px;
+    top: 40px;
     height: unset;
     font-size: 13px;
-    padding: 5px 40px;
+    padding: 5px 5px;
   }
 }
 @media (max-width: 1024px) {
