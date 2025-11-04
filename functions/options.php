@@ -41,19 +41,26 @@ function register_referenzen(){
 }
 
 // CPT-Name ändern
-add_filter( 'register_post_type_args', 'fescon_change_Termine_Name', 10, 2 );
+
+add_filter( 'register_post_type_args', 'fescon_change_Termine_Name', 111111, 2 );
 function fescon_change_Termine_Name( $args, $post_type ) {
+	
     // Ersetze "mein_cpt" durch den Slug deines Parent-CPT
     if ( 'termin' === $post_type ) {
 
         // Labels ändern (Name etc.)
-        $args['labels']['name'] = 'Webinare';
+		$name = 'Webinare';
+		$slug = 'webinare';
+        $args['labels']['name'] = $name;
         $args['labels']['singular_name'] = 'Neues Webinar';
+		$args['labels']['menu_name'] = $name;
 
         // Slug ändern
-        $args['rewrite']['slug'] = 'webinar';
-
+        $args['rewrite']['slug'] = $slug;
+		
     }
+
+	
     return $args;
 }
 
