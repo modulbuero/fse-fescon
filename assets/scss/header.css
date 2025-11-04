@@ -63,4 +63,10 @@ header.isSpecialHeader > div p {
 .parts-footer .wp-block-navigation__container {
   display: flex;
   flex-direction: column;
+  gap: 5px !important;
+}
+
+footer > div > div:last-of-type {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=header.css.map */

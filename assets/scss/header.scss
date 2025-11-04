@@ -64,6 +64,7 @@ header{
 }
 }
 
+// footer
 .parts-footer {
 	min-width: 50%;
 	.wp-block-navigation-item__label {
@@ -72,5 +73,10 @@ header{
 	.wp-block-navigation__container {
 		display: flex;
 		flex-direction:column;
+		gap: 5px !important;
 	}
+}
+footer > div > div:last-of-type{
+	display: flex;
+	flex-direction: column;
 }
