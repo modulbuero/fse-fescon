@@ -61,6 +61,7 @@ body {
   &:not(.home) {
     h1 {
       font-size: 56px !important;
+	  line-height: 76px !important;
     }
   }
 }
@@ -140,9 +141,6 @@ body {
 				}
 				.wp-block-buttons {
 					flex: 1;
-				}
-				.wp-block-post-terms__separator {
-					display: none;
 				}
 				.webinar-btns {
 					display: flex;
@@ -314,6 +312,7 @@ body {
 				
 				.query-text-container{
 					margin-bottom:30px;
+					justify-content: space-between;
 				}
 
 				.bild-details-wrap{
@@ -697,4 +696,15 @@ form .nf-form-content {
 		@include paginationButton;
 		color: var(--wp--preset--color--contrast) !important;
 	}
+}
+
+.list-items-blog li::marker {
+	content: "";
+}
+.wp-block-post-terms__separator {
+	display: none;
+}
+.taxonomy-category {
+	display: flex;
+	gap: 10px;
 }

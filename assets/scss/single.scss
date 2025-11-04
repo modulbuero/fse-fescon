@@ -15,7 +15,30 @@
 }
 
 @mixin bottom-border-row($border-color: var(--mbfse--border-color)) {
-  border-bottom: 1px solid var($border-color) !important;
+  border-bottom: 1px solid $border-color !important;
+}
+
+@mixin meta-infos-wrapper{
+	background-color: var(--wp--preset--color--quaternary);
+    padding: 60px;
+}
+
+@mixin row-info{
+	padding: 20px 0;
+	&:first-child { padding-top: 0; }
+	&:last-child  { border-bottom: none !important; }
+}
+
+@mixin row-info-p{
+	label {
+      color: var(--wp--preset--color--contrast);
+      opacity: 0.5;
+      font-size: 18px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
 }
 
 .single {
@@ -26,31 +49,37 @@
 	line-height: 120px !important;
   }
 
+  .single-termin-html{
+	h1 {
+		width: 65%;
+		margin-left: 40px !important;
+		margin-top: 50px
+	}
+	.fescon-meta-fields {
+		@include meta-infos-wrapper;
+		> div {
+			@include bottom-border-row;
+			@include row-info;
+		}
+	 	@include row-info-p;
+	}
+	.entry-content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+  }
+
   /* Referenzen */
   .fescon-ref-info-fields {
-    background-color: var(--wp--preset--color--quaternary);
-    padding: 60px;
-
+    @include meta-infos-wrapper;
     > div { 
 		@include bottom-border-row;
-		padding: 20px 0;
-		&:first-child { padding-top: 0; }
-		&:last-child  { border-bottom: none !important; }
+		@include row-info;
 	 }
-
-    label {
-      color: var(--wp--preset--color--contrast);
-      opacity: 0.5;
-      font-size: 18px;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
+    @include row-info-p;
   }
   .entry-content {
-	padding-left: 0;
-	padding-right: 0;
 	details {
 		border: 0 !important;
 		border-radius: 0 !important;

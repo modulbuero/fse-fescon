@@ -24,12 +24,43 @@
 .single h2 {
   line-height: 120px !important;
 }
+.single .single-termin-html h1 {
+  width: 65%;
+  margin-left: 40px !important;
+  margin-top: 50px;
+}
+.single .single-termin-html .fescon-meta-fields {
+  background-color: var(--wp--preset--color--quaternary);
+  padding: 60px;
+}
+.single .single-termin-html .fescon-meta-fields > div {
+  border-bottom: 1px solid var(--mbfse--border-color) !important;
+  padding: 20px 0;
+}
+.single .single-termin-html .fescon-meta-fields > div:first-child {
+  padding-top: 0;
+}
+.single .single-termin-html .fescon-meta-fields > div:last-child {
+  border-bottom: none !important;
+}
+.single .single-termin-html .fescon-meta-fields label {
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.5;
+  font-size: 18px;
+}
+.single .single-termin-html .fescon-meta-fields p {
+  margin-bottom: 0;
+}
+.single .single-termin-html .entry-content {
+  padding-left: 0;
+  padding-right: 0;
+}
 .single .fescon-ref-info-fields {
   background-color: var(--wp--preset--color--quaternary);
   padding: 60px;
 }
 .single .fescon-ref-info-fields > div {
-  border-bottom: 1px solid var(var(--mbfse--border-color)) !important;
+  border-bottom: 1px solid var(--mbfse--border-color) !important;
   padding: 20px 0;
 }
 .single .fescon-ref-info-fields > div:first-child {
@@ -46,15 +77,11 @@
 .single .fescon-ref-info-fields p {
   margin-bottom: 0;
 }
-.single .entry-content {
-  padding-left: 0;
-  padding-right: 0;
-}
 .single .entry-content details {
   border: 0 !important;
   border-radius: 0 !important;
   margin-bottom: 0 !important;
-  border-bottom: 1px solid var(var(--mbfse--border-color)) !important;
+  border-bottom: 1px solid var(--mbfse--border-color) !important;
 }
 .single .entry-content details summary {
   width: 100% !important;
