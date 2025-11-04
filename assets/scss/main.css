@@ -174,6 +174,13 @@ body:not(.home) h1 {
 .posts-cover .wp-block-cover__inner-container {
   width: 55% !important;
 }
+.posts-cover .wp-block-cover__inner-container > div {
+  padding: 50px 40px 65px 30px;
+  min-height: 600px;
+}
+.posts-cover .wp-block-cover__inner-container .wp-block-button {
+  margin-top: 50px;
+}
 .posts-cover .wp-block-cover__inner-container ul.wp-block-post-template {
   grid-template-columns: 1fr;
 }

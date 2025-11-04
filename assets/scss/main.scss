@@ -205,6 +205,13 @@ body {
 .posts-cover {
 	.wp-block-cover__inner-container{
 		width: 55% !important;
+		> div {
+			    padding: 50px 40px 65px 30px;
+    			min-height: 600px;
+		}
+		.wp-block-button {
+			margin-top: 50px;
+		}
 
 		ul.wp-block-post-template{
 			grid-template-columns: 1fr;
