@@ -250,10 +250,34 @@ body:not(.home) h1 {
   border-radius: 0 !important;
 }
 
+/*
+	SearchBar
+*/
 .wp-block-search__inside-wrapper {
   margin-bottom: 100px !important;
 }
 .wp-block-search__inside-wrapper button {
+  display: none;
+}
+.wp-block-search__inside-wrapper input {
+  padding: 20px;
+  background-color: var(--wp--preset--color--quaternary);
+  border: none;
+}
+
+.wp-block-search__inside-wrapper::after {
+  content: "\f52a";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #666;
+  pointer-events: none;
+}
+
+.wp-block-search__label {
   display: none;
 }
 
@@ -431,6 +455,7 @@ form .nf-form-content > nf-fields-wrap nf-field:focus-within .nf-field-label {
   top: -10px;
   font-size: 16px;
   color: var(--wp--preset--color--contrast);
+  opacity: 0.6;
   transform: translateY(0);
 }
 form .nf-form-content > nf-fields-wrap nf-field .field-wrap {
@@ -682,7 +707,7 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
   color: var(--wp--preset--color--contrast) !important;
 }
 
-.list-items-blog li::marker {
+.wp-block-list li::marker {
   content: "";
 }
 
