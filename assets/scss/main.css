@@ -159,6 +159,14 @@ body:not(.home) h1 {
   background-color: var(--wp--preset--color--quaternary);
 }
 
+.webinar-arrows {
+  display: flex;
+  gap: 20px;
+  font-size: 40px;
+  position: absolute;
+  bottom: 5px;
+}
+
 /**
 *	home - Blog: 
 *	Customized Post-Loop

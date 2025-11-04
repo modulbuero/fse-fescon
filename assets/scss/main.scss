@@ -175,6 +175,15 @@ body {
 	}
 }
 
+.webinar-arrows {
+	display: flex;
+	gap: 20px;
+	font-size: 40px;
+	position: absolute;
+	bottom: 5px;
+
+}
+
 /**
 *	home - Blog: 
 *	Customized Post-Loop
