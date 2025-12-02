@@ -104,24 +104,6 @@
 	}	
    } 
   
-  /* BreadCrumb */
-  .breadcrumb {
-	display: flex;
-	gap: 15px;
-	padding-inline-start: 0;
-	li {
-		&::marker {
-			display: none;
-			content: "";
-		}
-		a {
-			color: black;
-		}
-	}
-	.bi-chevron-right::before {
-		font-size: 10px;
-  	}
-   }
 
 /* Fazit */
 .fazit-wrap  {
@@ -174,3 +156,23 @@
 	padding-bottom: 140px;
 }
 }
+
+
+/* BreadCrumb */
+  ol.breadcrumb {
+	display: flex;
+	gap: 15px;
+	padding-inline-start: 0;
+	li {
+		&::marker {
+			display: none;
+			content: "";
+		}
+		a {
+			color: black;
+		}
+	}
+	.bi-chevron-right::before {
+		font-size: 10px;
+  	}
+   }

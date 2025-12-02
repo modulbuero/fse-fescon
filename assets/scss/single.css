@@ -14,7 +14,6 @@
 
 .single {
   /* Referenzen */
-  /* BreadCrumb */
   /* Fazit */
   /* Webinare */
 }
@@ -99,21 +98,6 @@
 .single .entry-content details[open] summary:before {
   content: "\f2ea" !important;
 }
-.single .breadcrumb {
-  display: flex;
-  gap: 15px;
-  padding-inline-start: 0;
-}
-.single .breadcrumb li::marker {
-  display: none;
-  content: "";
-}
-.single .breadcrumb li a {
-  color: black;
-}
-.single .breadcrumb .bi-chevron-right::before {
-  font-size: 10px;
-}
 .single .fazit-wrap {
   margin-bottom: 100px;
 }
@@ -166,4 +150,21 @@
 .single .refrences-wrapper {
   padding-top: 140px;
   padding-bottom: 140px;
+}
+
+/* BreadCrumb */
+ol.breadcrumb {
+  display: flex;
+  gap: 15px;
+  padding-inline-start: 0;
+}
+ol.breadcrumb li::marker {
+  display: none;
+  content: "";
+}
+ol.breadcrumb li a {
+  color: black;
+}
+ol.breadcrumb .bi-chevron-right::before {
+  font-size: 10px;
 }/*# sourceMappingURL=single.css.map */

@@ -1,5 +1,6 @@
 header {
   --mbfse--menu-item-padding:10px;
+  --mbfse--menu-item-color-hover: #000;
 }
 header * {
   transition: all 0.3s ease;
@@ -17,26 +18,38 @@ header > div .wp-block-navigation__responsive-container-content {
   justify-content: center !important;
   align-items: center;
 }
-header > div ul {
+header > div .wp-block-navigation__responsive-container-content ul {
   padding: 5px !important;
-  /*  Add hovered animated mode style */
 }
-header > div ul li a {
+header > div .wp-block-navigation__responsive-container-content ul * {
+  transition: all 0.3s ease;
+}
+header > div .wp-block-navigation__responsive-container-content ul li a {
   padding: 5px 20px !important;
-}
-header > div ul li {
   border-radius: 50px;
-  background: linear-gradient(to right, #ffdc0b 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: none;
+  overflow: hidden;
 }
-header > div ul li:hover {
-  transition: background-position 0.5s ease;
-  background-position: left bottom;
+header > div .wp-block-navigation__responsive-container-content ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--wp--preset--color--tertiary);
+  border-radius: 40px;
+  z-index: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
-header > div ul li:hover span {
-  color: var(--wp--preset--color--contrast);
+header > div .wp-block-navigation__responsive-container-content ul li:hover a:before {
+  transform: translateX(0);
+  opacity: 1;
+}
+header > div .wp-block-navigation__responsive-container-content ul li.current-menu-item a:before {
+  transform: translateX(0);
+  opacity: 1;
 }
 header.isSpecialHeader > div {
   padding-top: 30px;

@@ -46,6 +46,52 @@
                     standSwiper.slideToLoop(index);
                 });
             });
+
+            //Animation des Menüs
+            $(index + ' .swiper-pagination').before('<div class="slider" id="slider"></div>');
+            const $menu     = $(index + ' .swiper-pagination');
+            const $slider   = $(index + ' #slider');
+            const $menuItems = $menu.find('span');
+            let activeClass  = 'swiper-pagination-bullet-active';
+            let activeAdding = 'active';
+
+            function setSliderPosition($el) {
+                const rect = $el[0].getBoundingClientRect();
+                const menuRect = $menu[0].getBoundingClientRect();
+                $slider.css({
+                    width: rect.width + 'px',
+                    left: $el.position().left + 'px'
+                });
+            }
+
+            const $activeItem = $menu.find('.' + activeAdding);
+            setSliderPosition($activeItem);
+
+            // Hover
+            $menuItems.on('mouseenter', function () {
+                setSliderPosition($(this));
+            });
+
+            // Zurück zur aktiven Position
+            $menu.on('mouseleave', function () {
+                setSliderPosition($menu.find('.' + activeAdding));
+            });
+
+            // Click Handler
+            $menuItems.each(function () {
+                const $item = $(this);
+                $item.find('a').on('click', function (e) {
+                    e.preventDefault();
+
+                    $menuItems.removeClass(activeAdding).find('span').removeClass(activeClass);
+
+                    $item.addClass(activeAdding);
+                    $(this).addClass(activeClass);
+
+                    setSliderPosition($item);
+                });
+            });
+
         }
     }
 
