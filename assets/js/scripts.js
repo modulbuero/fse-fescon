@@ -18,7 +18,7 @@
             let slidesPerView = spv;
     
             let cSwiperParams ={
-                loop: true,
+                loop: false,
                 navigation: {
                     nextEl: index + ' .swiper-button-next',
                     prevEl: index + ' .swiper-button-prev',
@@ -49,49 +49,88 @@
 
             //Animation des Menüs
             $(index + ' .swiper-pagination').before('<div class="slider" id="slider"></div>');
-            const $menu     = $(index + ' .swiper-pagination');
-            const $slider   = $(index + ' #slider');
+            $(index + ' .swiper-pagination, '+ index + ' #slider').wrapAll('<div class="menu-container"></div>');
+
+            const $menu      = $(index + ' .swiper-pagination');
+            const $slider    = $(index + ' #slider');
             const $menuItems = $menu.find('span');
+            const $prevBtn   = $(index + ' .swiper-button-prev');
+            const $nextBtn   = $(index + ' .swiper-button-next');
             let activeClass  = 'swiper-pagination-bullet-active';
             let activeAdding = 'active';
 
+            let currentIndex = 0;
+
+            // Slider-Position setzen
             function setSliderPosition($el) {
                 const rect = $el[0].getBoundingClientRect();
                 const menuRect = $menu[0].getBoundingClientRect();
+
                 $slider.css({
                     width: rect.width + 'px',
-                    left: $el.position().left + 'px'
+                    left: 13 + $el.position().left + 'px'
                 });
             }
 
-            const $activeItem = $menu.find('.' + activeAdding);
-            setSliderPosition($activeItem);
+            // Aktiven Menüpunkt setzen
+            function setActiveItem(i) {
+                $menuItems.removeClass(activeClass).removeClass('active');
+                $menuItems.eq(i).addClass(activeClass).addClass('active');
 
-            // Hover
+                setSliderPosition($menuItems.eq(i));
+                updateButtonStates();
+            }
+
+            // Button States aktualisieren
+            function updateButtonStates() {
+                $prevBtn.prop('disabled', currentIndex === 0);
+                $nextBtn.prop('disabled', currentIndex === $menuItems.length - 1);
+            }
+
+            // Initiale Position setzen
+            const $activeItem = $menu.find('.'+activeClass);
+            if ($activeItem.length) {
+                setSliderPosition($activeItem);
+            }
+            updateButtonStates();
+
+            // Hover-Effekte
             $menuItems.on('mouseenter', function () {
                 setSliderPosition($(this));
             });
 
             // Zurück zur aktiven Position
             $menu.on('mouseleave', function () {
-                setSliderPosition($menu.find('.' + activeAdding));
+                const $active = $menu.find('.'+activeClass);
+                if ($active.length) {
+                    setSliderPosition($active);
+                }
             });
 
             // Click Handler
-            $menuItems.each(function () {
-                const $item = $(this);
-                $item.find('a').on('click', function (e) {
+            $menuItems.each(function (index) {
+                $(this).on('click', function (e) {
                     e.preventDefault();
-
-                    $menuItems.removeClass(activeAdding).find('span').removeClass(activeClass);
-
-                    $item.addClass(activeAdding);
-                    $(this).addClass(activeClass);
-
-                    setSliderPosition($item);
+                    currentIndex = index;
+                    setActiveItem(currentIndex);
                 });
             });
 
+            // Prev Button
+            $prevBtn.on('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    setActiveItem(currentIndex);
+                }
+            });
+
+            // Next Button
+            $nextBtn.on('click', function () {
+                if (currentIndex < $menuItems.length - 1) {
+                    currentIndex++;
+                    setActiveItem(currentIndex);
+                }
+            });
         }
     }
 

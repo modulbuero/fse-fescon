@@ -76,65 +76,8 @@
         }
      }
 
-     .fescon-bulletpoints {
-        background-color: transparent;
-     }
-     .swiper-pagination{
-        position: absolute;
-        background: var(--wp--preset--color--base);
-        top: 50px;
-        font-size: 18px;
-        padding: 0 5px;
-        height: 60px;
-        @media (min-width: 1024px) and (max-width: 1440px) {
-			top: 40px;
-			height: unset;
-            font-size: 13px;
-            padding: 5px 5px;
-        }
-		@media (max-width: 1024px) {
-			top: 15px;
-			height: unset;
-            font-size: 11px;
-			padding: 5px 20px;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        left: 50px;
-        border-radius: 50px;
-        line-height: 24px;
-        width: fit-content;
-        min-width: 25%;
-        
-        
-        > span{
-            width: 25%;
-            padding-bottom: 22px;
-            padding-top: 10px;
-			opacity: 1;
-			transition: background-color 0.3s ease-out, color 0.3s ease-out, border-radius 0.3s ease-out;
-            @media (max-width: 1024px) {
-                padding-bottom: 18px;
-                padding-top: 5px;
-            }
-        }
-     }
-
-	@mixin activatedStyle() {
-		background-color: var(--wp--preset--color--contrast);
-		color: var(--wp--preset--color--base);
-		border-radius: 26px;
-	}
-
-	.swiper-pagination-bullet:hover {
-		@include activatedStyle();
-	}	
-     .swiper-pagination-bullet-active {
-        @include activatedStyle();
-     }
-     .swiper-button-prev::after {
+    /*Pfeil-Navigation*/
+    .swiper-button-prev::after {
             font-family: "bootstrap-icons";
             content: "\F12F";
     }
@@ -157,4 +100,73 @@
         }
     }
 
+    /*Slider Menu*/
+    .menu-container{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: calc(40% - 100px);
+        background: #fff;
+        border-radius: 50px;
+        padding:10px;
+        z-index: 1;
+
+        
+        /*Slider animation*/
+        #slider{
+            position: absolute;
+            height: calc(100% - 20px);
+            background: black;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+            top: 10px;
+        }
+
+        /*Menu*/
+        .swiper-pagination{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            left: 0;
+
+            &:hover span.fescon-bulletpoints {
+                color:#000;
+            }
+            
+            .fescon-bulletpoints {
+                background-color: transparent;
+                flex:content;
+                padding: 10px 30px;
+                opacity: 1;
+                font-size: 18px;
+                width: auto;
+                height: auto;
+                color:#000;
+                transition: all .3s ease;
+                &.swiper-pagination-bullet-active{
+                    color:#fff
+                }
+                &:hover{
+                    color:#fff !important
+                }
+            }
+        }
+
+        
+        /**/
+        @media (min-width: 1024px) and (max-width: 1440px) {
+			top: 40px;
+			height: unset;
+            font-size: 13px;
+            padding: 5px 5px;
+        }
+		@media (max-width: 1024px) {
+			top: 15px;
+			height: unset;
+            font-size: 11px;
+			padding: 5px 20px;
+        }
+    }
 }
