@@ -1,6 +1,9 @@
 /*
 	Webinar Slider
 */
+.query-loop-termine .webinar-slider .swiper-wrapper {
+  height: auto;
+}
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
   background-color: var(--wp--preset--color--quaternary);
 }

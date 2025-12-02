@@ -1,5 +1,5 @@
 /*Container*/
-.home .wp-site-blocks > main{
+.home .wp-site-blocks > main{ 
 	margin-top: 0;
 	.mbfse-hero{
 		height: 100vh;
@@ -77,19 +77,21 @@ body {
 }
 
 /* 
-	Floating image Container
+	Floating image Container "DocuWare"
 */
 .hero-split {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 200px !important;
-  margin-bottom: 200px !important;
-  > .wp-block-columns {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-top: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
+	margin-bottom: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
+	margin-block-end: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
+
+	> .wp-block-columns {
 		@media (max-width: 1440px) {
 			gap: 15%;
 			padding: 0 !important;
 		}
-	   .wp-block-column:first-child{
+		.wp-block-column:first-child{
 			img {
 				display: block;
 				width: min(560px, 50vw);
@@ -106,30 +108,32 @@ body {
 			justify-content: center;
 			align-items: center;
 		}
-  }	
-	
-}
-.hero-float {
-  position: absolute;
-  z-index: 2;
-  left: 15%;
-  bottom: -25%;
-  width: min(560px, 45vw);
-  pointer-events: none;
-  @media (max-width: 1024px) {
-    width: min(360px, 45vw);
-  }
-  @media (min-width: 2000px) {
-    left: 20%;
-  }
+	}	
 
-  img {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 12px 40px rgba(0,0,0,.12);
-  }
+	/*Untere Bild*/
+	.hero-float {
+		position: absolute;
+		z-index: 2;
+		left: 15%;
+		bottom: -25%;
+		width: min(560px, 45vw);
+		pointer-events: none;
+		@media (max-width: 1024px) {
+			width: min(360px, 45vw);
+		}
+		@media (min-width: 2000px) {
+			left: 20%;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 12px 40px rgba(0,0,0,.12);
+		}
+	}
 }
+
 
 
 
@@ -398,6 +402,8 @@ form .nf-form-content {
 /* Webinar Cards */
 .termine-infos {
 	color: var(--wp--preset--color--base);
+	margin-bottom: var(--mbfse--margin-bottom-inline) !important;
+
 	> div {
 		>p::before {
   			display: none !important;

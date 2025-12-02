@@ -3,7 +3,10 @@
 */
 .query-loop-termine{
 	.webinar-slider{
+		
 		.swiper-wrapper{
+			height:auto;
+
 			.swiper-slide{
 				background-color: var(--wp--preset--color--quaternary);
 				.wp-block-post-excerpt {

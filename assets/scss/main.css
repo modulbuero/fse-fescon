@@ -66,13 +66,15 @@ body:not(.home) h1 {
 }
 
 /* 
-	Floating image Container
+	Floating image Container "DocuWare"
 */
 .hero-split {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  margin-top: 200px !important;
-  margin-bottom: 200px !important;
+  margin-top: calc(5vw + var(--mbfse--margin-bottom-block)) !important;
+  margin-bottom: calc(5vw + var(--mbfse--margin-bottom-block)) !important;
+  margin-block-end: calc(5vw + var(--mbfse--margin-bottom-block)) !important;
+  /*Untere Bild*/
 }
 @media (max-width: 1440px) {
   .hero-split > .wp-block-columns {
@@ -95,8 +97,7 @@ body:not(.home) h1 {
   justify-content: center;
   align-items: center;
 }
-
-.hero-float {
+.hero-split .hero-float {
   position: absolute;
   z-index: 2;
   left: 15%;
@@ -105,16 +106,16 @@ body:not(.home) h1 {
   pointer-events: none;
 }
 @media (max-width: 1024px) {
-  .hero-float {
+  .hero-split .hero-float {
     width: min(360px, 45vw);
   }
 }
 @media (min-width: 2000px) {
-  .hero-float {
+  .hero-split .hero-float {
     left: 20%;
   }
 }
-.hero-float img {
+.hero-split .hero-float img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -381,6 +382,7 @@ form .nf-form-content > nf-fields-wrap nf-field > div input::placeholder {
 /* Webinar Cards */
 .termine-infos {
   color: var(--wp--preset--color--base);
+  margin-bottom: var(--mbfse--margin-bottom-inline) !important;
 }
 .termine-infos > div > p::before {
   display: none !important;
