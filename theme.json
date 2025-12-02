@@ -82,6 +82,9 @@
 			"fontFamily": "var(--wp--preset--font-family--unineue)",
 			"fontSize":"22px",
 			"lineHeight": "34px"
+		},
+		"spacing": {
+			"blockGap": "160px"
 		}
 	},
 	"patterns" : [
