@@ -1,0 +1,45 @@
+/*
+	Webinar Slider
+*/
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
+  background-color: var(--wp--preset--color--quaternary);
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .wp-block-post-excerpt {
+  margin-bottom: 50px;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .taxonomy-category {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  flex-wrap: wrap;
+  flex: 2;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .wp-block-buttons {
+  flex: 1;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  bottom: -50px;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns > div {
+  margin: 0 !important;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
+  background-color: var(--wp--preset--color--tertiary);
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active .taxonomy-category.wp-block-post-terms a {
+  background-color: var(--wp--preset--color--quaternary);
+}
+
+.webinar-arrows {
+  display: flex;
+  gap: 20px;
+  font-size: 40px;
+  position: absolute;
+  bottom: 5px;
+}/*# sourceMappingURL=webinar-slider.css.map */

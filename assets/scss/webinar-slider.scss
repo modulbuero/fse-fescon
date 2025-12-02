@@ -1,0 +1,52 @@
+/*
+	Webinar Slider
+*/
+.query-loop-termine{
+	.webinar-slider{
+		.swiper-wrapper{
+			.swiper-slide{
+				background-color: var(--wp--preset--color--quaternary);
+				.wp-block-post-excerpt {
+					margin-bottom: 50px;
+				}
+				.taxonomy-category {
+					display: flex;
+					flex-direction: row-reverse;
+					gap: 5px;
+					flex-wrap: wrap;
+					flex: 2;
+				}
+				.wp-block-buttons {
+					flex: 1;
+				}
+				.webinar-btns {
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					justify-items: center;
+					align-items: center;
+					position: absolute;
+					bottom: -50px;
+					> div {
+						margin: 0 !important;
+					}
+				}
+			}
+			.swiper-slide-active{
+				background-color: var(--wp--preset--color--tertiary);
+				.taxonomy-category.wp-block-post-terms a {
+					background-color: var(--wp--preset--color--quaternary);
+				}
+			}
+		}
+	}
+}
+
+.webinar-arrows {
+	display: flex;
+	gap: 20px;
+	font-size: 40px;
+	position: absolute;
+	bottom: 5px;
+
+}

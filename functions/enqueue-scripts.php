@@ -30,6 +30,27 @@ function mbfse_child_style_Files(){
 	);
 
 	wp_enqueue_style(
+		'mb-child-blog',
+		get_stylesheet_directory_uri().$f_CSS.'blog.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+
+	wp_enqueue_style(
+		'mb-child-leistungen',
+		get_stylesheet_directory_uri().$f_CSS.'leistungen-slider.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+
+	wp_enqueue_style(
+		'mb-child-webinar',
+		get_stylesheet_directory_uri().$f_CSS.'webinar-slider.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+	
+	wp_enqueue_style(
 		'mb-child-single',
 		get_stylesheet_directory_uri().$f_CSS.'single.css',
 		array(),

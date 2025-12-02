@@ -1,0 +1,160 @@
+/* Leistungen Slider */
+.leistungen-slider {
+     .swiper-wrapper {
+        .wp-block-columns {
+            gap: 0 !important;
+            margin-bottom: 50px !important;
+            .has-background {
+                margin-bottom: 20px;
+                margin-top: 20px;
+				@media (max-width: 1024px) {
+                    margin-bottom: 5px;
+                	margin-top: 5px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+                .wp-block-buttons {
+                    .wp-block-button {
+                        position: absolute;
+                        top: 60px;
+						width: 180px;
+						@media (min-width: 1300px) and (max-width: 1700px) {
+                            top: 10px;
+                        }
+                        @media (max-width: 1300px) {
+                            top: 0;
+                        }
+                    }
+                    
+                }
+				/* Handle responsive font sizes */
+                .wp-block-heading {
+					@media (min-width: 1440px) and (max-width: 1600px)  {
+						font-size: 28px !important;
+					}
+					@media (min-width: 1200px) and (max-width: 1440px)  {
+						p {
+							font-size: 21px !important;
+							line-height: 38px !important;	
+						}
+						
+					}
+                    @media (min-width: 1024px) and (max-width: 1200px) {
+						margin-block-end: 0;
+						p {
+							font-size: 20px !important;
+							line-height: 38px !important;
+						}
+                	}  
+					@media (max-width: 1024px) {
+						margin-block-end: 0;
+						p {
+							font-size: 15px !important;
+							line-height: 30px !important;
+						}
+                	}  
+                }
+				@media (min-width: 1024px) and (max-width: 1200px) {					
+					h3 {
+						font-size: 20px !important;
+						line-height: 28px !important;
+					}
+					p {
+                    	font-size: 14px !important;
+						line-height: 25px !important;
+						margin-bottom: 0 !important;
+					}
+                }  
+				@media (max-width: 1024px) {
+					p{
+						font-size: 12px !important;
+					}	
+                }  
+            }
+        }
+     }
+
+     .fescon-bulletpoints {
+        background-color: transparent;
+     }
+     .swiper-pagination{
+        position: absolute;
+        background: var(--wp--preset--color--base);
+        top: 50px;
+        font-size: 18px;
+        padding: 0 5px;
+        height: 60px;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+			top: 40px;
+			height: unset;
+            font-size: 13px;
+            padding: 5px 5px;
+        }
+		@media (max-width: 1024px) {
+			top: 15px;
+			height: unset;
+            font-size: 11px;
+			padding: 5px 20px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        left: 50px;
+        border-radius: 50px;
+        line-height: 24px;
+        width: fit-content;
+        min-width: 25%;
+        
+        
+        > span{
+            width: 25%;
+            padding-bottom: 22px;
+            padding-top: 10px;
+			opacity: 1;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out, border-radius 0.3s ease-out;
+            @media (max-width: 1024px) {
+                padding-bottom: 18px;
+                padding-top: 5px;
+            }
+        }
+     }
+
+	@mixin activatedStyle() {
+		background-color: var(--wp--preset--color--contrast);
+		color: var(--wp--preset--color--base);
+		border-radius: 26px;
+	}
+
+	.swiper-pagination-bullet:hover {
+		@include activatedStyle();
+	}	
+     .swiper-pagination-bullet-active {
+        @include activatedStyle();
+     }
+     .swiper-button-prev::after {
+            font-family: "bootstrap-icons";
+            content: "\F12F";
+    }
+    .swiper-button-next::after {
+            font-family: "bootstrap-icons";
+            content: "\F138";
+    }
+    .swiper-button-next {
+        top: 100%;
+        right: 47%;
+		@media (max-width: 1300px) {
+            right: 45%;
+        }
+    }
+    .swiper-button-prev {
+        top: 100%;
+        left: 47%;
+		@media (max-width: 1300px) {
+            left: 45%;
+        }
+    }
+
+}
