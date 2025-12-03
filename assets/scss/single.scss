@@ -40,22 +40,31 @@
       margin-bottom: 0;
     }
 }
+.fescon-meta-fields {
+		@include meta-infos-wrapper;
+		> div {
+			@include bottom-border-row;
+			@include row-info;
+		}
+	 	@include row-info-p;
+}
 
-.single {
-  h1 {
+
+h1 {
 	font-size: 96px;
   }
-  h2 {
+h2 {
 	line-height: 120px !important;
   }
 
-  .single-termin-html{
+.single-termin-html{
 	h1 {
 		width: 65%;
 		margin-left: 40px !important;
 		margin-top: 50px
 	}
 	.fescon-meta-fields {
+		background-color: red;
 		@include meta-infos-wrapper;
 		> div {
 			@include bottom-border-row;
@@ -68,10 +77,10 @@
 		padding-right: 0;
 	}
 	
-  }
+}
 
-  /* Referenzen */
-  .fescon-ref-info-fields {
+/* Referenzen */
+.fescon-ref-info-fields {
     @include meta-infos-wrapper;
     > div { 
 		@include bottom-border-row;
@@ -79,7 +88,7 @@
 	 }
     @include row-info-p;
   }
-  .entry-content {
+.entry-content {
 	details {
 		border: 0 !important;
 		border-radius: 0 !important;
@@ -102,8 +111,7 @@
 	details[open] summary:before {
   			content: '\F2EA' !important;
 	}	
-   } 
-  
+} 
 
 /* Fazit */
 .fazit-wrap  {
@@ -155,8 +163,6 @@
 	padding-top: 140px;
 	padding-bottom: 140px;
 }
-}
-
 
 /* BreadCrumb */
   ol.breadcrumb {
@@ -175,4 +181,4 @@
 	.bi-chevron-right::before {
 		font-size: 10px;
   	}
-   }
+}

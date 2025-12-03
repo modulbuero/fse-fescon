@@ -1,8 +1,16 @@
 /*Container*/
 .home .wp-site-blocks > main {
   margin-top: 0;
+  padding-bottom: 0;
   /*  Buttons General style */
   /* hover buttons */
+}
+.home .wp-site-blocks > main .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+.home .wp-site-blocks > main .wp-block-cover__inner-container {
+  margin-bottom: var(--wp--style--root--padding-left) !important;
 }
 .home .wp-site-blocks > main .mbfse-hero {
   height: 100vh;
