@@ -1,0 +1,53 @@
+.contac-info-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--wp--preset--color--tertiary);
+    width: 100%;
+    padding: 20px 35px;
+}
+
+.plus-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-items: center;
+}
+
+/* Hidden state */
+.contact-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+
+    background-color: var(--wp--preset--color--tertiary);
+
+    transform: translateY(-10px);
+    transition:
+        max-height 0.35s ease-out,
+        opacity 0.35s ease-out,
+        transform 0.35s ease-out,
+        padding-top 0.35s ease-out;
+}
+
+.contac-info-wrapper:hover .contact-details {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 160px;
+    transform: translateY(0);
+}
+
+
+.contact {
+    margin-bottom: 0 !important;
+    gap: 0 !important;
+    &:after{
+		content:"+";
+		position: absolute;
+        right: 60px;
+	}
+}
+.contac-info-wrapper:hover .contact::after {
+    content: "–";
+}

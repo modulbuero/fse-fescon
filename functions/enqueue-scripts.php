@@ -49,6 +49,13 @@ function mbfse_child_style_Files(){
 		array(),
 		wp_get_theme()->get( 'Version' )
 	);
+
+	wp_enqueue_style(
+		'mb-child-aboutus',
+		get_stylesheet_directory_uri().$f_CSS.'about-us.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
 	
 	wp_enqueue_style(
 		'mb-child-single',

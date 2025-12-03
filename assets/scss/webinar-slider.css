@@ -3,7 +3,10 @@
 */
 .query-loop-termine .webinar-slider .swiper-wrapper {
   height: auto;
+<<<<<<< Updated upstream
   margin-bottom: 0;
+=======
+>>>>>>> Stashed changes
 }
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
   background-color: var(--wp--preset--color--quaternary);
