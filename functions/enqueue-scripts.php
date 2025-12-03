@@ -56,6 +56,13 @@ function mbfse_child_style_Files(){
 		array(),
 		wp_get_theme()->get( 'Version' )
 	);
+
+	wp_enqueue_style(
+		'mb-child-contacts',
+		get_stylesheet_directory_uri().$f_CSS.'contacts.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
 	
 	wp_enqueue_style(
 		'mb-child-single',

@@ -1,7 +1,10 @@
+.wp-site-blocks > main {
+  padding-bottom: 0;
+}
+
 /*Container*/
 .home .wp-site-blocks > main {
   margin-top: 0;
-  padding-bottom: 0;
   /*  Buttons General style */
   /* hover buttons */
 }
