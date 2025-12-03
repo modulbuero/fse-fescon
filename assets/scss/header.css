@@ -67,19 +67,31 @@ header.isSpecialHeader > div p {
   opacity: 0;
 }
 
-.parts-footer {
+footer {
+  --mbfse--padding-footer:40px 0;
+}
+footer * {
+  font-size: 18px;
+}
+footer .parts-footer {
   min-width: 50%;
 }
-.parts-footer .wp-block-navigation-item__label {
+footer .parts-footer .wp-block-navigation-item__label {
   color: white !important;
 }
-.parts-footer .wp-block-navigation__container {
+footer .parts-footer .wp-block-navigation__container {
   display: flex;
   flex-direction: column;
   gap: 5px !important;
 }
-
 footer > div > div:last-of-type {
   display: flex;
   flex-direction: column;
+}
+footer > div > div:last-of-type figure {
+  margin-bottom: var(--mbfse--margin-bottom-inline);
+}
+footer > div > div:last-of-type p {
+  margin-bottom: 0;
+  margin-top: auto;
 }/*# sourceMappingURL=header.css.map */
