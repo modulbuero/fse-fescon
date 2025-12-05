@@ -1,4 +1,38 @@
 @charset "UTF-8";
+.team-body {
+  padding-bottom: 80px !important;
+  height: 350px;
+}
+
+.team-card {
+  max-width: 572px;
+  background: transparent;
+  overflow: hidden;
+  margin-bottom: 0 !important;
+}
+.team-card figure {
+  margin-bottom: 0 !important;
+}
+.team-card figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team-card > div {
+  background: #F4F4F4;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1720px;
+  margin: 0 auto !important;
+  background: var(--wp--preset--color--base);
+}
+
 .contac-info-wrapper {
   position: absolute;
   bottom: 0;

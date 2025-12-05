@@ -281,34 +281,6 @@ body:not(.home) h1 {
   display: none;
 }
 
-.team-card {
-  max-width: 572px;
-  background: transparent;
-  overflow: hidden;
-}
-.team-card figure {
-  margin-bottom: 0 !important;
-}
-.team-card figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.team-card > div {
-  background: #F4F4F4;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1720px;
-  margin: 0 auto;
-  background: var(--wp--preset--color--base);
-}
-
 /* 
 	Contact Form
 */
