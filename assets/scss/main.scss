@@ -4,6 +4,7 @@
 /*Container*/
 .home .wp-site-blocks > main{ 
 	margin-top: 0;
+	padding-bottom: 0;
 	.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
 		margin-left: unset !important;
 		margin-right: unset !important;
@@ -60,8 +61,8 @@ body {
   }
 
   .custom-p {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 28px !important;
+    line-height: 40px !important;
   }
 
   .wp-block-post-excerpt {

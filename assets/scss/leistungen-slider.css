@@ -154,6 +154,9 @@
 .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints.swiper-pagination-bullet-active {
   color: #fff;
 }
+.leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints.active {
+  color: #fff;
+}
 .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints:hover {
   color: #fff !important;
 }

@@ -146,10 +146,13 @@
                 color:#000;
                 transition: all .3s ease;
                 &.swiper-pagination-bullet-active{
-                    color:#fff
+                    color:#fff;
+                }
+                &.active {
+                    color:#fff;
                 }
                 &:hover{
-                    color:#fff !important
+                    color:#fff !important;
                 }
             }
         }
