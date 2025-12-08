@@ -28,9 +28,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  max-width: 1720px;
-  margin: 0 auto !important;
-  background: var(--wp--preset--color--base);
 }
 
 .contac-info-wrapper {
