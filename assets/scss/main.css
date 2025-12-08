@@ -7,7 +7,7 @@
   margin-top: 0;
   padding-bottom: 0;
   /*  Buttons General style */
-  /* hover buttons */
+  /*p-tag spezial*/
 }
 .wp-site-blocks > main .wp-block-cover__inner-container {
   margin-bottom: var(--wp--style--root--padding-left) !important;
@@ -15,23 +15,24 @@
 .wp-site-blocks > main .mbfse-hero {
   height: 100vh;
 }
-.wp-site-blocks > main .wp-block-button__link {
+.wp-site-blocks > main .wp-block-button__link.wp-element-button {
   font-size: 18px;
   line-height: 34px;
   min-width: 160px;
+  transition: all 0.3s ease;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
-.wp-site-blocks > main .wp-element-button {
-  transition: all 0.3s ease;
-}
-.wp-site-blocks > main .wp-element-button:hover {
+.wp-site-blocks > main .wp-block-button__link.wp-element-button:hover {
   background-color: var(--wp--preset--color--contrast);
   color: var(--wp--preset--color--base) !important;
-  border: none;
 }
 .wp-site-blocks > main .mb-button-outline .wp-element-button {
   border: 1px solid var(--wp--preset--color--contrast);
+}
+.wp-site-blocks > main > .entry-content > p {
+  padding-right: 200px;
+  box-sizing: border-box;
 }
 
 /*Fonts*/
