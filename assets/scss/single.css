@@ -66,6 +66,25 @@
   padding-right: 0;
 }
 
+/*Blog*/
+.single-editor-content {
+  max-width: 1200px;
+  padding-top: 30px;
+  margin-block-end: var(--mbfse--margin-bottom-block) !important;
+  margin-bottom: var(--mbfse--margin-bottom-block);
+}
+.single-editor-content h1 {
+  font-size: 56px;
+}
+.single-editor-content ul, .single-editor-content ol {
+  margin-bottom: var(--mbfse--margin-bottom-inline) !important;
+}
+.single-editor-content > .wp-block-separator {
+  margin: 70px 0;
+  width: 100% !important;
+  color: #ccc;
+}
+
 /* Referenzen */
 .fescon-ref-info-fields {
   background-color: var(--wp--preset--color--quaternary);

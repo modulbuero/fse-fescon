@@ -95,7 +95,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "5px"
+					"radius": "55px"
 				}
 			},
 			"heading": {

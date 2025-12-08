@@ -1,9 +1,27 @@
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group parts-single-template fse-fescon">
-    <!-- wp:post-featured-image {"align":"wide","className":"has-margin-bottom-block", "sizeSlug":"full"} /-->
-    <!-- wp:post-terms {"term":"category"} /-->
-    <!-- wp:post-title {"level":1} /-->
+    <!-- wp:search {"label":"Search","placeholder":"Suche","buttonText":"Search"} /-->
+    <!-- wp:categories /-->
+
+    <div class="wp-block-group single-editor-content">
+        <!-- wp:post-featured-image {"align":"wide","className":"has-margin-bottom-block", "sizeSlug":"full"} /-->
+        <!-- wp:post-terms {"term":"category"} /-->
+        <!-- wp:post-title {"level":1} /-->
+        <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+        <!-- wp:separator -->
+            <hr class="wp-block-separator has-alpha-channel-opacity"/>
+        <!-- /wp:separator -->
+        <!-- wp:buttons -->
+            <div class="wp-block-buttons">
+                <!-- wp:button {"buttonOutlineClass":true} -->
+                <div class="wp-block-button mb-button-outline">
+                    <a class="wp-block-button__link wp-element-button" href="http://fescon.gmbh.178-20-102-49.modulbuero.kundencloudserver.de/blog/">zurück</a>
+                </div>
+            <!-- /wp:button -->
+            </div>
+        <!-- /wp:buttons -->
+    </div>
+
 </div>
-<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
 
 <!-- wp:block {"ref":534} /-->

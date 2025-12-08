@@ -1,4 +1,5 @@
 .wp-site-blocks > main {
+	--mbfse--margin-bottom-inline:40px;
 	padding-bottom: 0;
 }
 
@@ -7,26 +8,7 @@
 	margin-top: 0;
 	padding-bottom: 0;
 	
-	/*  Buttons General style */
-	.wp-block-button__link.wp-element-button {
-		font-size: 18px;
-		line-height: 34px;
-		min-width: 160px;
-		transition: all 0.3s ease;
-		padding-top: 5px !important;
-		padding-bottom: 5px !important;
-
-		&:hover{
-			background-color: var(--wp--preset--color--contrast);
-			color: var(--wp--preset--color--base) !important;
-		}
-	}
-
-	.mb-button-outline{
-		.wp-element-button {
-			border: 1px solid var(--wp--preset--color--contrast);
-		}
-	}
+	
 
 	/*p-tag spezial*/
 	>h2+p{
@@ -94,6 +76,26 @@ body.page{
 	}
 }
 
+/*  Buttons General style */
+.wp-block-button__link.wp-element-button {
+	font-size: 18px;
+	line-height: 34px;
+	min-width: 160px;
+	transition: all 0.3s ease;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	color:#000;
+	&:hover{
+		background-color: var(--wp--preset--color--contrast);
+		color: var(--wp--preset--color--base) !important;
+	}
+}
+
+.mb-button-outline{
+	.wp-element-button {
+		border: 1px solid var(--wp--preset--color--contrast);
+	}
+}
 
 /* 
 	Floating image Container "DocuWare"
