@@ -5,22 +5,14 @@
   gap: 60px;
 
   .team-card{
-        max-width: 572px;
-        background: transparent;
-        overflow: hidden;  
         margin-bottom: 0 !important;
+
         figure {
             margin-bottom: 0 !important;
-            img{
-                display:block;
-                width:100%;
-                height:auto;
-                object-fit:cover;
-            }
         }
 
         .team-body {
-            padding-bottom: 80px !important;
+            padding: 50px 60px 80px !important;
             height: 350px;
             background:#F4F4F4;
 
@@ -54,7 +46,7 @@
                     &:after{
                         content:"+";
                         position: absolute;
-                        right: 60px;
+                        right: 0px;
                     }
                 }
 
