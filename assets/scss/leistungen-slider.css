@@ -6,10 +6,12 @@
 .leistungen-slider .swiper-wrapper .wp-block-columns {
   gap: 0 !important;
   margin-bottom: 50px !important;
+  /*Rechte Spalte mit Bild*/
 }
 .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
   margin-bottom: 20px;
   margin-top: 20px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +83,14 @@
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background p {
     font-size: 12px !important;
   }
+}
+.leistungen-slider .swiper-wrapper .wp-block-columns figure {
+  height: 600px;
+  display: flex;
+}
+.leistungen-slider .swiper-wrapper .wp-block-columns figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .leistungen-slider .swiper-button-prev::after {
   font-family: "bootstrap-icons";
