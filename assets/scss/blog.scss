@@ -18,11 +18,20 @@
 }
 
 .posts-cover {
+	padding: 140px 40px;
+
 	.wp-block-cover__inner-container{
 		width: 55% !important;
 		> div {
-			    padding: 50px 40px 65px 30px;
-    			min-height: 600px;
+			padding: 60px 44px;
+
+			.wp-block-query{
+				margin-bottom: 40px;
+				h3{
+					font-size: var(--wp--preset--font-size--large);
+				}
+			}
+
 		}
 		.wp-block-button {
 			margin-top: 50px;

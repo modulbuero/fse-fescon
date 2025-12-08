@@ -2,7 +2,7 @@
 	padding-bottom: 0;
 }
 /*Container*/
-.home .wp-site-blocks > main{ 
+.wp-site-blocks > main{ 
 	margin-top: 0;
 	padding-bottom: 0;
 	.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
@@ -22,10 +22,6 @@
 		min-width: 160px;
 		padding-top: 5px !important;
 		padding-bottom: 5px !important;
-		@media (max-width: 1024px) {
-            font-size: 12px;
-			padding: 0  !important;
-        }
 	}
 	/* hover buttons */
 

@@ -2,12 +2,20 @@
 *	home - Blog: 
 *	Customized Post-Loop
 */
+.posts-cover {
+  padding: 140px 40px;
+}
 .posts-cover .wp-block-cover__inner-container {
   width: 55% !important;
 }
 .posts-cover .wp-block-cover__inner-container > div {
-  padding: 50px 40px 65px 30px;
-  min-height: 600px;
+  padding: 60px 44px;
+}
+.posts-cover .wp-block-cover__inner-container > div .wp-block-query {
+  margin-bottom: 40px;
+}
+.posts-cover .wp-block-cover__inner-container > div .wp-block-query h3 {
+  font-size: var(--wp--preset--font-size--large);
 }
 .posts-cover .wp-block-cover__inner-container .wp-block-button {
   margin-top: 50px;
