@@ -3,21 +3,40 @@
 *	home - Blog: 
 *	Customized Post-Loop
 */
-@mixin postLoopTile() {
-	background-color: transparent;
-	background-image: none;
-	box-shadow: none;
-	padding:0 0 20px;
-	border-radius:0;
-	border-bottom: 1px solid #E0E0E0;
+.blog .wp-site-blocks > main {
+	padding-bottom: var(--mbfse--margin-bottom-block);
+}
+/*Blog-Loop-Item*/
+.wp-block-query.mbfse-block-post-template {
+	margin-bottom: 0 !important;
 
-	&:last-child{
-		border-bottom:0;
-		padding:0;
+	ul.wp-block-post-template {
+		display: flex;
+		flex-direction: column;
+				
+		li {
+			box-shadow: none !important;
+			background-image: none !important;
+			padding: 60px var(--mbfse--margin-bottom-inline);
+			.query-text-container{
+				justify-content: space-between;
+				h3{
+					font-size: var(--fescon-blog-loop-title-size);
+				}
+				.wp-block-post-date {
+					min-width: 120px;
+				}
+			}
+		}
+		li:not(:last-child){
+			border-bottom:1px solid #ccc;
+		}
 	}
 }
 
+/* Blog-Loop-Container in Startpage */
 .posts-cover {
+	--fescon-blog-loop-title-size:var(--wp--preset--font-size--large);
 	padding: 140px 40px;
 
 	.wp-block-cover__inner-container{
@@ -26,41 +45,10 @@
 			padding: 60px 44px;
 
 			.wp-block-query{
-				margin-bottom: 40px;
-				h3{
-					font-size: var(--wp--preset--font-size--large);
-				}
-			}
-
-		}
-		.wp-block-button {
-			margin-top: 50px;
-		}
-
-		ul.wp-block-post-template{
-			grid-template-columns: 1fr;
-
-			li{
-				@include postLoopTile;
-				
-				.query-text-container{
-					height: 100% !important;
-					justify-content: space-between;
-					
-					.wp-block-group{
-						transition: transform 0.3s ease;
-						h2{
-							font-weight: 900;
-						}
-					}
-					.wp-block-post-excerpt {
-						display: none;
-					}
-				}
-
-				&:hover{
-					.query-text-container .wp-block-group{
-						transform: translateX(8px);
+				margin-bottom: 40px !important;
+				ul.wp-block-post-template{
+					li {
+						padding: 30px var(--mbfse--margin-bottom-inline);
 					}
 				}
 			}
@@ -68,30 +56,21 @@
 	}
 }
 
-/*
-	In Row Blogs
-*/
+/* Blog-Loop-Container in Blogpage */
 .blogs-wrapper {
 	padding-right: 150px !important;
 	padding-left: 150px !important;
-	ul {
-		display: flex !important;
-		flex-direction: column !important;
-		row-gap: 0 !important;
-		margin-bottom: 0 !important;
-	}
-	.wp-block-post-date {
-		min-width: 120px;
-	}
-	li {
-		box-shadow: none !important;
-		background-color: transparent !important;
-		background-image: none !important;
-		border-top: 1px solid var(--wp--preset--color--cyan-bluish-gray);
-		padding: 60px var(--mbfse--margin-bottom-inline) !important;
-		border-radius: 0 !important;
+	--fescon-blog-loop-title-size:var(--wp--preset--font-size--x-large);
+	ul.wp-block-post-template{
+		margin-bottom:60px !important;
+		
+		li:last-child{
+			border-bottom:1px solid #ccc;
+		}
 	}
 }
+
+
 /*
 	SearchBar
 */
@@ -105,8 +84,8 @@
 		background-color: var(--wp--preset--color--quaternary);
 		border: none;
 	}
-}
-.wp-block-search__inside-wrapper::after {
+
+	&:after {
 		content: '\F52A';
 		font-family: "bootstrap-icons";
 		position: absolute;
@@ -116,18 +95,24 @@
 		font-size: 25px;
 		color: #666;
 		pointer-events: none;
+	}
+
 }
 .wp-block-search__label {
 	display: none;
 }
 
 
-
-
+/*
+	Pagination
+*/
 @mixin paginationButton() {
 	border-radius: 50px;
 	width:35px;
-	text-align: center;
+	height:35px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 	border: 1px solid var(--wp--preset--color--contrast);
 }
 
@@ -161,4 +146,49 @@
 .taxonomy-category {
 	display: flex;
 	gap: 10px;
+}
+
+/*
+	Category-Label
+*/
+@mixin taxitem(){
+	background-color: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--contrast) !important;
+	display: inline-flex;
+	gap: 7px;
+	padding: 5px 10px;
+	line-height: 1;
+	border:1px solid var(--wp--preset--color--tertiary);
+
+	&:before{
+		content: '\F3D1';
+		font-family: 'bootstrap-icons';
+		position: relative;
+		top:2px;
+	}
+	&:hover{
+		background-color: transparent;
+		border-color:#000;
+	}
+}
+.taxonomy-item{
+	@include taxitem;
+}
+.taxonomy-category.wp-block-post-terms{
+	margin-bottom:5px;
+
+	a{
+		@include taxitem;
+	}
+}
+.wp-block-categories-list{
+	display: flex;
+	list-style-type:none;
+	gap:20px;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 30px !important;
+    padding-bottom: 60px;
+	li a{
+		@include taxitem;
+	}
 }

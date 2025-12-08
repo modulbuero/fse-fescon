@@ -133,42 +133,6 @@ body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
 }
 
 /*
-	Category-Label
-*/
-.taxonomy-item {
-  background-color: var(--wp--preset--color--tertiary);
-  color: var(--wp--preset--color--contrast);
-  display: inline-flex;
-  gap: 7px;
-  padding: 5px 10px;
-  line-height: 1;
-}
-.taxonomy-item:before {
-  content: "\f3d1";
-  font-family: "bootstrap-icons";
-  position: relative;
-  top: 2px;
-}
-
-.taxonomy-category.wp-block-post-terms {
-  margin-bottom: 5px;
-}
-.taxonomy-category.wp-block-post-terms a {
-  background-color: var(--wp--preset--color--tertiary);
-  color: var(--wp--preset--color--contrast);
-  display: inline-flex;
-  gap: 7px;
-  padding: 5px 10px;
-  line-height: 1;
-}
-.taxonomy-category.wp-block-post-terms a:before {
-  content: "\f3d1";
-  font-family: "bootstrap-icons";
-  position: relative;
-  top: 2px;
-}
-
-/*
 	Referenzberichte
 */
 .refrences-wrapper > h2.wp-block-heading {
