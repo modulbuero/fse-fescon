@@ -61,6 +61,33 @@
 				"name": "UniNeue",
 				"slug": "unineue"
 				}
+			],
+			"fontSizes": [
+				{
+				"slug": "small",
+				"name": "Small",
+				"size": "16px"
+				},
+				{
+				"slug": "medium",
+				"name": "Medium",
+				"size": "22px"
+				},
+				{
+				"slug": "large",
+				"name": "Large",
+				"size": "28px"
+				},
+				{
+				"slug": "x-large",
+				"name": "XL",
+				"size": "40px"
+				},
+				{
+				"slug": "xx-large",
+				"name": "XXL",
+				"size": "96px"
+				}
 			]
 		}
 	},
