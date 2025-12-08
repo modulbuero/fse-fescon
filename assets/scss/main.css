@@ -9,9 +9,6 @@
   /*  Buttons General style */
   /*p-tag spezial*/
 }
-.wp-site-blocks > main .wp-block-post-content .wp-block-cover__inner-container {
-  margin-bottom: var(--wp--style--root--padding-left) !important;
-}
 .wp-site-blocks > main .wp-block-post-content .wp-block-button__link.wp-element-button {
   font-size: 18px;
   line-height: 34px;
@@ -58,13 +55,24 @@ body.home h1 {
 }
 
 /*Hero*/
-.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
+body.page {
+  /*Home has SpezialHeader*/
+}
+body.page .wp-site-blocks .wp-block-post-content .mbfse-hero {
+  margin-top: calc(var(--mbfse--margin-bottom-block) * -1);
+  padding: 0;
+}
+body.page .wp-site-blocks .wp-block-post-content .mbfse-hero .wp-block-cover__inner-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 30% 50%, rgba(255, 255, 255, 0) 100%);
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+body.page .wp-site-blocks .wp-block-post-content .mbfse-hero .wp-block-cover__inner-container :last-child {
+  padding-bottom: 55px;
+}
+body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
   margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
   height: 100vh;
-}
-
-.page .wp-site-blocks .wp-block-post-content .mbfse-hero {
-  margin-top: calc(var(--mbfse--margin-bottom-block) * -1);
 }
 
 /* 

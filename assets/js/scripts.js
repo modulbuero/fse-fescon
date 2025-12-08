@@ -168,18 +168,20 @@
     function detectScrollPosition(){
         const targetScroll = window.innerHeight * 0.9;
         let hasReached = false;
-        $('.home header').addClass('isSpecialHeader')
-        $(window).on('scroll', function() {
-            const scrollPosition = $(window).scrollTop();
-            if (scrollPosition >= targetScroll && !hasReached) {
-                hasReached = true;
-                $('header').removeClass('isSpecialHeader')
-            }
-            
-            if (scrollPosition < targetScroll && hasReached) {
-                hasReached = false;
-                $('header').addClass('isSpecialHeader')
-            }
-        });
+        if($('body.home').length){
+            $('.home header').addClass('isSpecialHeader')
+            $(window).on('scroll', function() {
+                const scrollPosition = $(window).scrollTop();
+                if (scrollPosition >= targetScroll && !hasReached) {
+                    hasReached = true;
+                    $('header').removeClass('isSpecialHeader')
+                }
+                
+                if (scrollPosition < targetScroll && hasReached) {
+                    hasReached = false;
+                    $('header').addClass('isSpecialHeader')
+                }
+            });    
+        }
     }
 })(jQuery)
