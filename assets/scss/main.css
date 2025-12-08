@@ -59,6 +59,9 @@ body h3 {
 body h3 {
   font-size: var(--wp--preset--font-size--large);
 }
+body.home h1 {
+  font-size: 180px;
+}
 
 /* 
 	Floating image Container "DocuWare"
