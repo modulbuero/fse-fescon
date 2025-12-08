@@ -1,17 +1,16 @@
 .wp-site-blocks > main {
 	padding-bottom: 0;
 }
-/*Container*/
-.wp-site-blocks > main{ 
+
+/*Standards*/
+.wp-site-blocks > main .wp-block-post-content{ 
 	margin-top: 0;
 	padding-bottom: 0;
 	
 	.wp-block-cover__inner-container {
 		margin-bottom: var(--wp--style--root--padding-left) !important;
 	}
-	.mbfse-hero{
-		height: 100vh;
-	}
+	
 	/*  Buttons General style */
 	.wp-block-button__link.wp-element-button {
 		font-size: 18px;
@@ -34,11 +33,9 @@
 	}
 
 	/*p-tag spezial*/
-	>.entry-content{
-		>p{
-			padding-right: 200px;
-    		box-sizing: border-box;
-		}
+	>h2+p{
+		padding-right: 200px;
+		box-sizing: border-box;
 	}
 }
 
@@ -75,6 +72,21 @@ body {
 
 
 }
+
+/*Hero*/
+.home{
+	.wp-site-blocks .wp-block-post-content .mbfse-hero{
+		margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
+		height:100vh
+	}	
+}
+.page{
+	.wp-site-blocks .wp-block-post-content .mbfse-hero{
+		margin-top: calc(var(--mbfse--margin-bottom-block) * -1);
+		
+	}	
+}
+
 
 /* 
 	Floating image Container "DocuWare"
@@ -133,9 +145,6 @@ body {
 		}
 	}
 }
-
-
-
 
 
 /*
@@ -367,7 +376,6 @@ form .nf-form-content {
 		padding: 60px;
 	}
 }
-
 
 
 /* Webinar Cards */
