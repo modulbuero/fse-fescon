@@ -33,7 +33,6 @@
 	label {
       color: var(--wp--preset--color--contrast);
       opacity: 0.5;
-      font-size: 18px;
     }
 
     p {
@@ -48,14 +47,6 @@
 		}
 	 	@include row-info-p;
 }
-
-
-h1 {
-	font-size: 96px;
-  }
-h2 {
-	line-height: 120px !important;
-  }
 
 .single-termin-html{
 	h1 {
@@ -137,7 +128,6 @@ h2 {
 			}
 			@media (min-width: 1001px) and (max-width: 1200px) {
 				padding: 10px 30px;
-				font-size: 16px;
 			}
 			@media (max-width: 1000px) {
 				margin-left: 0;

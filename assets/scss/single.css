@@ -29,18 +29,9 @@
 .fescon-meta-fields label {
   color: var(--wp--preset--color--contrast);
   opacity: 0.5;
-  font-size: 18px;
 }
 .fescon-meta-fields p {
   margin-bottom: 0;
-}
-
-h1 {
-  font-size: 96px;
-}
-
-h2 {
-  line-height: 120px !important;
 }
 
 .single-termin-html h1 {
@@ -66,7 +57,6 @@ h2 {
 .single-termin-html .fescon-meta-fields label {
   color: var(--wp--preset--color--contrast);
   opacity: 0.5;
-  font-size: 18px;
 }
 .single-termin-html .fescon-meta-fields p {
   margin-bottom: 0;
@@ -94,7 +84,6 @@ h2 {
 .fescon-ref-info-fields label {
   color: var(--wp--preset--color--contrast);
   opacity: 0.5;
-  font-size: 18px;
 }
 .fescon-ref-info-fields p {
   margin-bottom: 0;
@@ -151,7 +140,6 @@ h2 {
 @media (min-width: 1001px) and (max-width: 1200px) {
   .fazit-wrap div > blockquote.wp-block-quote {
     padding: 10px 30px;
-    font-size: 16px;
   }
 }
 @media (max-width: 1000px) {

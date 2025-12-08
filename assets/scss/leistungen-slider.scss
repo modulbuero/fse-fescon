@@ -30,49 +30,6 @@
                     }
                     
                 }
-				/* Handle responsive font sizes */
-                .wp-block-heading {
-					@media (min-width: 1440px) and (max-width: 1600px)  {
-						font-size: 28px !important;
-					}
-					@media (min-width: 1200px) and (max-width: 1440px)  {
-						p {
-							font-size: 21px !important;
-							line-height: 38px !important;	
-						}
-						
-					}
-                    @media (min-width: 1024px) and (max-width: 1200px) {
-						margin-block-end: 0;
-						p {
-							font-size: 20px !important;
-							line-height: 38px !important;
-						}
-                	}  
-					@media (max-width: 1024px) {
-						margin-block-end: 0;
-						p {
-							font-size: 15px !important;
-							line-height: 30px !important;
-						}
-                	}  
-                }
-				@media (min-width: 1024px) and (max-width: 1200px) {					
-					h3 {
-						font-size: 20px !important;
-						line-height: 28px !important;
-					}
-					p {
-                    	font-size: 14px !important;
-						line-height: 25px !important;
-						margin-bottom: 0 !important;
-					}
-                }  
-				@media (max-width: 1024px) {
-					p{
-						font-size: 12px !important;
-					}	
-                }  
             }
 
             /*Rechte Spalte mit Bild*/
@@ -172,13 +129,11 @@
         @media (min-width: 1024px) and (max-width: 1440px) {
 			top: 40px;
 			height: unset;
-            font-size: 13px;
             padding: 5px 5px;
         }
 		@media (max-width: 1024px) {
 			top: 15px;
 			height: unset;
-            font-size: 11px;
 			padding: 5px 20px;
         }
     }

@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  /* Handle responsive font sizes */
 }
 @media (max-width: 1024px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
@@ -37,51 +36,6 @@
 @media (max-width: 1300px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-buttons .wp-block-button {
     top: 0;
-  }
-}
-@media (min-width: 1440px) and (max-width: 1600px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
-    font-size: 28px !important;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1440px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
-    font-size: 21px !important;
-    line-height: 38px !important;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
-    margin-block-end: 0;
-  }
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
-    font-size: 20px !important;
-    line-height: 38px !important;
-  }
-}
-@media (max-width: 1024px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading {
-    margin-block-end: 0;
-  }
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background .wp-block-heading p {
-    font-size: 15px !important;
-    line-height: 30px !important;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background h3 {
-    font-size: 20px !important;
-    line-height: 28px !important;
-  }
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background p {
-    font-size: 14px !important;
-    line-height: 25px !important;
-    margin-bottom: 0 !important;
-  }
-}
-@media (max-width: 1024px) {
-  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background p {
-    font-size: 12px !important;
   }
 }
 .leistungen-slider .swiper-wrapper .wp-block-columns figure {
@@ -174,7 +128,6 @@
   .leistungen-slider .menu-container {
     top: 40px;
     height: unset;
-    font-size: 13px;
     padding: 5px 5px;
   }
 }
@@ -182,7 +135,6 @@
   .leistungen-slider .menu-container {
     top: 15px;
     height: unset;
-    font-size: 11px;
     padding: 5px 20px;
   }
 }/*# sourceMappingURL=leistungen-slider.css.map */
