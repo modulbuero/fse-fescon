@@ -1,83 +1,75 @@
-.team-body {
-    padding-bottom: 80px !important;
-    height: 350px;
-}
-
-.team-card{
-  max-width: 572px;
-  background: transparent;
-  overflow: hidden;  
-  margin-bottom: 0 !important;
-  figure {
-	margin-bottom: 0 !important;
-	img{
-			display:block;
-			width:100%;
-			height:auto;
-			object-fit:cover;
-		}
-	}
-	>div {
-		background:#F4F4F4;   
-	}
-}
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-}
 
-.contac-info-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--wp--preset--color--tertiary);
-    width: 100%;
-    padding: 20px 35px;
-}
+  .team-card{
+        max-width: 572px;
+        background: transparent;
+        overflow: hidden;  
+        margin-bottom: 0 !important;
+        figure {
+            margin-bottom: 0 !important;
+            img{
+                display:block;
+                width:100%;
+                height:auto;
+                object-fit:cover;
+            }
+        }
 
-.plus-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    justify-items: center;
-}
+        .team-body {
+            padding-bottom: 80px !important;
+            height: 350px;
+            background:#F4F4F4;
 
-/* Hidden state */
-.contact-details {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding-top: 0;
+            .contac-info-wrapper {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: var(--wp--preset--color--tertiary);
+                width: 100%;
+                padding: 20px 35px;
+                box-sizing: border-box;
 
-    background-color: var(--wp--preset--color--tertiary);
+                /* Hidden state */
+                .contact-details {
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    padding-top: 0;
+                    background-color: var(--wp--preset--color--tertiary);
+                    transform: translateY(-10px);
+                    transition:
+                    max-height 0.35s ease-out,
+                    opacity 0.35s ease-out,
+                    transform 0.35s ease-out,
+                    padding-top 0.35s ease-out;
+                }
 
-    transform: translateY(-10px);
-    transition:
-        max-height 0.35s ease-out,
-        opacity 0.35s ease-out,
-        transform 0.35s ease-out,
-        padding-top 0.35s ease-out;
-}
+                .contact {
+                    margin-bottom: 0 !important;
+                    gap: 0 !important;
+                    &:after{
+                        content:"+";
+                        position: absolute;
+                        right: 60px;
+                    }
+                }
 
-.contac-info-wrapper:hover .contact-details {
-    max-height: 300px;
-    opacity: 1;
-    padding-top: 160px;
-    transform: translateY(0);
-}
-
-
-.contact {
-    margin-bottom: 0 !important;
-    gap: 0 !important;
-    &:after{
-		content:"+";
-		position: absolute;
-        right: 60px;
-	}
-}
-.contac-info-wrapper:hover .contact::after {
-    content: "–";
+                &:hover {
+                    .contact-details {
+                        max-height: 300px;
+                        opacity: 1;
+                        padding-top: 160px;
+                        transform: translateY(0);
+                    }
+                    .contact::after {
+                        content: "–";
+                    }
+                }
+            }
+        }
+    }
 }
