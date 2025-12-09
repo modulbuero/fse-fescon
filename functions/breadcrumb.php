@@ -7,7 +7,7 @@
 function theme_breadcrumb() {
     // Breadcrumb nur auf Frontend anzeigen
     if (is_admin()) return;
-    
+
     $separator = '<span class="breadcrumb-separator"><i class="bi bi-chevron-right"></i></span>';
     $home_title = 'fescon';
     
@@ -39,37 +39,44 @@ function theme_breadcrumb() {
         
         // Kategorien für normale Posts
         if ($post_type === 'post') {
-            $categories = get_the_category();
-            if ($categories) {
-                $category = $categories[0];
-                $cat_parents = array();
+            echo $separator;
+            echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+            echo '<a href="' . esc_url(get_permalink( get_page_by_path( 'blog' ) )) . '" itemprop="item">';
+            echo '<span itemprop="name">Blog</span></a>';
+            echo '<meta itemprop="position" content="' . $position++ . '" />';
+            echo '</li>';
+
+            // $categories = get_the_category();
+            // if ($categories) {
+            //     $category = $categories[0];
+            //     $cat_parents = array();
                 
-                // Eltern-Kategorien sammeln
-                while ($category->parent) {
-                    $category = get_category($category->parent);
-                    $cat_parents[] = $category;
-                }
+            //     // Eltern-Kategorien sammeln
+            //     while ($category->parent) {
+            //         $category = get_category($category->parent);
+            //         $cat_parents[] = $category;
+            //     }
                 
-                // Eltern-Kategorien ausgeben (umgekehrte Reihenfolge)
-                $cat_parents = array_reverse($cat_parents);
-                foreach ($cat_parents as $parent_cat) {
-                    echo $separator;
-                    echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-                    echo '<a href="' . esc_url(get_category_link($parent_cat->term_id)) . '" itemprop="item">';
-                    echo '<span itemprop="name">' . esc_html($parent_cat->name) . '</span></a>';
-                    echo '<meta itemprop="position" content="' . $position++ . '" />';
-                    echo '</li>';
-                }
+            //     // Eltern-Kategorien ausgeben (umgekehrte Reihenfolge)
+            //     $cat_parents = array_reverse($cat_parents);
+            //     foreach ($cat_parents as $parent_cat) {
+            //         echo $separator;
+            //         echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+            //         echo '<a href="' . esc_url(get_category_link($parent_cat->term_id)) . '" itemprop="item">';
+            //         echo '<span itemprop="name">' . esc_html($parent_cat->name) . '</span></a>';
+            //         echo '<meta itemprop="position" content="' . $position++ . '" />';
+            //         echo '</li>';
+            //     }
                 
-                // Aktuelle Kategorie
-                $main_category = $categories[0];
-                echo $separator;
-                echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-                echo '<a href="' . esc_url(get_category_link($main_category->term_id)) . '" itemprop="item">';
-                echo '<span itemprop="name">' . esc_html($main_category->name) . '</span></a>';
-                echo '<meta itemprop="position" content="' . $position++ . '" />';
-                echo '</li>';
-            }
+            //     // Aktuelle Kategorie
+            //     $main_category = $categories[0];
+            //     echo $separator;
+            //     echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+            //     echo '<a href="' . esc_url(get_category_link($main_category->term_id)) . '" itemprop="item">';
+            //     echo '<span itemprop="name">' . esc_html($main_category->name) . '</span></a>';
+            //     echo '<meta itemprop="position" content="' . $position++ . '" />';
+            //     echo '</li>';
+            // }
         }
         
         // Aktueller Beitrag

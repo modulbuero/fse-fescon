@@ -140,15 +140,25 @@
     function webinarSlider(){
         new Swiper('.swiper.webinar-slider', {
             slidesPerView: 1.5,
-            spaceBetween: 20,
-            
-            slidesPerGroup: 1,
-  
+            spaceBetween: 20,            
+            slidesPerGroup: 1,  
             navigation: {
                 nextEl: '.webinar-arrows .custom-next',
                 prevEl: '.webinar-arrows .custom-prev',
             },
         })
+
+        new Swiper('.swiper.webinar-slider.fescon-webinar', {
+            slidesPerView: 2.5,
+            spaceBetween: 20,            
+            slidesPerGroup: 1,  
+            navigation: {
+                nextEl: '.webinar-arrows .custom-next',
+                prevEl: '.webinar-arrows .custom-prev',
+            },
+        })
+        
+
     }
 
     function refSlider(){

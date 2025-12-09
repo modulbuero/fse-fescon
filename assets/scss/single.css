@@ -85,6 +85,18 @@
   color: #ccc;
 }
 
+body.single {
+  ---fescon-blog-abstand:50px;
+}
+body.single .wp-site-blocks > main {
+  margin-block-start: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
+  margin-top: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
+}
+body.single .wp-site-blocks > main .breadcrumb-navigation,
+body.single .wp-site-blocks > main .parts-single-template > form {
+  margin-bottom: var(---fescon-blog-abstand);
+}
+
 /* Referenzen */
 .fescon-ref-info-fields {
   background-color: var(--wp--preset--color--quaternary);

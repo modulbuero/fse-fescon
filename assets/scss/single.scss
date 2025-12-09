@@ -90,6 +90,19 @@
 	}
 }
 
+body.single{
+	---fescon-blog-abstand:50px;
+	.wp-site-blocks > main{
+	    margin-block-start: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
+    	margin-top: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
+
+		.breadcrumb-navigation,
+		.parts-single-template>form{
+			margin-bottom: var(---fescon-blog-abstand);
+		}
+	}
+}
+
 /* Referenzen */
 .fescon-ref-info-fields {
     @include meta-infos-wrapper;
