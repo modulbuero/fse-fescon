@@ -52,8 +52,7 @@
 
 /* Blog-Loop-Container in Blogpage */
 .blogs-wrapper {
-  padding-right: 150px !important;
-  padding-left: 150px !important;
+  width: 80%;
   --fescon-blog-loop-title-size:var(--wp--preset--font-size--x-large);
 }
 .blogs-wrapper ul.wp-block-post-template {
@@ -193,8 +192,11 @@
   list-style-type: none;
   gap: 20px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 30px !important;
   padding-bottom: 60px;
+  margin-bottom: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 80%;
 }
 .wp-block-categories-list li a {
   background-color: var(--wp--preset--color--tertiary);

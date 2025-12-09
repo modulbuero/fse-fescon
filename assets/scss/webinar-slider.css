@@ -50,4 +50,9 @@
 
 body.fescon-webinare .webinar-arrows {
   bottom: -80px;
+}
+body.fescon-webinare .wp-block-categories-list {
+  border-bottom: none !important;
+  margin-left: 0 !important;
+  width: 100%;
 }/*# sourceMappingURL=webinar-slider.css.map */

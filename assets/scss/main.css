@@ -25,6 +25,7 @@ body {
 }
 body h1 {
   font-size: var(--wp--preset--font-size--xx-large);
+  margin-bottom: 10px !important;
 }
 body h2 {
   font-size: var(--wp--preset--font-size--xx-large);
@@ -42,6 +43,10 @@ body.home h1 {
 /*Align title marginTop*/
 body:not(.page-template-page-no-title) .wp-site-blocks > main {
   margin-top: 80px;
+}
+
+.wp-site-blocks .wp-block-post-content > p:has(+ .wp-block-heading, + div, + table, + .wp-block-table, + ul, + ol) {
+  margin-bottom: 100px !important;
 }
 
 /*Hero*/
