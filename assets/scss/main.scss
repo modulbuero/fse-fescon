@@ -66,6 +66,10 @@ body.page{
 			width: 100% !important;
 			margin-bottom: 0 !important;
 
+			@media (max-width: 1800px) {
+				padding-left: var(--wp--style--root--padding-left);
+			}			
+
 			:last-child{
 				padding-bottom: 55px;
 			}
