@@ -51,6 +51,11 @@ body {
 
 }
 
+/*Align title marginTop*/
+body:not(.page-template-page-no-title) .wp-site-blocks > main {
+    margin-top: 80px;
+}
+
 /*Hero*/
 body.page{
 	.wp-site-blocks .wp-block-post-content .mbfse-hero{
@@ -293,6 +298,9 @@ body.page{
 	}
 }
 form .nf-form-content {
+	.nf-before-field {
+		display:none;
+	} 
 	> nf-fields-wrap nf-field {	
 	  display: flex;
 	  width: 100%;

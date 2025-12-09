@@ -66,6 +66,9 @@ header.isSpecialHeader > div figure {
 header.isSpecialHeader > div p {
   opacity: 0;
 }
+header:not(.isSpecialHeader) {
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1019607843);
+}
 
 footer {
   --mbfse--padding-footer:40px 0;
