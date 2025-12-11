@@ -6,19 +6,21 @@
 
   .team-card{
         margin-bottom: 0 !important;
+        display: flex; 
+        flex-direction: column;
+        background: #F4F4F4; 
 
         figure {
             margin-bottom: 0 !important;
         }
 
         .team-body {
-            padding: 50px 60px 80px !important;
-            height: 350px;
-            background:#F4F4F4;
-
+            padding: 50px 60px 120px !important;
+            flex:1;
+        
             .contac-info-wrapper {
                 position: absolute;
-                bottom:-20px;
+                bottom:0;
                 left: 0;
                 background-color: var(--wp--preset--color--tertiary);
                 width: 100%;
