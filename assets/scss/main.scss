@@ -50,43 +50,9 @@ body {
 	}
   }
 
-}
-
-/*Align title marginTop*/
-body:not(.page-template-page-no-title) .wp-site-blocks > main {
-    margin-top: 80px;
-}
-
-/*Hero*/
-body.page{
-	.wp-site-blocks .wp-block-post-content .mbfse-hero{
-		margin-top: calc(var(--mbfse--margin-bottom-block) * -1);
-		padding:0;
-		.wp-block-cover__inner-container{
-			background: linear-gradient(0deg, rgb(0 0 0 / 40%) 30% 50%, rgba(255, 255, 255, 0) 100%);
-			width: 100% !important;
-			margin-bottom: 0 !important;
-
-			@media (max-width: 1800px) {
-				padding-left: var(--wp--style--root--padding-left);
-			}			
-
-			:last-child{
-				padding-bottom: 55px;
-			}
-		}
-	}
-
-	/*Home has SpezialHeader*/
-	&.home{
-		.wp-site-blocks .wp-block-post-content .mbfse-hero{
-			margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
-			height:100vh
-		}
-	}
-	/*
-		Categories
-	*/
+  /*
+	lobal Categories style
+  */
 	.taxonomy-category {
 		display: flex;
 		gap: 10px;
@@ -127,6 +93,7 @@ body.page{
 		gap:20px;
 		border-bottom:1px solid #ccc;
 		padding-bottom: 60px;
+		padding: 60px 0;
 		margin-bottom: 0 !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
@@ -136,6 +103,40 @@ body.page{
 		}	
 	}
 
+}
+
+/*Align title marginTop*/
+body:not(.page-template-page-no-title) .wp-site-blocks > main {
+    margin-top: 80px;
+}
+
+/*Hero*/
+body.page{
+	.wp-site-blocks .wp-block-post-content .mbfse-hero{
+		margin-top: calc(var(--mbfse--margin-bottom-block) * -1);
+		padding:0;
+		.wp-block-cover__inner-container{
+			background: linear-gradient(0deg, rgb(0 0 0 / 40%) 30% 50%, rgba(255, 255, 255, 0) 100%);
+			width: 100% !important;
+			margin-bottom: 0 !important;
+
+			@media (max-width: 1800px) {
+				padding-left: var(--wp--style--root--padding-left);
+			}			
+
+			:last-child{
+				padding-bottom: 55px;
+			}
+		}
+	}
+
+	/*Home has SpezialHeader*/
+	&.home{
+		.wp-site-blocks .wp-block-post-content .mbfse-hero{
+			margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
+			height:100vh
+		}
+	}
 	
 }
 
