@@ -12,6 +12,12 @@
   flex-direction: column;
 }
 
+.related-webinars-wrapper > div {
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+  margin-bottom: var(--mbfse--margin-bottom-block);
+}
+
 .fescon-meta-fields {
   background-color: var(--wp--preset--color--quaternary);
   padding: 60px;
@@ -38,6 +44,9 @@
   width: 65%;
   margin-left: 40px !important;
   margin-top: 50px;
+}
+.single-termin-html h2 {
+  font-size: var(--wp--preset--font-size--h2-x-large);
 }
 .single-termin-html .fescon-meta-fields {
   background-color: var(--wp--preset--color--quaternary);

@@ -2,15 +2,27 @@
 *	Single Content / Metabox
 *	Used in Referenzen, Webinare
 */
-.referenzen-webinar-content-fields{
+
+@mixin styled-padding { 
 	padding-right: 100px !important;
 	padding-left: 100px !important;
+}
+.referenzen-webinar-content-fields{
+	@include styled-padding;
 	gap: 100px !important;
+
 	.fescon-meta-fields{
 		div{
 			display:flex;
 			flex-direction: column;
 		}
+	}
+}
+
+.related-webinars-wrapper {
+	> div {
+		@include styled-padding;
+		margin-bottom: var(--mbfse--margin-bottom-block);
 	}
 }
 
@@ -53,6 +65,9 @@
 		width: 65%;
 		margin-left: 40px !important;
 		margin-top: 50px
+	}
+	h2 {
+		font-size: var(--wp--preset--font-size--h2-x-large);
 	}
 	.fescon-meta-fields {
 		@include meta-infos-wrapper;
