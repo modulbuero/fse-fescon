@@ -99,6 +99,10 @@ body.single{
 		.parts-single-template>form{
 			margin-bottom: var(---fescon-blog-abstand);
 		}
+
+		.breadcrumb-navigation {
+			 font-size: var(--wp--preset--font-size--small);
+		}
 	}
 }
 

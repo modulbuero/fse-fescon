@@ -17,7 +17,7 @@
 }
 .team-grid .team-card .team-body .contac-info-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
   background-color: var(--wp--preset--color--tertiary);
   width: 100%;
