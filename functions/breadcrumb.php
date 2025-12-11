@@ -28,7 +28,7 @@ function theme_breadcrumb() {
         $post_type_obj = get_post_type_object($post_type);
         
         // Post Type Archive Link (wenn nicht "post")
-        if ($post_type !== 'post' && $post_type_obj->has_archive) {
+        if ($post_type !== 'post' && $post_type_obj->has_archive && $post_type !== 'termin') {
             echo $separator;
             echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
             echo '<a href="' . esc_url(get_post_type_archive_link($post_type)) . '" itemprop="item">';
@@ -44,40 +44,25 @@ function theme_breadcrumb() {
             echo '<a href="' . esc_url(get_permalink( get_page_by_path( 'blog' ) )) . '" itemprop="item">';
             echo '<span itemprop="name">Blog</span></a>';
             echo '<meta itemprop="position" content="' . $position++ . '" />';
-            echo '</li>';
+            echo '</li>';    
 
-            // $categories = get_the_category();
-            // if ($categories) {
-            //     $category = $categories[0];
-            //     $cat_parents = array();
-                
-            //     // Eltern-Kategorien sammeln
-            //     while ($category->parent) {
-            //         $category = get_category($category->parent);
-            //         $cat_parents[] = $category;
-            //     }
-                
-            //     // Eltern-Kategorien ausgeben (umgekehrte Reihenfolge)
-            //     $cat_parents = array_reverse($cat_parents);
-            //     foreach ($cat_parents as $parent_cat) {
-            //         echo $separator;
-            //         echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-            //         echo '<a href="' . esc_url(get_category_link($parent_cat->term_id)) . '" itemprop="item">';
-            //         echo '<span itemprop="name">' . esc_html($parent_cat->name) . '</span></a>';
-            //         echo '<meta itemprop="position" content="' . $position++ . '" />';
-            //         echo '</li>';
-            //     }
-                
-            //     // Aktuelle Kategorie
-            //     $main_category = $categories[0];
-            //     echo $separator;
-            //     echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-            //     echo '<a href="' . esc_url(get_category_link($main_category->term_id)) . '" itemprop="item">';
-            //     echo '<span itemprop="name">' . esc_html($main_category->name) . '</span></a>';
-            //     echo '<meta itemprop="position" content="' . $position++ . '" />';
-            //     echo '</li>';
-            // }
         }
+
+        // Kategorien für normale Posts
+        if ($post_type === 'termin') {
+            $slug = 'fescon-webinare';
+            $post_type = 'page'; // z.B. 'post', 'page' oder dein CPT
+            $postpath = get_page_by_path($slug, OBJECT, $post_type);
+
+            echo $separator;
+            echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+            echo '<a href="' . esc_url(get_permalink( $postpath->ID )) . '" itemprop="item">';
+            echo '<span itemprop="name">Webinare</span></a>';
+            echo '<meta itemprop="position" content="' . $position++ . '" />';
+            echo '</li>';    
+
+        }
+
         
         // Aktueller Beitrag
         echo $separator;

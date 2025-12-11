@@ -1,12 +1,18 @@
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group parts-single-template fse-fescon">
+<div class="wp-block-group parts-single-template fse-fescon-post">
     <!-- wp:fse-fescon/breadcrumb /-->
     <!-- wp:search {"label":"Search","placeholder":"Suche","buttonText":"Search"} /-->
     <!-- wp:categories /-->
 
     <div class="wp-block-group single-editor-content">
         <!-- wp:post-featured-image {"align":"wide","className":"has-margin-bottom-block", "sizeSlug":"full"} /-->
-        <!-- wp:post-terms {"term":"category"} /-->
+        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+        <div class="wp-block-group">
+            <!-- wp:post-terms {"term":"category"} /-->
+            <!-- wp:post-date /-->
+        </div>
+        <!-- /wp:group -->
+            
         <!-- wp:post-title {"level":1} /-->
         <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
         <!-- wp:separator -->
