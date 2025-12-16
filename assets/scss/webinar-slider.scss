@@ -6,6 +6,9 @@
 		
 		.swiper-wrapper{
 			height:auto;
+			@media (max-width: 550px) { 
+					height: 400px;
+				}
 			margin-bottom:0;
 			.swiper-slide{
 				background-color: var(--wp--preset--color--quaternary);
@@ -30,6 +33,9 @@
 					align-items: center;
 					position: absolute;
 					bottom: -50px;
+					@media (max-width: 550px) { 
+						bottom: 0;
+					}
 					> div {
 						margin: 0 !important;
 					}
@@ -37,6 +43,10 @@
 			}
 			.swiper-slide-active{
 				background-color: var(--wp--preset--color--tertiary);
+				@media (max-width: 550px) { 
+					width: 100vw !important;
+					margin-right: 0 !important;	
+				}
 				.taxonomy-category.wp-block-post-terms a {
 					background-color: var(--wp--preset--color--quaternary);
 				}

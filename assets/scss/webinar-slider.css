@@ -5,6 +5,11 @@
   height: auto;
   margin-bottom: 0;
 }
+@media (max-width: 550px) {
+  .query-loop-termine .webinar-slider .swiper-wrapper {
+    height: 400px;
+  }
+}
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide {
   background-color: var(--wp--preset--color--quaternary);
 }
@@ -30,11 +35,22 @@
   position: absolute;
   bottom: -50px;
 }
+@media (max-width: 550px) {
+  .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns {
+    bottom: 0;
+  }
+}
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns > div {
   margin: 0 !important;
 }
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
   background-color: var(--wp--preset--color--tertiary);
+}
+@media (max-width: 550px) {
+  .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active {
+    width: 100vw !important;
+    margin-right: 0 !important;
+  }
 }
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide-active .taxonomy-category.wp-block-post-terms a {
   background-color: var(--wp--preset--color--quaternary);
