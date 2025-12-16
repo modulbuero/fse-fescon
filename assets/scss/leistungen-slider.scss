@@ -4,12 +4,20 @@
         .wp-block-columns {
             gap: 0 !important;
             margin-bottom: 50px !important;
+             @media (max-width: 550px) {
+                   flex-direction: column-reverse;
+            }
             .has-background {
                 margin-bottom: 20px;
                 margin-top: 20px;
                 gap:50px;
                 @media (max-width: 550px) {
                     gap: 0;
+                    text-align: center;
+                    min-height: 300px;
+                    h3 {
+                        margin-bottom: 0 !important;
+                    }
                 }
 				@media (max-width: 1024px) {
                     margin-bottom: 5px;
@@ -20,6 +28,9 @@
                 justify-content: center;
                 justify-items: center;
                 .wp-block-buttons {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
                     .wp-block-button {
                         position: absolute;
                         top: 60px;
@@ -27,8 +38,8 @@
 						@media (min-width: 1300px) and (max-width: 1700px) {
                             top: 10px;
                         }
-                        @media (max-width: 1300px) {
-                            top: 0;
+                        @media (max-width: 550px) {
+                            top: 30px;
                         }
                     }
                     
@@ -38,6 +49,9 @@
             /*Rechte Spalte mit Bild*/
             figure{
                 height: 600px;
+                @media (max-width: 550px) {
+                    height: 270px;
+                }
                 display: flex;
                 img{
                     object-fit: cover;
@@ -116,7 +130,7 @@
                 opacity: 1;
                 font-size: 18px;
                 @media (max-width: 550px) {
-    	            font-size: var(--wp--preset--mobile--font-size--small);
+    	            font-size: var(--wp--preset--font-size--small);
                     padding: 10px;
                 }
                 width: auto;
@@ -142,8 +156,8 @@
 			height: unset;
             padding: 5px 5px;
         }
-		@media (max-width: 1024px) {
-			top: 15px;
+		@media (max-width: 520px) {
+			top: 43%;
 			height: unset;
 			padding: 5px 20px;
         }

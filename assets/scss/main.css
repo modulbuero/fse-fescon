@@ -2,6 +2,11 @@
   --mbfse--margin-bottom-inline:40px;
   padding-bottom: 0;
 }
+@media (max-width: 550px) {
+  .wp-site-blocks > main {
+    --mbfse--margin-bottom-inline:10px;
+  }
+}
 
 /*Standards*/
 .wp-site-blocks > main .wp-block-post-content {
@@ -29,10 +34,6 @@ body {
   --wp--preset--font-size--medium:22px;
   --wp--preset--font-size--small:16px;
   /*  Mobile font sizes  */
-  --wp--preset--mobile--font-size--x-large:56px;
-  --wp--preset--mobile--font-size--large:40px;
-  --wp--preset--mobile--font-size--medium:24px;
-  --wp--preset--mobile--font-size--small:14px;
   /*  Global font defaults  */
   /*
   lobal Categories style
@@ -42,24 +43,20 @@ body {
   body {
     --wp--style--root--padding-right: 15px;
     --wp--style--root--padding-left: 15px;
+    --wp--preset--font-size--xx-large:56px;
+    --wp--preset--font-size--h2-x-large:56px;
+    --wp--preset--font-size--x-large:40px;
+    --wp--preset--font-size--large:40px;
+    --wp--preset--font-size--medium:24px;
+    --wp--preset--font-size--small:14px;
   }
 }
 body h1 {
   font-size: var(--wp--preset--font-size--xx-large);
   margin-bottom: 10px !important;
 }
-@media (max-width: 550px) {
-  body h1 {
-    font-size: var(--wp--preset--mobile--font-size--x-large);
-  }
-}
 body h2 {
   font-size: var(--wp--preset--font-size--xx-large);
-}
-@media (max-width: 550px) {
-  body h2 {
-    font-size: var(--wp--preset--mobile--font-size--large);
-  }
 }
 body h3 {
   font-size: var(--wp--preset--font-size--x-large);
@@ -68,13 +65,18 @@ body h3 {
   font-size: var(--wp--preset--font-size--large);
 }
 @media (max-width: 550px) {
+  body h3 {
+    font-size: var(--wp--preset--font-size--medium);
+  }
+}
+@media (max-width: 550px) {
   body p {
-    font-size: var(--wp--preset--mobile--font-size--small) !important;
+    font-size: var(--wp--preset--font-size--small) !important;
   }
 }
 @media (max-width: 550px) {
   body .has-large-font-size {
-    font-size: var(--wp--preset--mobile--font-size--small) !important;
+    font-size: var(--wp--preset--font-size--small) !important;
   }
 }
 body.home h1 {
@@ -82,7 +84,7 @@ body.home h1 {
 }
 @media (max-width: 550px) {
   body.home h1 {
-    font-size: var(--wp--preset--mobile--font-size--x-large) !important;
+    font-size: var(--wp--preset--font-size--x-large) !important;
   }
 }
 body .taxonomy-category {
