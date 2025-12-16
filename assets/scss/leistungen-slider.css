@@ -17,6 +17,11 @@
   justify-content: center;
   justify-items: center;
 }
+@media (max-width: 550px) {
+  .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
+    gap: 0;
+  }
+}
 @media (max-width: 1024px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns .has-background {
     margin-bottom: 5px;
@@ -85,6 +90,12 @@
   /*Menu*/
   /**/
 }
+@media (max-width: 550px) {
+  .leistungen-slider .menu-container {
+    width: calc(100% - 75px);
+    left: 15px;
+  }
+}
 .leistungen-slider .menu-container #slider {
   position: absolute;
   height: calc(100% - 20px);
@@ -114,6 +125,12 @@
   height: auto;
   color: #000;
   transition: all 0.3s ease;
+}
+@media (max-width: 550px) {
+  .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints {
+    font-size: var(--wp--preset--mobile--font-size--small);
+    padding: 10px;
+  }
 }
 .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints.swiper-pagination-bullet-active {
   color: #fff;
