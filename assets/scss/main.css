@@ -246,6 +246,12 @@ body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 550px) {
+  .hero-split > .wp-block-columns .wp-block-column:nth-child(2) {
+    margin-top: 80px !important;
+    padding-bottom: 50px;
+  }
+}
 .hero-split .hero-float {
   position: absolute;
   z-index: 2;
@@ -253,6 +259,11 @@ body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
   bottom: -25%;
   width: min(560px, 45vw);
   pointer-events: none;
+}
+@media (max-width: 550px) {
+  .hero-split .hero-float {
+    top: 60px;
+  }
 }
 @media (max-width: 1024px) {
   .hero-split .hero-float {

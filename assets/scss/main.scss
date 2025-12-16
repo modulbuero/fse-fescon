@@ -232,6 +232,10 @@ body.page{
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			@media (max-width: 550px) {
+				margin-top: 80px !important;
+				padding-bottom: 50px;
+			}
 		}
 	}	
 
@@ -243,6 +247,9 @@ body.page{
 		bottom: -25%;
 		width: min(560px, 45vw);
 		pointer-events: none;
+		@media (max-width: 550px) {
+			top: 60px;
+		}
 		@media (max-width: 1024px) {
 			width: min(360px, 45vw);
 		}
