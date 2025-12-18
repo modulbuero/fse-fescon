@@ -7,6 +7,14 @@
     --mbfse--margin-bottom-inline:10px;
   }
 }
+@media (max-width: 550px) {
+  .wp-site-blocks > main .wp-block-group.alignfull > .wp-block-columns {
+    padding: 0 !important;
+  }
+  .wp-site-blocks > main .is-layout-flex {
+    gap: 20px !important;
+  }
+}
 
 /*Standards*/
 .wp-site-blocks > main .wp-block-post-content {

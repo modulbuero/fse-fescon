@@ -4,6 +4,14 @@
     	--mbfse--margin-bottom-inline:10px;	
     }
 	padding-bottom: 0;
+	@media (max-width: 550px) {
+		.wp-block-group.alignfull > .wp-block-columns {
+			padding: 0 !important;
+		}
+		.is-layout-flex {
+			gap: 20px !important;
+		}
+    }
 }
 
 /*Standards*/
@@ -23,8 +31,6 @@
     	}
 	}
 }
-
-
 
 /*Fonts*/
 body {
@@ -89,6 +95,8 @@ body {
     	}
 	}
   }
+  
+
 
   /*
 	lobal Categories style

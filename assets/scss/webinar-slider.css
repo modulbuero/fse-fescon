@@ -37,7 +37,7 @@
 }
 @media (max-width: 550px) {
   .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns {
-    bottom: 0;
+    width: 90%;
   }
 }
 .query-loop-termine .webinar-slider .swiper-wrapper .swiper-slide .webinar-btns > div {
@@ -62,6 +62,14 @@
   font-size: 40px;
   position: absolute;
   bottom: 5px;
+}
+@media (max-width: 550px) {
+  .webinar-arrows {
+    font-size: 20px;
+    gap: 5px;
+    bottom: -470px;
+    right: 50%;
+  }
 }
 
 body.fescon-webinare .webinar-arrows {
