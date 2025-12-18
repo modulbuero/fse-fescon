@@ -137,43 +137,67 @@
     /**
      * CustomSwiper with outofthebox Navigation
      */
-    function webinarSlider(){
-        new Swiper('.swiper.webinar-slider', {
-            slidesPerView: 1.5,
-            spaceBetween: 20,            
-            slidesPerGroup: 1,  
+    function webinarSlider() {
+        // default webinar slider
+        new Swiper('.swiper.webinar-slider:not(.fescon-webinar)', {
+            slidesPerGroup: 1,
             navigation: {
-                nextEl: '.webinar-arrows .custom-next',
-                prevEl: '.webinar-arrows .custom-prev',
+            nextEl: '.webinar-arrows .custom-next',
+            prevEl: '.webinar-arrows .custom-prev',
             },
-        })
 
+            // mobile
+            slidesPerView: 1,
+            spaceBetween: 16,
+
+            // bigger screens
+            breakpoints: {
+            550: { slidesPerView: 1.5, spaceBetween: 20 },
+            }
+        });
+
+        // fescon-webinar variant
         new Swiper('.swiper.webinar-slider.fescon-webinar', {
-            slidesPerView: 2.5,
-            spaceBetween: 20,            
-            slidesPerGroup: 1,  
+            slidesPerGroup: 1,
             navigation: {
-                nextEl: '.webinar-arrows .custom-next',
-                prevEl: '.webinar-arrows .custom-prev',
+            nextEl: '.webinar-arrows .custom-next',
+            prevEl: '.webinar-arrows .custom-prev',
             },
-        })
-        
+
+            // mobile
+            slidesPerView: 1,
+            spaceBetween: 16,
+
+            // ✅ bigger screens
+            breakpoints: {
+            550: { slidesPerView: 2.5, spaceBetween: 20 },
+            }
+        });
 
     }
 
-    function refSlider(){
-        new Swiper('.referenz-slider',{
-            slidesPerView: 3,
-            spaceBetween: 20,
+    function refSlider() {
+        new Swiper('.referenz-slider', {
             loop: true,
             slidesPerGroup: 1,
-  
             navigation: {
-                nextEl: '.referenz-arrows .custom-next',
-                prevEl: '.referenz-arrows .custom-prev',
+            nextEl: '.referenz-arrows .custom-next',
+            prevEl: '.referenz-arrows .custom-prev',
             },
-        })
-    }
+
+            // responsive
+            slidesPerView: 1,
+            spaceBetween: 16,
+
+            breakpoints: {
+            550: {          // mobile  breakpoint
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+            }
+        });
+    }   
+
 
     function detectScrollPosition(){
         const targetScroll = window.innerHeight * 0.9;

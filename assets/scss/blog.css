@@ -21,6 +21,11 @@
 .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container h3 {
   font-size: var(--fescon-blog-loop-title-size);
 }
+@media (max-width: 550px) {
+  .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container h3 {
+    font-size: var(--wp--preset--font-size--medium);
+  }
+}
 .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container .wp-block-post-date {
   min-width: 120px;
 }

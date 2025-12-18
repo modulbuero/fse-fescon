@@ -20,6 +20,10 @@
 				justify-content: space-between;
 				h3{
 					font-size: var(--fescon-blog-loop-title-size);
+					@media (max-width: 550px) {
+    					font-size: var(--wp--preset--font-size--medium);
+    				}
+
 				}
 				.wp-block-post-date {
 					min-width: 120px;

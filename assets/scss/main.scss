@@ -284,6 +284,15 @@ body.page{
 	.referenz-arrows {
 		display: flex;
 		gap: 15px;
+
+		@media (max-width: 550px) {
+			position: absolute;
+    		bottom: -400px;
+    		font-size: 20px;
+    		gap: 5px;
+   	    	right: 50%;
+		}
+		
 	}
 	.wp-block-group {
 		padding: 0;
@@ -303,9 +312,12 @@ body.page{
 				box-shadow: none;
 				border-radius: 0 ;
 				background-image: none;
-				padding: 60px;
+				padding: 40px 20px !important;
 				overflow: initial;
-				margin-right: 40px !important;
+				height: 370px;
+				@media (max-width: 550px) {
+					height: 330px;
+				}
 				
 				.query-text-container{
 					margin-bottom:30px;
