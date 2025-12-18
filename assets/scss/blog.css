@@ -38,11 +38,38 @@
   --fescon-blog-loop-title-size:var(--wp--preset--font-size--large);
   padding: 140px 40px;
 }
+@media (max-width: 550px) {
+  .posts-cover {
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0;
+    padding-left: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 550px) {
+  .posts-cover img {
+    position: relative !important;
+  }
+}
 .posts-cover .wp-block-cover__inner-container {
   width: 55% !important;
 }
+@media (max-width: 550px) {
+  .posts-cover .wp-block-cover__inner-container {
+    width: 100% !important;
+  }
+}
 .posts-cover .wp-block-cover__inner-container > div {
   padding: 60px 44px;
+}
+@media (max-width: 550px) {
+  .posts-cover .wp-block-cover__inner-container > div {
+    padding: 60px 0 100px 0;
+  }
 }
 .posts-cover .wp-block-cover__inner-container > div .wp-block-query {
   margin-bottom: 40px !important;

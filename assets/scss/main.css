@@ -14,6 +14,9 @@
   .wp-site-blocks > main .is-layout-flex {
     gap: 20px !important;
   }
+  .wp-site-blocks > main .wp-block-query .wp-block-post-template li .wp-block-post-title {
+    font-size: var(--wp--preset--font-size--medium);
+  }
 }
 
 /*Standards*/
