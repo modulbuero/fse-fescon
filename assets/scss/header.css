@@ -76,6 +76,11 @@ footer {
 footer * {
   font-size: 18px;
 }
+@media (max-width: 550px) {
+  footer * {
+    font-size: 14px;
+  }
+}
 footer .parts-footer {
   min-width: 50%;
 }
@@ -87,6 +92,12 @@ footer .parts-footer .wp-block-navigation__container {
   flex-direction: column;
   gap: 5px !important;
 }
+@media (max-width: 550px) {
+  footer .parts-footer > div {
+    display: flex;
+    flex-wrap: unset !important;
+  }
+}
 footer > div > div:last-of-type {
   display: flex;
   flex-direction: column;
@@ -97,4 +108,16 @@ footer > div > div:last-of-type figure {
 footer > div > div:last-of-type p {
   margin-bottom: 0;
   margin-top: auto;
+}
+@media (max-width: 550px) {
+  footer > div > div:last-of-type p {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 550px) {
+  footer > div {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 60px !important;
+  }
 }/*# sourceMappingURL=header.css.map */
