@@ -2,19 +2,20 @@
 *	Single Content / Metabox
 *	Used in Referenzen, Webinare
 */
-.referenzen-webinar-content-fields {
-  padding-right: 100px !important;
-  padding-left: 100px !important;
+.wp-block-group .referenzen-webinar-content-fields {
+  padding-right: var(--wp--style--root--padding-right);
+  padding-left: var(--wp--style--root--padding-left);
   gap: 100px !important;
+  margin-bottom: var(--mbfse--margin-bottom-block);
 }
-.referenzen-webinar-content-fields .fescon-meta-fields div {
+.wp-block-group .referenzen-webinar-content-fields .fescon-meta-fields div {
   display: flex;
   flex-direction: column;
 }
 
 .related-webinars-wrapper > div {
-  padding-right: 100px !important;
-  padding-left: 100px !important;
+  padding-right: var(--wp--style--root--padding-right);
+  padding-left: var(--wp--style--root--padding-left);
   margin-bottom: var(--mbfse--margin-bottom-block);
 }
 
@@ -41,12 +42,10 @@
 }
 
 .single-termin-html h1 {
-  width: 65%;
-  margin-left: 40px !important;
-  margin-top: 50px;
+  font-size: var(--wp--preset--font-size--h2-x-large);
 }
 .single-termin-html h2 {
-  font-size: var(--wp--preset--font-size--h2-x-large);
+  font-size: var(--wp--preset--font-size--x-large);
 }
 .single-termin-html .fescon-meta-fields {
   background-color: var(--wp--preset--color--quaternary);
@@ -93,19 +92,16 @@
   color: #ccc;
 }
 
-body.single {
+body.single:not(.referenzen-template-default) {
   ---fescon-blog-abstand:50px;
 }
-body.single .wp-site-blocks > main {
+body.single:not(.referenzen-template-default) .wp-site-blocks > main {
   margin-block-start: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
   margin-top: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
 }
-body.single .wp-site-blocks > main .breadcrumb-navigation,
-body.single .wp-site-blocks > main .parts-single-template > form {
+body.single:not(.referenzen-template-default) .wp-site-blocks > main .breadcrumb-navigation,
+body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-single-template > form {
   margin-bottom: var(---fescon-blog-abstand);
-}
-body.single .wp-site-blocks > main .breadcrumb-navigation {
-  font-size: var(--wp--preset--font-size--small);
 }
 
 /* Referenzen */
@@ -216,6 +212,9 @@ ol.breadcrumb {
   gap: 15px;
   padding-inline-start: 0;
 }
+ol.breadcrumb li {
+  font-size: var(--wp--preset--font-size--small);
+}
 ol.breadcrumb li::marker {
   display: none;
   content: "";
@@ -225,4 +224,7 @@ ol.breadcrumb li a {
 }
 ol.breadcrumb .bi-chevron-right::before {
   font-size: 10px;
+}
+ol.breadcrumb .breadcrumb-separator {
+  top: -6px;
 }/*# sourceMappingURL=single.css.map */

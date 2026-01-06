@@ -15,7 +15,7 @@
 		li {
 			box-shadow: none !important;
 			background-image: none !important;
-			padding: 60px var(--mbfse--margin-bottom-inline);
+			padding: 60px 0;
 			.query-text-container{
 				justify-content: space-between;
 				h3{
@@ -72,7 +72,7 @@
 				margin-bottom: 40px !important;
 				ul.wp-block-post-template{
 					li {
-						padding: 30px var(--mbfse--margin-bottom-inline);
+						padding: 30px 0;
 					}
 				}
 			}

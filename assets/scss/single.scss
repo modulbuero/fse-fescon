@@ -4,13 +4,14 @@
 */
 
 @mixin styled-padding { 
-	padding-right: 100px !important;
-	padding-left: 100px !important;
+	padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
 }
-.referenzen-webinar-content-fields{
+.wp-block-group .referenzen-webinar-content-fields{
 	@include styled-padding;
 	gap: 100px !important;
-
+	margin-bottom: var(--mbfse--margin-bottom-block);
+	
 	.fescon-meta-fields{
 		div{
 			display:flex;
@@ -62,12 +63,10 @@
 
 .single-termin-html{
 	h1 {
-		width: 65%;
-		margin-left: 40px !important;
-		margin-top: 50px
+		font-size: var(--wp--preset--font-size--h2-x-large);
 	}
 	h2 {
-		font-size: var(--wp--preset--font-size--h2-x-large);
+		font-size: var(--wp--preset--font-size--x-large);
 	}
 	.fescon-meta-fields {
 		@include meta-infos-wrapper;
@@ -104,7 +103,7 @@
 	}
 }
 
-body.single{
+body.single:not(.referenzen-template-default){
 	---fescon-blog-abstand:50px;
 	.wp-site-blocks > main{
 	    margin-block-start: calc(var(--mbfse-header-height) + var(---fescon-blog-abstand));
@@ -115,11 +114,10 @@ body.single{
 			margin-bottom: var(---fescon-blog-abstand);
 		}
 
-		.breadcrumb-navigation {
-			 font-size: var(--wp--preset--font-size--small);
-		}
+		
 	}
 }
+
 
 /* Referenzen */
 .fescon-ref-info-fields {
@@ -199,6 +197,7 @@ body.single{
 		}
 	}
    }
+
 /* Webinare */
 .refrences-wrapper {
 	padding-top: 140px;
@@ -206,11 +205,12 @@ body.single{
 }
 
 /* BreadCrumb */
-  ol.breadcrumb {
+ol.breadcrumb {
 	display: flex;
 	gap: 15px;
 	padding-inline-start: 0;
 	li {
+		font-size: var(--wp--preset--font-size--small);
 		&::marker {
 			display: none;
 			content: "";
@@ -222,4 +222,7 @@ body.single{
 	.bi-chevron-right::before {
 		font-size: 10px;
   	}
+	.breadcrumb-separator{
+		top:-6px
+	}
 }

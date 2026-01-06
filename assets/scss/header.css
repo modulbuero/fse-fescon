@@ -9,7 +9,13 @@ header > div {
   padding-top: 10px;
   background-color: #fff;
 }
-header > div figure {
+header > div .header-logo a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+header > div .header-logo figure {
   filter: invert(1);
   max-width: 140px;
 }
@@ -81,6 +87,9 @@ footer * {
     font-size: 14px;
   }
 }
+footer > div {
+  align-items: stretch !important;
+}
 footer .parts-footer {
   min-width: 50%;
 }
@@ -90,7 +99,7 @@ footer .parts-footer .wp-block-navigation-item__label {
 footer .parts-footer .wp-block-navigation__container {
   display: flex;
   flex-direction: column;
-  gap: 5px !important;
+  gap: 15px !important;
 }
 @media (max-width: 550px) {
   footer .parts-footer > div {
@@ -106,7 +115,7 @@ footer > div > div:last-of-type figure {
   margin-bottom: var(--mbfse--margin-bottom-inline);
 }
 footer > div > div:last-of-type p {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   margin-top: auto;
 }
 @media (max-width: 550px) {

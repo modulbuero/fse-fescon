@@ -1,4 +1,5 @@
 .wp-site-blocks > main {
+	--mbfse--details-padding:1rem 0;
 	--mbfse--margin-bottom-inline:40px;
 	@media (max-width: 550px) {
     	--mbfse--margin-bottom-inline:10px;	
@@ -110,6 +111,7 @@ body {
 		gap: 10px;
 	}
 	@mixin taxitem(){
+		font-size: 18px;
 		background-color: var(--wp--preset--color--tertiary);
 		color: var(--wp--preset--color--contrast) !important;
 		display: inline-flex;
@@ -158,10 +160,13 @@ body {
 }
 
 /*Align title marginTop*/
-body:not(.page-template-page-no-title) .wp-site-blocks > main {
-    margin-top: 80px;
+body.kontakt .wp-site-blocks > main,
+body:not(.page-template-page-no-title):not(.referenzen-template-default) .wp-site-blocks > main {
+    margin-top: 120px;
 }
-
+body.ueber-uns .wp-site-blocks > main {
+    // margin-top: var(--mbfse-header-height)
+}
 /*Hero*/
 body.page{
 	.wp-site-blocks .wp-block-post-content .mbfse-hero{
@@ -281,6 +286,22 @@ body.page{
 /*
 	Referenzberichte
 */
+body.referenzen-template-default .wp-site-blocks > main {
+	margin-top: var(--mbfse-header-height) !important;
+	.parts-single-template{
+		.mbfse-hero{
+			min-height: 700px;
+			max-height: calc(100vh - var(--mbfse-header-height));
+			margin-bottom: 50px;
+		}
+		.breadcrumb-navigation{
+			margin-bottom: 50px;
+		}
+		h1{
+			margin-bottom: 50px !important;
+		}
+	}
+}
 .refrences-wrapper {
 	>h2.wp-block-heading{
 		padding:0
@@ -288,6 +309,9 @@ body.page{
 	.referenz-arrows {
 		display: flex;
 		gap: 15px;
+		i{
+			font-size: 35px;
+		}
 
 		@media (max-width: 550px) {
 			position: absolute;
@@ -312,6 +336,8 @@ body.page{
 				margin-bottom:calc(var(--triangle-height) + 20px);
 			}
 			li {
+				display: flex;
+    			flex-direction: column;
 				background-color: white;
 				box-shadow: none;
 				border-radius: 0 ;
@@ -331,7 +357,7 @@ body.page{
 				.bild-details-wrap{
 					justify-content: space-between;
 					margin-bottom: 0;
-					margin-top: 100px;
+					margin-top: auto;
 					.wp-block-post-featured-image{
 						overflow: visible;
 						top:auto;
@@ -340,8 +366,7 @@ body.page{
 						max-width: 100px;
 						
 						img{
-							transform:scale(1) !important;
-							object-fit: contain !important;
+							aspect-ratio:auto
 						}
 					}
 					.mbgi-block-bootstrap-icon{
@@ -360,7 +385,7 @@ body.page{
 							min-width: 55px;
 							width: max-content;
 							font-size: 15px;
-							top:-14px;
+							top:-9.5px;
 							color:white
 						}
 						div {
@@ -440,7 +465,7 @@ form .nf-form-content {
       transition: top .18s ease, font-size .18s ease, color .18s ease, transform .18s ease;
       background: var(--wp--preset--color--base);
       padding: 0 6px;
-	  z-index: 1000;
+	  z-index: 1;
     }
 	 &:focus-within .nf-field-label {
       top: -10px;
@@ -490,6 +515,7 @@ form .nf-form-content {
 		width: 30% !important;
 		background: var(--wp--preset--color--base);
 		padding: 60px;
+		min-width: 500px;
 	}
 }
 
@@ -521,5 +547,12 @@ form .nf-form-content {
 	}
 	.query-text-container{
 		height: 100% !important;
+	}
+}
+
+/*Akkordeon*/
+.wp-block-details {
+	summary{
+		font-size: var(--wp--preset--font-size--large);
 	}
 }

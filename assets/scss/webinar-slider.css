@@ -1,6 +1,9 @@
 /*
 	Webinar Slider
 */
+.query-loop-termine .webinar-slider {
+  touch-action: none;
+}
 .query-loop-termine .webinar-slider .swiper-wrapper {
   height: auto;
   margin-bottom: 0;
@@ -72,11 +75,28 @@
   }
 }
 
+body.single-termin .webinar-arrows,
 body.fescon-webinare .webinar-arrows {
   bottom: -80px;
 }
+body.single-termin .wp-block-categories-list,
 body.fescon-webinare .wp-block-categories-list {
   border-bottom: none !important;
   margin-left: 0 !important;
   width: 100%;
+}
+
+main .webinar-slider-container.alignfull {
+  padding-right: 0;
+}
+
+.webinar-simple-wrap {
+  padding-right: 0 !important;
+}
+
+.webinar-question {
+  margin-top: calc(var(--wp--style--block-gap) + 40px);
+}
+.webinar-question .bi:before {
+  color: var(--wp--preset--color--tertiary);
 }/*# sourceMappingURL=webinar-slider.css.map */
