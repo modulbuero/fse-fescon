@@ -41,7 +41,6 @@ function register_referenzen(){
 }
 
 // CPT-Name ändern
-
 add_filter( 'register_post_type_args', 'fescon_change_Termine_Name', 111111, 2 );
 function fescon_change_Termine_Name( $args, $post_type ) {
 	
@@ -94,3 +93,20 @@ function referenzLogo($pID){
     $html .= "</figure>";
     return $html;
 }
+
+/*Pagination Text*/
+add_filter( 'render_block', function( $block_content, $block ) {
+    if ( empty( $block['blockName'] ) ) {
+        return $block_content;
+    }
+    // Next Page
+    if ( $block['blockName'] === 'core/query-pagination-next' ) {
+        $block_content = str_replace( 'Nächste Seite', '>', $block_content );
+    }
+    // Previous Page
+    if ( $block['blockName'] === 'core/query-pagination-previous' ) {
+        $block_content = str_replace( 'Vorherige Seite', '<', $block_content );
+    }
+    return $block_content;
+
+}, 10, 3 );

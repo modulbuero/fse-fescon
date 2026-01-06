@@ -101,7 +101,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily":"var(--wp--preset--font-family--unineue)",
-					"lineHeight": "1.35"
+					"lineHeight": "1.3"
 				}
 			}
 		},

@@ -149,7 +149,7 @@
             // mobile
             slidesPerView: 1,
             spaceBetween: 16,
-
+            allowTouchMove: false,
             // bigger screens
             breakpoints: {
             550: { slidesPerView: 1.5, spaceBetween: 20 },
@@ -163,7 +163,7 @@
             nextEl: '.webinar-arrows .custom-next',
             prevEl: '.webinar-arrows .custom-prev',
             },
-
+            allowTouchMove: false,
             // mobile
             slidesPerView: 1,
             spaceBetween: 16,
