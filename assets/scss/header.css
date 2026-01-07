@@ -16,6 +16,7 @@ header > div .header-logo a {
   z-index: 1;
 }
 header > div .header-logo figure {
+  top: 0px;
   filter: invert(1);
   max-width: 140px;
 }
@@ -66,11 +67,19 @@ header.isSpecialHeader > div ul {
   border-radius: 50px;
 }
 header.isSpecialHeader > div figure {
+  top: 13px;
   max-width: 160px;
   filter: invert(0);
 }
 header.isSpecialHeader > div p {
   opacity: 0;
+}
+header.isSpecialHeader > div nav > button {
+  color: #fff;
+}
+header.isSpecialHeader > div nav > button svg {
+  stroke: #fff;
+  fill: #fff;
 }
 header:not(.isSpecialHeader) {
   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1019607843);
@@ -89,6 +98,7 @@ footer * {
 }
 footer > div {
   align-items: stretch !important;
+  gap: 20px !important;
 }
 footer .parts-footer {
   min-width: 50%;

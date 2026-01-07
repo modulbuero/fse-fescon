@@ -30,10 +30,9 @@
   padding-right: 200px;
   box-sizing: border-box;
 }
-@media (max-width: 550px) {
+@media (max-width: 960px) {
   .wp-site-blocks > main .wp-block-post-content > h2 + p {
-    padding-right: unset;
-    margin-bottom: 0 !important;
+    padding-right: 0px;
   }
 }
 
@@ -76,6 +75,11 @@ body h2 {
     font-size: 80px;
   }
 }
+@media (max-width: 960px) {
+  body h2 {
+    font-size: 70px;
+  }
+}
 body h3 {
   font-size: var(--wp--preset--font-size--x-large);
 }
@@ -103,6 +107,11 @@ body.home h1 {
 @media (max-width: 1118px) {
   body.home h1 {
     font-size: 150px;
+  }
+}
+@media (max-width: 960px) {
+  body.home h1 {
+    font-size: 100px;
   }
 }
 @media (max-width: 550px) {

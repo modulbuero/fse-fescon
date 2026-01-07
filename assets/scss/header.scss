@@ -17,6 +17,7 @@ header{
 				z-index: 1;
 			}
 			figure{
+				top: 0px;
 				filter: invert(1);
 				max-width: 140px;
 			}
@@ -81,11 +82,20 @@ header{
 			border-radius: 50px;
 		}
 		figure {
+			top: 13px;
 			max-width: 160px;
 			filter: invert(0);
 		}
 		p {
 			opacity: 0;
+		}
+		
+		nav > button{
+			color:#fff;
+			svg{
+				stroke: #fff;
+				fill:#fff;
+			}
 		}
 	}
 }
@@ -106,6 +116,7 @@ footer{
 	}
 	>div{
 		align-items: stretch !important;
+		gap:20px !important;
 	}
 
 	.parts-footer {

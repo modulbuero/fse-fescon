@@ -29,10 +29,9 @@
 	>h2+p{
 		padding-right: 200px;
 		box-sizing: border-box;
-		@media (max-width: 550px) {
-    		padding-right: unset;
-			margin-bottom: 0 !important;
-    	}
+		@media (max-width: 960px) {
+			padding-right: 0px;
+		}
 	}
 }
 
@@ -70,6 +69,9 @@ body {
 	@media (max-width: 1024px) {
 		font-size: 80px;
 	}
+	@media (max-width: 960px) {
+		font-size: 70px;
+	}
   }
 
   h3 {
@@ -100,6 +102,9 @@ body {
 		font-size: 180px;
 		@media (max-width: 1118px) {
    	 		font-size: 150px;
+    	}
+		@media (max-width: 960px) {
+   	 		font-size: 100px;
     	}
 		@media (max-width: 550px) {
    	 		font-size: var(--wp--preset--font-size--x-large);
