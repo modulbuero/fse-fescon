@@ -4,7 +4,7 @@
 	@media (max-width: 550px) {
     	--mbfse--margin-bottom-inline:10px;	
     }
-	padding-bottom: 0;
+	
 	@media (max-width: 550px) {
 		.wp-block-group.alignfull > .wp-block-columns {
 			padding: 0 !important;
@@ -16,14 +16,14 @@
 			font-size: var(--wp--preset--font-size--medium);
 		}
     }
+
+	padding-bottom:0px;
 }
 
 /*Standards*/
 .wp-site-blocks > main .wp-block-post-content{ 
 	margin-top: 0;
 	padding-bottom: 0;
-	
-	
 
 	/*p-tag spezial*/
 	>h2+p{
@@ -67,6 +67,9 @@ body {
 
   h2 {
     font-size: var(--wp--preset--font-size--xx-large);
+	@media (max-width: 1024px) {
+		font-size: 80px;
+	}
   }
 
   h3 {
@@ -95,8 +98,11 @@ body {
   &.home{
 	h1{
 		font-size: 180px;
+		@media (max-width: 1118px) {
+   	 		font-size: 150px;
+    	}
 		@media (max-width: 550px) {
-   	 		font-size: var(--wp--preset--font-size--x-large) !important;
+   	 		font-size: var(--wp--preset--font-size--x-large);
     	}
 	}
   }
@@ -104,7 +110,7 @@ body {
 
 
   /*
-	lobal Categories style
+	global Categories style
   */
 	.taxonomy-category {
 		display: flex;
@@ -148,7 +154,6 @@ body {
 		border-bottom:1px solid #ccc;
 		padding-bottom: 60px;
 		padding: 60px 0;
-		margin-bottom: 0 !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
 		width: 80%;
@@ -156,7 +161,9 @@ body {
 			@include taxitem;
 		}	
 	}
-
+ 	&.blog .wp-block-categories-list{
+		margin-bottom: 0;
+	}
 }
 
 /*Align title marginTop*/
@@ -218,6 +225,10 @@ body.page{
 	}
 }
 
+.mbgi-openstreetmap-button{
+	background-color: var(--wp--preset--color--quaternary);
+	color:#000
+}
 /* 
 	Floating image Container "DocuWare"
 */
@@ -231,8 +242,9 @@ body.page{
 	> .wp-block-columns {
 		@media (max-width: 1440px) {
 			gap: 15%;
-			padding: 0 !important;
+			padding:20px 0 !important;
 		}
+
 		.wp-block-column:first-child{
 			img {
 				display: block;
@@ -264,14 +276,22 @@ body.page{
 		bottom: -25%;
 		width: min(560px, 45vw);
 		pointer-events: none;
+		padding: 0;
+
+		@media (max-width: 1440px) {
+			left: 8%;
+		}
+
+		@media (max-width: 1118px) {
+			bottom: -15%;
+		}
+
+		@media (max-width: 1118px) {
+			
+		}
+
 		@media (max-width: 550px) {
 			top: 60px;
-		}
-		@media (max-width: 1024px) {
-			width: min(360px, 45vw);
-		}
-		@media (min-width: 2000px) {
-			left: 20%;
 		}
 
 		img {
@@ -366,7 +386,9 @@ body.referenzen-template-default .wp-site-blocks > main {
 						max-width: 100px;
 						
 						img{
-							aspect-ratio:auto
+							aspect-ratio:auto;
+							max-width: 100%;
+    						vertical-align: bottom;
 						}
 					}
 					.mbgi-block-bootstrap-icon{
