@@ -1,49 +1,51 @@
 /* Leistungen Slider */
 .leistungen-slider {
-     .swiper-wrapper {
+    /*Container-Content*/
+    .swiper-wrapper {
         .wp-block-columns {
             gap: 0 !important;
             margin-bottom: 50px !important;
-             @media (max-width: 550px) {
-                   flex-direction: column-reverse;
-            }
+            
             .has-background {
                 margin-bottom: 20px;
                 margin-top: 20px;
                 gap:10px;
-                ;
-                @media (max-width: 550px) {
-                    gap: 0;
-                    text-align: center;
-                    min-height: 300px;
-                    h3 {
-                        margin-bottom: 0 !important;
-                    }
-                }
-				@media (max-width: 1024px) {
-                    margin-bottom: 5px;
-                	margin-top: 5px;
-                }
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 justify-items: center;
+                padding-top:120px;
+
+                h3{
+                    margin-top: auto;
+                }
                 .wp-block-buttons {
                     display: flex;
                     width: 100%;
-                    justify-content: center;
+                    justify-content: left;
+                    margin-top: auto;
+
                     .wp-block-button {
-                        position: absolute;
-                        top: 60px;
-						width: 180px;
-						@media (min-width: 1300px) and (max-width: 1700px) {
-                            top: 10px;
-                        }
-                        @media (max-width: 550px) {
-                            top: 30px;
-                        }
+                        width: 180px;
                     }
                     
+                }
+                
+                @media (max-width: 768px) {
+                    padding: 140px 0 40px;
+                    text-align: center;
+                    gap:0;
+                    .wp-block-buttons {
+                        justify-content: center;
+                    }
+                }
+
+                @media (max-width: 601px) {
+                    gap: 0;
+                    
+                    h3 {
+                        margin-bottom: 0 !important;
+                    }
                 }
             }
 
@@ -69,31 +71,32 @@
                     flex-basis: 33%;
                 }
             }
+
+            @media (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
         }
-     }
+    }
 
     /*Pfeil-Navigation*/
     .swiper-button-prev::after {
-            font-family: "bootstrap-icons";
-            content: "\F12F";
+        font-family: "bootstrap-icons";
+        content: "\F12F";
     }
     .swiper-button-next::after {
-            font-family: "bootstrap-icons";
-            content: "\F138";
+        font-family: "bootstrap-icons";
+        content: "\F138";
     }
+    .swiper-button-prev,
     .swiper-button-next {
         top: 100%;
-        right: 47%;
-		@media (max-width: 1300px) {
-            right: 45%;
-        }
     }
-    .swiper-button-prev {
-        top: 100%;
-        left: 47%;
-		@media (max-width: 1300px) {
-            left: 45%;
-        }
+    --swiper-navigation-sides-offset: 47%;
+    @media (max-width: 1024px) {
+        --swiper-navigation-sides-offset: 45%;
+    }
+    @media (max-width: 768px) {
+        --swiper-navigation-sides-offset: 42%;
     }
 
     /*Slider Menu*/
@@ -101,8 +104,7 @@
         position: absolute;
         top: 50px;
         left: 50px;
-        width: calc(48% - 100px);
-        
+        width: calc(48% - 100px);        
         background: #fff;
         border-radius: 50px;
         padding:10px;
@@ -127,6 +129,7 @@
             justify-content: center;
             justify-items: center;
             left: 0;
+            top: 0;
 
             &:hover span.fescon-bulletpoints {
                 color:#000;
@@ -161,12 +164,16 @@
         @media (max-width: 1118px) {
             width: 50%;
         }
-        @media (max-width: 601px) {
-			top: 43%;
-			height: unset;
-			padding: 5px 20px;
+
+        @media (max-width: 768px) {
+            width: calc(100% - 100px);
+            box-sizing: border-box;
+            bottom: 250px;
+            top: auto;
         }
 
-        
+        @media (max-width: 601px) {
+			padding: 5px 20px;
+        }
     }
 }

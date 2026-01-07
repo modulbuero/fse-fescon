@@ -111,7 +111,7 @@ main .webinar-slider-container.alignfull {
     flex-direction: column;
   }
   main .webinar-slider-container.alignfull .wp-block-columns > .wp-block-column:first-child {
-    width: 100% !important;
+    width: calc(100% - var(--wp--style--root--padding-left)) !important;
   }
   main .webinar-slider-container.alignfull .wp-block-columns .webinar-arrows {
     bottom: -25px;

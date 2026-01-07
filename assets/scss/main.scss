@@ -238,29 +238,29 @@ body.page{
 	Floating image Container "DocuWare"
 */
 .hero-split {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	margin-top: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
-	margin-bottom: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
-	margin-block-end: calc(5vw + var(--mbfse--margin-bottom-block) ) !important;
-
+	--versatz-bild-top:130px;
+	margin-top: calc(var(--versatz-bild-top) + var(--mbfse--margin-bottom-block) ) !important;
+	margin-bottom: calc(var(--versatz-bild-top) + var(--mbfse--margin-bottom-block) ) !important;
+	margin-block-end: calc(var(--versatz-bild-top) + var(--mbfse--margin-bottom-block) ) !important;
+	
 	> .wp-block-columns {
-		@media (max-width: 1440px) {
-			gap: 15%;
-			padding:20px 0 !important;
-		}
-
+		gap:40px !important;
 		.wp-block-column:first-child{
-			img {
-				display: block;
-				width: min(560px, 50vw);
-				height: auto;
-				border-radius: 12px;
-				box-shadow: 0 10px 30px rgba(0,0,0,.08);
-				transform: translateY(-5vw);
+			figure{
+				width: 80%;
+				margin-top: calc(var(--versatz-bild-top) * -1);
+				margin-bottom:0 !important;
+				box-shadow: 15px 15px 30px #00000033;
+			}
+			figure:last-child {
+				margin-top:0;
+				position: absolute;
+				bottom: calc(var(--versatz-bild-top) * -1);
+				left:20%;
 			}
 		}
-		.wp-block-column:nth-child(2) {
+
+		.wp-block-column:last-child {
 			text-align: center;
 			display: flex;
 			flex-direction: column;
@@ -271,39 +271,41 @@ body.page{
 				padding-bottom: 50px;
 			}
 		}
-	}	
+	}
 
-	/*Untere Bild*/
-	.hero-float {
-		position: absolute;
-		z-index: 2;
-		left: 15%;
-		bottom: -25%;
-		width: min(560px, 45vw);
-		pointer-events: none;
-		padding: 0;
-
-		@media (max-width: 1440px) {
-			left: 8%;
+	@media (max-width: 1280px){
+		--versatz-bild-top:80px;
+	}
+	@media (max-width: 1024px){
+		--versatz-bild-top:80px;
+		padding-left:0 !important;
+		padding-right:0 !important;
+		.wp-block-columns .wp-block-column:first-child{
+			figure{
+				margin-top:0;
+			}
+			figure:last-child{
+				bottom:0;
+			}
 		}
-
-		@media (max-width: 1118px) {
-			bottom: -15%;
-		}
-
-		@media (max-width: 1118px) {
-			
-		}
-
-		@media (max-width: 550px) {
-			top: 60px;
-		}
-
-		img {
-			width: 100%;
-			height: auto;
-			border-radius: 10px;
-			box-shadow: 0 12px 40px rgba(0,0,0,.12);
+	}
+	@media (max-width: 768px){
+		--versatz-bild-top:120px;
+		.wp-block-columns{
+			gap:80px !important;
+			.wp-block-column:first-child{
+				figure{
+					margin-top: calc(var(--versatz-bild-top) * -1);
+				}
+				figure:last-child{
+					margin-top: calc(var(--versatz-bild-top) * -1);
+					bottom:0;
+					position: relative;
+				}
+			}
+			.wp-block-heading.has-text-align-center{
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
