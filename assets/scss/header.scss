@@ -110,7 +110,7 @@ footer{
 	--mbfse--padding-footer:40px 0;
 	*{
 		font-size: 18px;
-		@media (max-width: 550px) {
+		@media (max-width: 601px) {
 			font-size: 14px;
     	}
 	}
@@ -129,7 +129,7 @@ footer{
 			flex-direction:column;
 			gap: 15px !important;
 		}
-		@media (max-width: 550px) {
+		@media (max-width: 601px) {
 			> div {
 				display: flex;
 				flex-wrap: unset !important;
@@ -146,12 +146,12 @@ footer{
 		p{
 			margin-bottom: 0 !important;
 			margin-top: auto;
-			@media (max-width: 550px) {
+			@media (max-width: 601px) {
 				margin-left: 0 !important;
 			}
 		}
 	}
-	@media (max-width: 550px) {
+	@media (max-width: 601px) {
 		> div {
 			flex-direction: column;
 			align-items: flex-start !important;

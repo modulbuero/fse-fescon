@@ -53,7 +53,7 @@
                 /*Rechte Spalte mit Bild*/
                 figure{
                     height: 600px;
-                    @media (max-width: 550px) {
+                    @media (max-width: 601px) {
                         height: 270px;
                     }
                     display: flex;
@@ -141,7 +141,7 @@
                 padding: 10px 30px;
                 opacity: 1;
                 font-size: 18px;
-                @media (max-width: 550px) {
+                @media (max-width: 601px) {
     	            font-size: var(--wp--preset--font-size--small);
                     padding: 10px;
                 }

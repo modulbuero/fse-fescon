@@ -187,13 +187,15 @@
 
             // responsive
             slidesPerView: 1,
-            spaceBetween: 16,
+            spaceBetween: 20,
 
             breakpoints: {
-            550: {          // mobile  breakpoint
-                slidesPerView: 3,
-                spaceBetween: 20,
-            }
+                602: {          // Tablet breakpoint
+                    slidesPerView: 2,
+                },
+                961: {          // Desktop breakpoint
+                    slidesPerView: 3,
+                }
             }
         });
     }   

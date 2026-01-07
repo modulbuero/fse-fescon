@@ -91,7 +91,7 @@ footer {
 footer * {
   font-size: 18px;
 }
-@media (max-width: 550px) {
+@media (max-width: 601px) {
   footer * {
     font-size: 14px;
   }
@@ -111,7 +111,7 @@ footer .parts-footer .wp-block-navigation__container {
   flex-direction: column;
   gap: 15px !important;
 }
-@media (max-width: 550px) {
+@media (max-width: 601px) {
   footer .parts-footer > div {
     display: flex;
     flex-wrap: unset !important;
@@ -128,12 +128,12 @@ footer > div > div:last-of-type p {
   margin-bottom: 0 !important;
   margin-top: auto;
 }
-@media (max-width: 550px) {
+@media (max-width: 601px) {
   footer > div > div:last-of-type p {
     margin-left: 0 !important;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 601px) {
   footer > div {
     flex-direction: column;
     align-items: flex-start !important;
