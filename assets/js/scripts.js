@@ -202,7 +202,11 @@
 
 
     function detectScrollPosition(){
-        const targetScroll = window.innerHeight * 0.9;
+        let targetScroll = window.innerHeight * 0.7;
+        if(window.innerWidth <= 650){
+            targetScroll = window.innerHeight * 0.1;
+        }
+
         let hasReached = false;
         if($('body.home').length){
             $('.home header').addClass('isSpecialHeader')

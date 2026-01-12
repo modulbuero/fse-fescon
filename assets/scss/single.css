@@ -23,6 +23,11 @@
   background-color: var(--wp--preset--color--quaternary);
   padding: 60px;
 }
+@media (max-width: 601px) {
+  .fescon-meta-fields {
+    padding: 20px;
+  }
+}
 .fescon-meta-fields > div {
   border-bottom: 1px solid var(--mbfse--border-color) !important;
   padding: 20px 0;
@@ -47,27 +52,6 @@
 .single-termin-html h2 {
   font-size: var(--wp--preset--font-size--x-large);
 }
-.single-termin-html .fescon-meta-fields {
-  background-color: var(--wp--preset--color--quaternary);
-  padding: 60px;
-}
-.single-termin-html .fescon-meta-fields > div {
-  border-bottom: 1px solid var(--mbfse--border-color) !important;
-  padding: 20px 0;
-}
-.single-termin-html .fescon-meta-fields > div:first-child {
-  padding-top: 0;
-}
-.single-termin-html .fescon-meta-fields > div:last-child {
-  border-bottom: none !important;
-}
-.single-termin-html .fescon-meta-fields label {
-  color: var(--wp--preset--color--contrast);
-  opacity: 0.5;
-}
-.single-termin-html .fescon-meta-fields p {
-  margin-bottom: 0;
-}
 .single-termin-html .entry-content {
   padding-left: 0;
   padding-right: 0;
@@ -76,12 +60,16 @@
 /*Blog*/
 .single-editor-content {
   width: 80%;
-  padding-top: 60px;
   margin-block-end: var(--mbfse--margin-bottom-block) !important;
   margin-bottom: var(--mbfse--margin-bottom-block);
 }
 .single-editor-content h1 {
   font-size: 56px;
+}
+@media (max-width: 601px) {
+  .single-editor-content h1 {
+    font-size: 36px;
+  }
 }
 .single-editor-content ul, .single-editor-content ol {
   margin-bottom: var(--mbfse--margin-bottom-inline) !important;
@@ -90,6 +78,14 @@
   margin: 70px 0;
   width: 100% !important;
   color: #ccc;
+}
+.single-editor-content .wp-block-post-featured-image {
+  display: none;
+}
+@media (max-width: 960px) {
+  .single-editor-content {
+    width: 100%;
+  }
 }
 
 body.single:not(.referenzen-template-default) {
@@ -104,10 +100,20 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
   margin-bottom: var(---fescon-blog-abstand);
 }
 
+.single .wp-site-blocks .wp-block-post-content > p:has(+ ul),
+.single .wp-site-blocks .wp-block-post-content > ul {
+  margin-bottom: var(--mbfse--margin-bottom-inline);
+}
+
 /* Referenzen */
 .fescon-ref-info-fields {
   background-color: var(--wp--preset--color--quaternary);
   padding: 60px;
+}
+@media (max-width: 601px) {
+  .fescon-ref-info-fields {
+    padding: 20px;
+  }
 }
 .fescon-ref-info-fields > div {
   border-bottom: 1px solid var(--mbfse--border-color) !important;
@@ -227,4 +233,12 @@ ol.breadcrumb .bi-chevron-right::before {
 }
 ol.breadcrumb .breadcrumb-separator {
   top: -6px;
+}
+@media (max-width: 601px) {
+  ol.breadcrumb {
+    flex-wrap: wrap;
+  }
+  ol.breadcrumb .breadcrumb-separator {
+    top: -2px;
+  }
 }/*# sourceMappingURL=single.css.map */

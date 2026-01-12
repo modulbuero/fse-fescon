@@ -1,6 +1,7 @@
 header {
   --mbfse--menu-item-padding:10px;
   --mbfse--menu-item-color-hover: #000;
+  --mbfse--menu-close-fixer:-7px;
 }
 header * {
   transition: all 0.3s ease;
@@ -84,6 +85,29 @@ header.isSpecialHeader > div nav > button svg {
 header:not(.isSpecialHeader) {
   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1019607843);
 }
+@media (max-width: 768px) {
+  header > div nav .wp-block-navigation__responsive-container {
+    top: var(--mbfse-header-height);
+  }
+  header > div nav .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: var(--wp--preset--color--tertiary);
+    min-height: auto;
+    top: var(--mbfse-header-height);
+  }
+  header > div nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+    height: calc(100vh - var(--mbfse-header-height));
+  }
+  header > div nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content > ul.wp-block-navigation__container {
+    background-color: var(--wp--preset--color--tertiary);
+    gap: 5px;
+  }
+  header > div nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content > ul.wp-block-navigation__container span {
+    font-size: 40px;
+  }
+  header > div nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+    background: #fff;
+  }
+}
 
 footer {
   --mbfse--padding-footer:40px 0;
@@ -112,6 +136,10 @@ footer .parts-footer .wp-block-navigation__container {
   gap: 15px !important;
 }
 @media (max-width: 601px) {
+  footer .parts-footer {
+    min-width: 100%;
+    gap: 40px;
+  }
   footer .parts-footer > div {
     display: flex;
     flex-wrap: unset !important;
