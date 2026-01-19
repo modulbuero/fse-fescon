@@ -138,6 +138,17 @@ body.page{
 				padding-bottom: 55px;
 			}
 		}
+
+		@media (max-width: 601px) {
+			min-height: auto;
+			height: auto !important;
+			aspect-ratio: 16 / 10;
+			.wp-block-cover__inner-container{
+				:last-child{
+					padding-bottom: 5px;
+				}	
+			}
+		}
 	}
 
 	/*Home has SpezialHeader*/
@@ -148,6 +159,81 @@ body.page{
 		}
 	}
 	
+}
+
+.video-hero{
+	padding: 0 !important;
+    margin-block-start: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1) !important;
+	margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
+    height:100vh;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+	figure.wp-block-video{
+		position: absolute;
+    	margin-bottom: 0 !important;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		height: 100%;
+		video{
+			width: 100vw;
+    		height: 100vh;
+		}
+	}
+
+	h1, p{
+		text-align: left;
+		width: 100%;
+		padding-left: var(--wp--style--root--padding-left);
+		padding-right: var(--wp--style--root--padding-left);
+		color:#fff;
+		z-index:1;
+	}
+	div.wp-block-group.txt-distance-bottom{
+		margin-bottom: 40px !important;
+		width: 100%;
+		gap: 0;
+		padding-left: var(--wp--style--root--padding-left);
+		p{
+			padding-left: 0;
+			width: auto;
+		}
+		.wp-block-modulbuero-bootstrap-icons{
+			z-index: 1;
+			.bi-arrow-down-circle-fill::before{
+				color:#fff
+			}
+		}
+		
+	}
+
+	&:after{
+		content:"";
+		position: absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:300px;
+		background: linear-gradient(0deg, rgb(0 0 0 / 40%) 30% 50%, rgba(255, 255, 255, 0) 100%);
+		z-index:0;
+	}
+
+	@media (max-width: 834px) {
+		h1, div.wp-block-group.txt-distance-bottom{
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 601px) {
+
+		>:last-child{
+			margin-bottom: 40px;
+		}
+	}
 }
 
 /*  Buttons General style */
@@ -454,18 +540,13 @@ form .nf-form-content {
 			padding: 0 6px;
 			z-index: 1;
 		}
-		&:focus-within .nf-field-label {
-			top: -10px;
-			font-size: 16px;
-			color: var(--wp--preset--color--contrast);
-			opacity: 0.6;
-			transform: translateY(0);
-		}
+
+		
 		.field-wrap {
 			padding-top: 25px;
 		}
-		&:has(input:not(:placeholder-shown)),
-		&:has(textarea:not(:placeholder-shown)),
+		//&:has(input:not(:placeholder-shown)),
+		//&:has(textarea:not(:placeholder-shown)),
 		&:has(select:valid) {
 			.nf-field-label {
 				top: 36px;
@@ -474,10 +555,19 @@ form .nf-form-content {
 			}
 		}
 
+		.focus-input .nf-field-label,
+		&:focus-within .nf-field-label {
+			top: -10px;
+			font-size: 16px;
+			color: var(--wp--preset--color--contrast);
+			opacity: 0.6;
+			transform: translateY(0);
+		}
+
 		>div { 
 			width: 100%;
 				
-			.nf-field >div .nf-field-element input:not([type="submit"]), select{
+			.nf-field >div .nf-field-element input:not([type="submit"]), select,textarea{
 				  border-bottom: 1px solid #e5e7eb !important;
 				  height: 50px;
 				  font-size: 18px;

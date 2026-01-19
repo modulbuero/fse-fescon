@@ -74,4 +74,12 @@
     @media (max-width: 1280px) {
         gap:30px
     }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 601px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

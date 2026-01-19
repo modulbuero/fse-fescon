@@ -143,9 +143,87 @@ body.page .wp-site-blocks .wp-block-post-content .mbfse-hero .wp-block-cover__in
 body.page .wp-site-blocks .wp-block-post-content .mbfse-hero .wp-block-cover__inner-container :last-child {
   padding-bottom: 55px;
 }
+@media (max-width: 601px) {
+  body.page .wp-site-blocks .wp-block-post-content .mbfse-hero {
+    min-height: auto;
+    height: auto !important;
+    aspect-ratio: 16/10;
+  }
+  body.page .wp-site-blocks .wp-block-post-content .mbfse-hero .wp-block-cover__inner-container :last-child {
+    padding-bottom: 5px;
+  }
+}
 body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
   margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
   height: 100vh;
+}
+
+.video-hero {
+  padding: 0 !important;
+  margin-block-start: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1) !important;
+  margin-top: calc((var(--mbfse-header-height) + var(--mbfse--margin-bottom-block)) * -1);
+  height: 100vh;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.video-hero figure.wp-block-video {
+  position: absolute;
+  margin-bottom: 0 !important;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.video-hero figure.wp-block-video video {
+  width: 100vw;
+  height: 100vh;
+}
+.video-hero h1, .video-hero p {
+  text-align: left;
+  width: 100%;
+  padding-left: var(--wp--style--root--padding-left);
+  padding-right: var(--wp--style--root--padding-left);
+  color: #fff;
+  z-index: 1;
+}
+.video-hero div.wp-block-group.txt-distance-bottom {
+  margin-bottom: 40px !important;
+  width: 100%;
+  gap: 0;
+  padding-left: var(--wp--style--root--padding-left);
+}
+.video-hero div.wp-block-group.txt-distance-bottom p {
+  padding-left: 0;
+  width: auto;
+}
+.video-hero div.wp-block-group.txt-distance-bottom .wp-block-modulbuero-bootstrap-icons {
+  z-index: 1;
+}
+.video-hero div.wp-block-group.txt-distance-bottom .wp-block-modulbuero-bootstrap-icons .bi-arrow-down-circle-fill::before {
+  color: #fff;
+}
+.video-hero:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 30% 50%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
+}
+@media (max-width: 834px) {
+  .video-hero h1, .video-hero div.wp-block-group.txt-distance-bottom {
+    margin-left: 0;
+  }
+}
+@media (max-width: 601px) {
+  .video-hero > :last-child {
+    margin-bottom: 40px;
+  }
 }
 
 /*  Buttons General style */
@@ -444,30 +522,25 @@ form .nf-form-content > nf-fields-wrap nf-field .nf-field-label {
   padding: 0 6px;
   z-index: 1;
 }
-form .nf-form-content > nf-fields-wrap nf-field:focus-within .nf-field-label {
+form .nf-form-content > nf-fields-wrap nf-field .field-wrap {
+  padding-top: 25px;
+}
+form .nf-form-content > nf-fields-wrap nf-field:has(select:valid) .nf-field-label {
+  top: 36px;
+  font-size: 16px;
+  color: var(--wp--preset--color--contrast);
+}
+form .nf-form-content > nf-fields-wrap nf-field .focus-input .nf-field-label, form .nf-form-content > nf-fields-wrap nf-field:focus-within .nf-field-label {
   top: -10px;
   font-size: 16px;
   color: var(--wp--preset--color--contrast);
   opacity: 0.6;
   transform: translateY(0);
 }
-form .nf-form-content > nf-fields-wrap nf-field .field-wrap {
-  padding-top: 25px;
-}
-form .nf-form-content > nf-fields-wrap nf-field:has(input:not(:-moz-placeholder)) .nf-field-label, form .nf-form-content > nf-fields-wrap nf-field:has(textarea:not(:-moz-placeholder)) .nf-field-label {
-  top: 36px;
-  font-size: 16px;
-  color: var(--wp--preset--color--contrast);
-}
-form .nf-form-content > nf-fields-wrap nf-field:has(input:not(:placeholder-shown)) .nf-field-label, form .nf-form-content > nf-fields-wrap nf-field:has(textarea:not(:placeholder-shown)) .nf-field-label, form .nf-form-content > nf-fields-wrap nf-field:has(select:valid) .nf-field-label {
-  top: 36px;
-  font-size: 16px;
-  color: var(--wp--preset--color--contrast);
-}
 form .nf-form-content > nf-fields-wrap nf-field > div {
   width: 100%;
 }
-form .nf-form-content > nf-fields-wrap nf-field > div .nf-field > div .nf-field-element input:not([type=submit]), form .nf-form-content > nf-fields-wrap nf-field > div select {
+form .nf-form-content > nf-fields-wrap nf-field > div .nf-field > div .nf-field-element input:not([type=submit]), form .nf-form-content > nf-fields-wrap nf-field > div select, form .nf-form-content > nf-fields-wrap nf-field > div textarea {
   border-bottom: 1px solid #e5e7eb !important;
   height: 50px;
   font-size: 18px;

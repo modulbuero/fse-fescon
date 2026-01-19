@@ -132,6 +132,14 @@ main .webinar-slider-container.alignfull{
 	.bi:before{
 		color:var(--wp--preset--color--tertiary);
 	}
+
+	a{
+		position: absolute;
+		top: -25px;
+		left: -55px;
+		height: 50px;
+		width: 50px;
+	}
 }
 
 .webinar-slider-wrapper{

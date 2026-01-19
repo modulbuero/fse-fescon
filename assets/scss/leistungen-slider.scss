@@ -183,3 +183,36 @@
         }
     }
 }
+
+/*Leistungen-Stapelanimation*/
+.leistungen-stapel{
+    .wp-block-columns{
+        gap:0;
+        box-shadow: 0px 0 50px #0000001A;
+        padding: 0;
+
+        .wp-block-column:first-child{
+            padding-top:30px;
+            padding-bottom: 30px;
+        }
+        
+        .wp-block-column:last-child{
+            padding: 0;
+
+            .wp-block-image{
+                height: 100%;
+                img{
+                    height:100%;
+                    object-fit: cover;
+                }
+                .wp-element-caption{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.leistungen-fragen{
+    max-width: 600px;
+}

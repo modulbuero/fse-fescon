@@ -4,6 +4,10 @@
         leistungenSwiper()
         refSlider()
         webinarSlider()
+
+        $(document).on('nfFormReady', function() {
+            contactFormLabel(); 
+        });
     })
 
     /**
@@ -223,5 +227,33 @@
                 }
             });    
         }
+    }
+
+    /*Kontakt-Formular Label-Activation*/
+    function contactFormLabel(){
+        let labelWrap = 'form ';
+        let input     = labelWrap + '.nf-field-element input';
+        let textarea  = labelWrap + '.nf-field-element textarea';
+        let fields    = input + ", " + textarea;
+        
+        function checkInputField() {
+            $(fields).each(function(){
+                if($(this).val() == ""){
+                    $(this).parents(':eq(1)').removeClass('focus-input');
+                }
+            })
+        }
+
+        $(fields).on('focus click', function(){
+            checkInputField();
+        })
+
+        $(fields).on('focus click', function(){
+            $(this).parents(':eq(1)').addClass('focus-input');
+        })
+
+        $(fields).on('focusout', function(){
+            checkInputField()
+        })
     }
 })(jQuery)
