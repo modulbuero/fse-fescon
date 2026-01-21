@@ -192,8 +192,16 @@
         padding: 0;
 
         .wp-block-column:first-child{
-            padding-top:30px;
-            padding-bottom: 30px;
+            padding:80px;
+            @media (max-width: 1024px){
+                padding:40px
+            }
+
+            display: flex;
+            flex-direction: column;
+            .wp-block-image{
+                margin-top: auto;
+            }
         }
         
         .wp-block-column:last-child{

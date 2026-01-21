@@ -31,13 +31,18 @@ body{
 			background-color: transparent;
 			border-color:#000;
 		}
+		@media (max-width: 601px) { 
+			font-size: 14px;
+		}
 	}
 	.taxonomy-item{
 		@include taxitem;
 	}
 	.taxonomy-category.wp-block-post-terms{
 		margin-bottom:5px;
-
+		@media (max-width: 601px) { 
+			margin-bottom:20px;
+		}
 		a{
 			@include taxitem;
 		}
@@ -48,12 +53,14 @@ body{
 		gap:20px;
 		border-bottom:1px solid #ccc;
 		padding-bottom: 60px;
-		padding: 60px 0;
 		margin-left: auto !important;
 		margin-right: auto !important;
-		width: 80%;
+		margin-bottom: 0 !important;
+		max-width: var(--wp--style--global--content-size);
 		flex-wrap: wrap;
-		li a{
+		padding-inline-start: 0;
+
+		li a{			    
 			@include taxitem;
 		}	
 		@media (max-width: 960px) { 
@@ -63,6 +70,29 @@ body{
 	}
 	&.blog .wp-block-categories-list{
 		margin-bottom: 0;
+	}
+
+
+	.wp-block-template-part {
+		
+		.entry-content{
+			a:where(:not(.wp-element-button)){
+				color: #000 !important;
+				text-decoration: underline;
+			}
+		}		
+	}
+
+	.referenzen-webinar-content-fields{
+		a:where(:not(.wp-element-button)){
+			color: #000 !important;
+			text-decoration: underline;
+		}
+	}
+
+	.wp-block-search{
+		padding-top:30px;
+		margin-bottom:80px;
 	}
 }
 
@@ -74,8 +104,9 @@ body{
 	ul.wp-block-post-template {
 		display: flex;
 		flex-direction: column;
-				
+		gap:0;
 		li {
+			border-radius: 0;
 			box-shadow: none !important;
 			background-image: none !important;
 			padding: 60px 0;
@@ -93,7 +124,7 @@ body{
 				display: none;
 			}
 		}
-		li:not(:last-child){
+		li:not(:last-child):not(.referenzen){
 			border-bottom:1px solid #ccc;
 		}
 	}
@@ -245,4 +276,11 @@ body{
 }
 .wp-block-post-terms__separator {
 	display: none;
+}
+
+/*Mobile*/
+@media (max-width: 601px) { 
+	.wp-block-query .wp-block-post-template li .wp-block-post-title{
+		line-height: 1.25
+	}
 }

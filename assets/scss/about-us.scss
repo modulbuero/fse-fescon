@@ -46,13 +46,16 @@
                     margin-bottom: 0 !important;
                     gap: 0 !important;
                     &:after{
-                        content:"+";
+                        content:"\F64D";
+                        font-family: 'bootstrap-icons';
                         position: absolute;
                         right: 0px;
+                        font-size: 20px;
+                        top: 1px;
                     }
                 }
 
-                &:hover {
+                &.open-info {
                     .contact-details {
                         max-height: 300px;
                         opacity: 1;
@@ -60,7 +63,7 @@
                         transform: translateY(0);
                     }
                     .contact::after {
-                        content: "–";
+                        content: "\F63B";
                     }
                 }
             }

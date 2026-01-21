@@ -36,7 +36,7 @@ header{
 				}
 				li {
 					a {
-						padding: 5px 20px !important;
+						padding: 5px 20px !important;						
 						border-radius: 50px;
 						overflow: hidden;
 						&:before{
@@ -80,7 +80,9 @@ header{
 			
 			ul {
 				background-color: #ffffff;
-				border-radius: 50px;
+				@media (min-width: 769px) {
+					border-radius: 50px;
+				}
 			}
 			figure {
 				top: 13px;
@@ -99,6 +101,18 @@ header{
 				}
 			}
 		}
+		@media (max-width: 768px) {
+			> div nav .wp-block-navigation__responsive-container{
+				top: 102px !important;
+				background-color: var(--wp--preset--color--tertiary) !important;
+				ul{
+					background-color: var(--wp--preset--color--tertiary) !important;
+				}
+				&.is-menu-open{
+					top: 102px !important
+				}
+			}
+		}
 	}
 
 	&:not(.isSpecialHeader) {
@@ -107,9 +121,10 @@ header{
 
 	@media (max-width: 768px) {
 		> div nav .wp-block-navigation__responsive-container{
-			top: var(--mbfse-header-height);
+			top: calc(var(--mbfse-header-height) - 1px);
+			background-color: var(--wp--preset--color--tertiary) !important;
 			&.is-menu-open{
-				background-color: var(--wp--preset--color--tertiary);
+				
 				min-height: auto;
 				top: var(--mbfse-header-height);
 				
@@ -118,9 +133,7 @@ header{
 					> ul.wp-block-navigation__container {
 						background-color: var(--wp--preset--color--tertiary);
 						gap:5px;
-						span{
-							font-size: 40px
-						}
+						
 					}
 				} 
 
@@ -128,6 +141,10 @@ header{
 					background: #fff
 				}		
 			}
+
+			span{
+							font-size: 40px
+						}
 		}
 	}
 }
@@ -135,6 +152,7 @@ header{
 // footer
 footer{
 	--mbfse--padding-footer:40px 0;
+	background-color: #000;
 	*{
 		font-size: 18px;
 		@media (max-width: 601px) {
@@ -142,12 +160,25 @@ footer{
     	}
 	}
 	>div{
+		max-width: var(--wp--style--global--content-size);
+		margin: 0 auto;
 		align-items: stretch !important;
 		gap:20px !important;
+
+		.wp-block-group.mbfse-copyright{
+			margin-left: 0 !important;
+			a,
+			p{
+				color:#fff;
+				line-height: 1;
+			}
+		} 
 	}
 
 	.parts-footer {
 		min-width: 50%;
+		padding:0; 
+
 		.wp-block-navigation-item__label {
 			color: white !important;
 		}
@@ -168,7 +199,8 @@ footer{
 	> div > div:last-of-type{
 		display: flex;
 		flex-direction: column;
-
+		justify-content: space-between;
+		
 		figure{
 			margin-bottom: var(--mbfse--margin-bottom-inline);
 		}
@@ -189,3 +221,18 @@ footer{
 	}
 }
 
+@media (max-width: 768px){
+	html.has-modal-open{
+		header.isSpecialHeader{
+			background-color: #fff;
+			.wp-block-image{
+				img{
+					filter: invert(1);
+				}
+			}
+			.wp-block-navigation__responsive-container-close{
+				top: 48px;
+			}
+		}
+	}
+}

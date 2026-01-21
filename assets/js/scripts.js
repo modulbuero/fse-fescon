@@ -4,10 +4,19 @@
         leistungenSwiper()
         refSlider()
         webinarSlider()
+        contactInfo()
 
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
         });
+
+        if(window.innerWidth <= 601){
+            // Unter einen anderen Container setzen
+            $('.wp-block-image.alignfull.size-full.only-mobile').insertBefore('.contact-cover');   
+        }
+
+        abstandLinks()
+
     })
 
     /**
@@ -178,6 +187,13 @@
             }
         });
 
+
+        if(window.innerWidth <= 601){
+            // Unter einen anderen Container setzen
+            $('.webinar-arrows').insertAfter('.webinars-wrapper');   
+        }
+        
+
     }
 
     function refSlider() {
@@ -202,6 +218,11 @@
                 }
             }
         });
+
+        if(window.innerWidth <= 601){
+            // Unter einen anderen Container setzen
+            $('.referenz-arrows').insertAfter('.refrences-wrapper .wp-block-query');   
+        }
     }   
 
 
@@ -254,6 +275,21 @@
 
         $(fields).on('focusout', function(){
             checkInputField()
+        })
+    }
+
+    function abstandLinks(){
+        let marginLeft = parseInt($("header > .parts-header > .wp-block-group").css('marginLeft'));
+        let paddingLeft = parseInt($("header > .parts-header").css('paddingLeft'));
+        let abstandLeft = marginLeft + paddingLeft
+        //Abstand für Hero-Slider
+        $('.webinar-slider-container, .webinar-simple-wrap').css('paddingLeft',abstandLeft + 'px')	
+    }
+
+    function contactInfo(){
+        $('.contac-info-wrapper').on('click', function(){
+
+            $(this).toggleClass("open-info")
         })
     }
 })(jQuery)

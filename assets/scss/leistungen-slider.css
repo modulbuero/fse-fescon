@@ -189,8 +189,17 @@
   padding: 0;
 }
 .leistungen-stapel .wp-block-columns .wp-block-column:first-child {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .leistungen-stapel .wp-block-columns .wp-block-column:first-child {
+    padding: 40px;
+  }
+}
+.leistungen-stapel .wp-block-columns .wp-block-column:first-child .wp-block-image {
+  margin-top: auto;
 }
 .leistungen-stapel .wp-block-columns .wp-block-column:last-child {
   padding: 0;

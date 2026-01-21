@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,18 +40,21 @@
   gap: 0 !important;
 }
 .team-grid .team-card .team-body .contac-info-wrapper .contact:after {
-  content: "+";
+  content: "\f64d";
+  font-family: "bootstrap-icons";
   position: absolute;
   right: 0px;
+  font-size: 20px;
+  top: 1px;
 }
-.team-grid .team-card .team-body .contac-info-wrapper:hover .contact-details {
+.team-grid .team-card .team-body .contac-info-wrapper.open-info .contact-details {
   max-height: 300px;
   opacity: 1;
   padding-top: 160px;
   transform: translateY(0);
 }
-.team-grid .team-card .team-body .contac-info-wrapper:hover .contact::after {
-  content: "–";
+.team-grid .team-card .team-body .contac-info-wrapper.open-info .contact::after {
+  content: "\f63b";
 }
 @media (max-width: 1118px) {
   .team-grid .team-card .team-body {
