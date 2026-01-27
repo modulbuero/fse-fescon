@@ -8,6 +8,7 @@
 
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
+            ninjaFormSubmit()
         });
 
         if(window.innerWidth <= 601){
@@ -16,7 +17,8 @@
         }
 
         abstandLinks()
-
+        //setTimeout(deaktivateTouchSwiper(), 1000);
+        
     })
 
     /**
@@ -44,13 +46,13 @@
                     },
                     clickable: true,
                 },
-                allowTouchMove: false,
-
+                
                 slidesPerView: slidesPerView,
                 effect: "slide",
             }
     
             let standSwiper = new Swiper(index, cSwiperParams);
+            disableSwipeDrag(standSwiper);
 
             // Klick auf eigene Pagination Bugfix Touch Navigataion
             document.querySelectorAll('.swiper-pagination-bullet').forEach(bullet => {
@@ -144,6 +146,8 @@
                     setActiveItem(currentIndex);
                 }
             });
+
+            
         }
     }
 
@@ -152,7 +156,7 @@
      */
     function webinarSlider() {
         // default webinar slider
-        new Swiper('.swiper.webinar-slider:not(.fescon-webinar)', {
+        let webinarNon = new Swiper('.swiper.webinar-slider:not(.fescon-webinar)', {
             slidesPerGroup: 1,
             navigation: {
             nextEl: '.webinar-arrows .custom-next',
@@ -163,6 +167,7 @@
             slidesPerView: 1,
             spaceBetween: 16,
             allowTouchMove: false,
+            simulateTouch: false,
             // bigger screens
             breakpoints: {
             550: { slidesPerView: 1.5, spaceBetween: 20 },
@@ -170,55 +175,61 @@
         });
 
         // fescon-webinar variant
-        new Swiper('.swiper.webinar-slider.fescon-webinar', {
+        let webinarS = new Swiper('.swiper.webinar-slider.fescon-webinar', {
             slidesPerGroup: 1,
             navigation: {
             nextEl: '.webinar-arrows .custom-next',
             prevEl: '.webinar-arrows .custom-prev',
             },
             allowTouchMove: false,
-            // mobile
+            simulateTouch: false,
+            /// mobile
             slidesPerView: 1,
             spaceBetween: 16,
-
-            // ✅ bigger screens
+            
             breakpoints: {
             550: { slidesPerView: 2.5, spaceBetween: 20 },
             }
         });
 
-
+        disableSwipeDrag(webinarNon);
+        disableSwipeDrag(webinarS);
+        
         if(window.innerWidth <= 601){
             // Unter einen anderen Container setzen
             $('.webinar-arrows').insertAfter('.webinars-wrapper');   
         }
-        
-
     }
 
     function refSlider() {
-        new Swiper('.referenz-slider', {
+       let refS = new Swiper('.referenz-slider', {
             loop: true,
             slidesPerGroup: 1,
             navigation: {
-            nextEl: '.referenz-arrows .custom-next',
-            prevEl: '.referenz-arrows .custom-prev',
+                nextEl: '.referenz-arrows .custom-next',
+                prevEl: '.referenz-arrows .custom-prev',
             },
-
-            // responsive
             slidesPerView: 1,
             spaceBetween: 20,
-
+           
+            
             breakpoints: {
-                602: {          // Tablet breakpoint
+                602: { 
                     slidesPerView: 2,
+                    allowTouchMove: false,
+                    touchRatio: 0
                 },
-                961: {          // Desktop breakpoint
+                961: { 
                     slidesPerView: 3,
+                    allowTouchMove: false,
+                    touchRatio: 0
                 }
             }
         });
 
+
+        disableSwipeDrag(refS);
+        
         if(window.innerWidth <= 601){
             // Unter einen anderen Container setzen
             $('.referenz-arrows').insertAfter('.refrences-wrapper .wp-block-query');   
@@ -291,5 +302,32 @@
 
             $(this).toggleClass("open-info")
         })
+    }
+
+    function disableSwipeDrag(swiperInstance) {
+        if(!swiperInstance || !swiperInstance.wrapperEl) {
+            return;
+        }
+        if($(window).width() <= 601){
+            //return;
+        }
+        //'touchstart', 'touchmove', 'touchend',
+        const events = ['mousedown', 'mousemove', 'mouseup',  'pointerdown', 'pointermove', 'pointerup'];
+        
+        events.forEach(eventType => {
+            swiperInstance.wrapperEl.addEventListener(eventType, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                return false;
+            }, { capture: true, passive: false });
+        });
+    }
+
+    function ninjaFormSubmit(){
+        $(document).on('nfFormSubmitResponse', function(event, response) {
+            // Klasse zum Body hinzufügen
+            $('body').addClass('ninja-form-submitted');
+        });
     }
 })(jQuery)

@@ -14,3 +14,18 @@
     padding:0 !important;
     margin-bottom: 0 !important;
 }
+
+body.ninja-form-submitted{
+    .contact-cover{
+        
+        .wp-block-cover__inner-container{
+            background-color: var(--wp--preset--color--tertiary);
+            h2{
+                color:#fff;
+            }
+        }
+        .wp-block-heading{
+            display:none
+        }
+    }
+}

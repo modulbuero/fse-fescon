@@ -74,6 +74,11 @@
   position: absolute;
   bottom: 5px;
 }
+@media (max-width: 1024px) {
+  .webinar-arrows {
+    bottom: -30px;
+  }
+}
 @media (max-width: 601px) {
   .webinar-arrows {
     font-size: 20px;
@@ -141,6 +146,7 @@ main .webinar-slider-container.alignfull > .wp-block-columns {
     right: auto;
     left: auto;
     font-size: 32px;
+    gap: 20px;
   }
 }
 

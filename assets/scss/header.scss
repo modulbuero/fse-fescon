@@ -9,8 +9,10 @@ header{
 	> div{
 		padding-top: 10px;
 		background-color: #fff;
-
+		box-sizing: border-box;
+		min-height: 84px;
 		.header-logo{
+			top: 2px;
 			a{
 				width: 100%;
 				height: 100%;
@@ -22,8 +24,15 @@ header{
 				filter: invert(1);
 				max-width: 140px;
 			}
+			position: absolute;
 		}
 
+		nav{
+			top:7px;
+			@media (max-width: 768px) {
+				top: 20px;
+			}
+		}
 		.wp-block-navigation__responsive-container-content {
 			display: flex;
 			justify-content: center !important;
@@ -75,6 +84,7 @@ header{
 
 	&.isSpecialHeader {
 		> div{
+			min-height: 84px;
 			padding-top: 30px;
 			background-color: transparent;
 			
@@ -85,7 +95,6 @@ header{
 				}
 			}
 			figure {
-				top: 13px;
 				max-width: 160px;
 				filter: invert(0);
 			}
@@ -93,6 +102,11 @@ header{
 				opacity: 0;
 			}
 			
+			nav{
+				@media (max-width: 768px) {
+					top: 10px;
+				}
+			}
 			nav > button{
 				color:#fff;
 				svg{
@@ -101,15 +115,16 @@ header{
 				}
 			}
 		}
+
 		@media (max-width: 768px) {
 			> div nav .wp-block-navigation__responsive-container{
-				top: 102px !important;
+				top: var(--mbfse-header-height) !important;
 				background-color: var(--wp--preset--color--tertiary) !important;
 				ul{
 					background-color: var(--wp--preset--color--tertiary) !important;
 				}
 				&.is-menu-open{
-					top: 102px !important
+					top: var(--mbfse-header-height) !important
 				}
 			}
 		}
@@ -187,9 +202,16 @@ footer{
 			flex-direction:column;
 			gap: 15px !important;
 		}
+
+		@media (max-width: 1600px) {
+			padding-left: var(--wp--style--root--padding-left);
+			padding-right: var(--wp--style--root--padding-left);
+		}
+		
 		@media (max-width: 601px) {
 			min-width: 100%;
 			gap:40px;
+			
 			> div {
 				display: flex;
 				flex-wrap: unset !important;
@@ -231,7 +253,7 @@ footer{
 				}
 			}
 			.wp-block-navigation__responsive-container-close{
-				top: 48px;
+				top: 40px;
 			}
 		}
 	}

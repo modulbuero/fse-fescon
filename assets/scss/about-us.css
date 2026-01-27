@@ -16,6 +16,9 @@
   padding: 50px 60px 120px !important;
   flex: 1;
 }
+.team-grid .team-card .team-body h3 {
+  margin-bottom: 0 !important;
+}
 .team-grid .team-card .team-body .contac-info-wrapper {
   position: absolute;
   bottom: 0;

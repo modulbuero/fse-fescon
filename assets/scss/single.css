@@ -12,6 +12,11 @@
   margin-right: auto;
   padding: 0;
 }
+@media (max-width: 1600px) {
+  .wp-block-group .referenzen-webinar-content-fields {
+    padding: 0 var(--wp--style--root--padding-left);
+  }
+}
 .wp-block-group .referenzen-webinar-content-fields .fescon-meta-fields div {
   display: flex;
   flex-direction: column;
@@ -112,14 +117,6 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
 .single .wp-site-blocks .parts-single-template ul.taxonomy-category.wp-block-post-terms {
   padding-bottom: 60px;
 }
-.single .wp-site-blocks .wp-block-post-content .wp-block-list li {
-  display: flex;
-}
-.single .wp-site-blocks .wp-block-post-content .wp-block-list li:before {
-  content: "\f63b";
-  font-family: "bootstrap-icons";
-  padding-right: 10px;
-}
 
 /* Referenzen */
 .fescon-ref-info-fields {
@@ -180,27 +177,18 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
   display: flex;
   gap: 0;
   margin-top: 40px;
+  align-items: flex-end;
 }
-.fazit-wrap div > figure.wp-block-image {
-  flex: 1;
+.fazit-wrap div .wp-block-image {
+  max-width: 50%;
 }
 .fazit-wrap div > blockquote.wp-block-quote {
   flex: 1;
   border: none;
   background-color: var(--wp--preset--color--tertiary);
   padding: 65px;
-  margin-left: -170px;
-  max-height: 430px;
-}
-@media (min-width: 1200px) and (max-width: 1440px) {
-  .fazit-wrap div > blockquote.wp-block-quote {
-    padding: 25px;
-  }
-}
-@media (min-width: 1001px) and (max-width: 1200px) {
-  .fazit-wrap div > blockquote.wp-block-quote {
-    padding: 10px 30px;
-  }
+  margin-left: -30px;
+  margin-bottom: 8%;
 }
 @media (max-width: 1000px) {
   .fazit-wrap div > blockquote.wp-block-quote {

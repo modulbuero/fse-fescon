@@ -16,6 +16,9 @@
 	margin-right: auto;
 	padding:0;
 
+	@media (max-width: 1600px) {
+		padding:0 var(--wp--style--root--padding-left);
+	}
 	.fescon-meta-fields{
 		div{
 			display:flex;
@@ -138,19 +141,6 @@ body.single:not(.referenzen-template-default){
 			ul.taxonomy-category.wp-block-post-terms{
 				padding-bottom:60px;
 			}
-		}
-
-		.wp-block-post-content{
-			.wp-block-list{
-				li{
-					display: flex;
-					&:before{
-						content:"\F63B";
-						font-family: 'bootstrap-icons';
-						padding-right: 10px;
-					}
-				}				
-			}
 		}		
 	}	
 }
@@ -197,9 +187,10 @@ body.single:not(.referenzen-template-default){
 		display: flex;
   		gap: 0;
 		margin-top: 40px;
-
-		> figure.wp-block-image {
-			flex: 1;
+		align-items: flex-end;
+		
+		.wp-block-image{
+			max-width: 50%;
 		}
 
 		> blockquote.wp-block-quote {
@@ -207,14 +198,8 @@ body.single:not(.referenzen-template-default){
 			border: none;
 			background-color: var(--wp--preset--color--tertiary);
 			padding: 65px;
-			margin-left: -170px;
-			max-height: 430px;
-			@media (min-width: 1200px) and (max-width: 1440px)  {
-				padding: 25px;
-			}
-			@media (min-width: 1001px) and (max-width: 1200px) {
-				padding: 10px 30px;
-			}
+			margin-left: -30px;
+			margin-bottom: 8%;
 			@media (max-width: 1000px) {
 				margin-left: 0;
 			}

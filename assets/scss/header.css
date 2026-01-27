@@ -9,6 +9,12 @@ header * {
 header > div {
   padding-top: 10px;
   background-color: #fff;
+  box-sizing: border-box;
+  min-height: 84px;
+}
+header > div .header-logo {
+  top: 2px;
+  position: absolute;
 }
 header > div .header-logo a {
   width: 100%;
@@ -20,6 +26,14 @@ header > div .header-logo figure {
   top: 0px;
   filter: invert(1);
   max-width: 140px;
+}
+header > div nav {
+  top: 7px;
+}
+@media (max-width: 768px) {
+  header > div nav {
+    top: 20px;
+  }
 }
 header > div .wp-block-navigation__responsive-container-content {
   display: flex;
@@ -60,6 +74,7 @@ header > div .wp-block-navigation__responsive-container-content ul li.current-me
   opacity: 1;
 }
 header.isSpecialHeader > div {
+  min-height: 84px;
   padding-top: 30px;
   background-color: transparent;
 }
@@ -72,12 +87,16 @@ header.isSpecialHeader > div ul {
   }
 }
 header.isSpecialHeader > div figure {
-  top: 13px;
   max-width: 160px;
   filter: invert(0);
 }
 header.isSpecialHeader > div p {
   opacity: 0;
+}
+@media (max-width: 768px) {
+  header.isSpecialHeader > div nav {
+    top: 10px;
+  }
 }
 header.isSpecialHeader > div nav > button {
   color: #fff;
@@ -88,14 +107,14 @@ header.isSpecialHeader > div nav > button svg {
 }
 @media (max-width: 768px) {
   header.isSpecialHeader > div nav .wp-block-navigation__responsive-container {
-    top: 102px !important;
+    top: var(--mbfse-header-height) !important;
     background-color: var(--wp--preset--color--tertiary) !important;
   }
   header.isSpecialHeader > div nav .wp-block-navigation__responsive-container ul {
     background-color: var(--wp--preset--color--tertiary) !important;
   }
   header.isSpecialHeader > div nav .wp-block-navigation__responsive-container.is-menu-open {
-    top: 102px !important;
+    top: var(--mbfse-header-height) !important;
   }
 }
 header:not(.isSpecialHeader) {
@@ -163,6 +182,12 @@ footer .parts-footer .wp-block-navigation__container {
   flex-direction: column;
   gap: 15px !important;
 }
+@media (max-width: 1600px) {
+  footer .parts-footer {
+    padding-left: var(--wp--style--root--padding-left);
+    padding-right: var(--wp--style--root--padding-left);
+  }
+}
 @media (max-width: 601px) {
   footer .parts-footer {
     min-width: 100%;
@@ -206,6 +231,6 @@ footer > div > div:last-of-type p {
     filter: invert(1);
   }
   html.has-modal-open header.isSpecialHeader .wp-block-navigation__responsive-container-close {
-    top: 48px;
+    top: 40px;
   }
 }/*# sourceMappingURL=header.css.map */

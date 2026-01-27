@@ -14,4 +14,14 @@
 .wp-block-image.alignfull.size-full.only-mobile {
   padding: 0 !important;
   margin-bottom: 0 !important;
+}
+
+body.ninja-form-submitted .contact-cover .wp-block-cover__inner-container {
+  background-color: var(--wp--preset--color--tertiary);
+}
+body.ninja-form-submitted .contact-cover .wp-block-cover__inner-container h2 {
+  color: #fff;
+}
+body.ninja-form-submitted .contact-cover .wp-block-heading {
+  display: none;
 }/*# sourceMappingURL=contacts.css.map */

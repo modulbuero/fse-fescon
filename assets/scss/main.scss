@@ -65,16 +65,22 @@ body {
   h1 {
     font-size: var(--wp--preset--font-size--xx-large);
 	margin-bottom: 10px !important;
+	@media (max-width: 1024px) {
+		line-height: 1.15;
+	}
   }
 
   h2 {
     font-size: var(--wp--preset--font-size--xx-large);
 	@media (max-width: 1024px) {
 		font-size: 80px;
+		line-height: 1.15;
 	}
 	@media (max-width: 960px) {
 		font-size: 70px;
+		
 	}
+	
 	@media (max-width: 601px) {
 		font-size: var(--wp--preset--font-size--h2-mobile);
 	}
@@ -104,8 +110,8 @@ body {
 	}
   }
 
-  p strong{
-	font-weight: 400;
+  strong{
+	font-weight: 400 !important
   }
   
   @media (max-width: 601px) {
@@ -185,6 +191,7 @@ body.page{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+	width: 100vw;
 
 	figure.wp-block-video{
 		position: absolute;
@@ -201,7 +208,7 @@ body.page{
 
 	h1, p{
 		text-align: left;
-		width: 100%;
+		width:calc(100% - (var(--wp--style--root--padding-left) * 2));
 		padding-left: var(--wp--style--root--padding-left);
 		padding-right: var(--wp--style--root--padding-left);
 		color:#fff;
@@ -252,6 +259,7 @@ body.page{
 }
 
 /*  Buttons General style */
+input[type="submit"],
 .wp-block-button__link.wp-element-button {
 	font-size: 18px;
 	line-height: 34px;
@@ -261,7 +269,7 @@ body.page{
 	padding-bottom: 5px !important;
 	color:#000;
 	&:hover{
-		background-color: var(--wp--preset--color--contrast);
+		background-color: var(--wp--preset--color--contrast) !important;
 		color: var(--wp--preset--color--base) !important;
 	}
 	@media (max-width: 601px) {
@@ -370,6 +378,31 @@ body.page{
 	}
 }
 
+.slider{
+	-webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+
+	.swiper-wrapper{
+		cursor: default;
+		touch-action: none;
+		cursor: default;
+	}
+	.swiper-slide {
+		user-select: auto; /* Erlaubt Text-Selektion */
+		pointer-events: auto; /* Erlaubt Klicks auf Inhalte */
+	}
+}
+.referenz-slider .swiper-wrapper {
+    pointer-events: none !important;
+    touch-action: none !important;
+}
+
+.referenz-slider .swiper-slide > * {
+    pointer-events: auto !important;
+}
 /*
 	Referenzberichte
 */
@@ -377,9 +410,10 @@ body.referenzen-template-default .wp-site-blocks > main {
 	margin-top: var(--mbfse-header-height) !important;
 	.parts-single-template{
 		.mbfse-hero{
-			min-height: 700px;
-			max-height: calc(100vh - var(--mbfse-header-height));
-			margin-bottom: 50px;
+			// min-height: 700px;
+			// max-height: calc(100vh - var(--mbfse-header-height));
+			// margin-bottom: 50px;
+			display:none
 		}
 		.breadcrumb-navigation{
 			margin-bottom: 50px;
@@ -437,6 +471,11 @@ body.referenzen-template-default .wp-site-blocks > main {
 				padding: 40px 20px !important;
 				overflow: initial;
 				height: 370px;
+
+				@media (max-width: 768px) {
+					height: 430px;
+				}
+				
 				@media (max-width: 601px) {
 					height: 330px;
 				}
@@ -461,6 +500,8 @@ body.referenzen-template-default .wp-site-blocks > main {
 							aspect-ratio:auto;
 							max-width: 100%;
     						vertical-align: bottom;
+							max-height: 46px;
+							object-fit: contain !important;
 						}
 					}
 					.mbgi-block-bootstrap-icon{
@@ -479,7 +520,7 @@ body.referenzen-template-default .wp-site-blocks > main {
 							min-width: 55px;
 							width: max-content;
 							font-size: 15px;
-							top:-9.5px;
+							top:-8.5px;
 							color:white
 						}
 						div {
@@ -562,11 +603,14 @@ form .nf-form-content {
 			padding: 0;
 			z-index: 1;
 			font-size: 22px;
+			label{
+				font-weight: 400;
+			}
 		}
 		
 		.list-select-wrap .nf-field-label {
 			font-size: 22px !important;
-			top: 31px !important;
+			top: 32px !important;
 		}
 		
 		.field-wrap {
@@ -618,6 +662,14 @@ form .nf-form-content {
 			.nf-field-element{
 				select{
 					padding-left: 40px;
+					-webkit-appearance: none;
+  					appearance: none;
+					font-family: var(--wp--preset--font-family--unineue);
+
+					background-image: url("../img/chevron-down.svg");
+					background-repeat: no-repeat;
+					background-position: right 0 center;
+    				background-size: 20px 20px;
 				}
 			}
 		}

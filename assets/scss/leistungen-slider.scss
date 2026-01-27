@@ -15,7 +15,7 @@
                 justify-content: center;
                 justify-items: center;
                 padding-top:120px;
-
+                padding-bottom:40px;
                 h3{
                     margin-top: auto;
                 }
@@ -58,6 +58,7 @@
                     display: flex;
                     img{
                         object-fit: cover;
+                        height:100%
                     }
                 }
             }
@@ -78,6 +79,7 @@
                         max-height: 400px;
                     }
                 }
+                
             }
         }
     }
@@ -102,6 +104,11 @@
     @media (max-width: 768px) {
         --swiper-navigation-sides-offset: 42%;
     }
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        font-size: 32px;
+    }
+    
 
     /*Slider Menu*/
     .menu-container{

@@ -120,7 +120,7 @@ body{
 				}
 			}
 
-			.wp-block-post-featured-image{
+			&:not(.referenzen) .wp-block-post-featured-image{
 				display: none;
 			}
 		}
@@ -271,9 +271,24 @@ body{
 	}
 }
 
-.wp-block-list li::marker {
-	content: "";
+
+.wp-block-list {
+	padding-inline-start: 10px;
+	margin-bottom: var(--mbfse--margin-bottom-inline) !important;
+	li{
+		display: flex;
+		&:before{
+			content:"\F63B";
+			font-family: 'bootstrap-icons';
+			padding-right: 10px;
+		}
+
+		&::marker {
+			content: "";
+		}
+	}
 }
+
 .wp-block-post-terms__separator {
 	display: none;
 }
