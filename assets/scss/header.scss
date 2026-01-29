@@ -176,6 +176,9 @@ footer{
 	}
 	>div{
 		max-width: var(--wp--style--global--content-size);
+
+		padding-left: var(--wp--style--root--padding-left);
+		padding-right: var(--wp--style--root--padding-left);
 		margin: 0 auto;
 		align-items: stretch !important;
 		gap:20px !important;
@@ -193,7 +196,7 @@ footer{
 	.parts-footer {
 		min-width: 50%;
 		padding:0; 
-
+		
 		.wp-block-navigation-item__label {
 			color: white !important;
 		}
@@ -204,8 +207,6 @@ footer{
 		}
 
 		@media (max-width: 1600px) {
-			padding-left: var(--wp--style--root--padding-left);
-			padding-right: var(--wp--style--root--padding-left);
 		}
 		
 		@media (max-width: 601px) {

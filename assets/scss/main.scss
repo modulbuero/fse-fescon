@@ -1,7 +1,7 @@
 .wp-site-blocks > main {
 	--mbfse--details-padding:1rem 0;
 	--mbfse--margin-bottom-inline:30px;
-
+	--mbfse--style--global--image-size: 100%;
 	@media (max-width: 601px) {
     	--mbfse--margin-bottom-inline:10px;	
 		--mbfse--margin-bottom-block:100px;
@@ -27,7 +27,10 @@
 		padding-bottom:60px !important
 	}
 
-	
+	.wp-block-post-content p > a:where(:not(.wp-element-button)){
+		color: #000;
+		text-decoration: underline
+	}
 }
 
 /*Standards*/
@@ -468,7 +471,7 @@ body.referenzen-template-default .wp-site-blocks > main {
 				box-shadow: none;
 				border-radius: 0 ;
 				background-image: none;
-				padding: 40px 20px !important;
+				padding: 40px !important;
 				overflow: initial;
 				height: 370px;
 
@@ -755,4 +758,17 @@ form .nf-form-content {
 .wp-block-post-content .has-background{
 	padding-top: var(--mbfse--margin-bottom-block);
 	padding-bottom:var(--mbfse--margin-bottom-block);
+}
+
+body{
+	&.datenschutz,
+	&.impressum{
+		h2{
+			font-size: var(--wp--preset--font-size--h2-x-large);
+		}
+
+		.entry-content{
+			padding-bottom: var(--mbfse--margin-bottom-block);
+		}
+	}
 }

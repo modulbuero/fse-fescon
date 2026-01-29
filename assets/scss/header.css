@@ -158,6 +158,8 @@ footer * {
 }
 footer > div {
   max-width: var(--wp--style--global--content-size);
+  padding-left: var(--wp--style--root--padding-left);
+  padding-right: var(--wp--style--root--padding-left);
   margin: 0 auto;
   align-items: stretch !important;
   gap: 20px !important;
@@ -181,12 +183,6 @@ footer .parts-footer .wp-block-navigation__container {
   display: flex;
   flex-direction: column;
   gap: 15px !important;
-}
-@media (max-width: 1600px) {
-  footer .parts-footer {
-    padding-left: var(--wp--style--root--padding-left);
-    padding-right: var(--wp--style--root--padding-left);
-  }
 }
 @media (max-width: 601px) {
   footer .parts-footer {

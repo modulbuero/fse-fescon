@@ -10,7 +10,6 @@
   max-width: var(--wp--style--global--content-size);
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
 }
 @media (max-width: 1600px) {
   .wp-block-group .referenzen-webinar-content-fields {
@@ -155,6 +154,7 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
 .entry-content details summary {
   width: 100% !important;
   padding-left: 0 !important;
+  font-weight: 400 !important;
 }
 .entry-content details summary:before {
   content: "\f4fe" !important;
@@ -168,6 +168,9 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
 .entry-content details[open] summary:before {
   content: "\f2ea" !important;
 }
+.entry-content details:has(+ :not(details)) {
+  margin-bottom: 40px !important;
+}
 
 /* Fazit */
 .fazit-wrap {
@@ -177,7 +180,7 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
   display: flex;
   gap: 0;
   margin-top: 40px;
-  align-items: flex-end;
+  align-items: center;
 }
 .fazit-wrap div .wp-block-image {
   max-width: 50%;
@@ -188,7 +191,7 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
   background-color: var(--wp--preset--color--tertiary);
   padding: 65px;
   margin-left: -30px;
-  margin-bottom: 8%;
+  margin-bottom: unset;
 }
 @media (max-width: 1000px) {
   .fazit-wrap div > blockquote.wp-block-quote {
@@ -224,6 +227,9 @@ ol.breadcrumb {
 }
 ol.breadcrumb * {
   font-size: var(--wp--preset--font-size--small);
+}
+ol.breadcrumb li {
+  list-style-type: none;
 }
 ol.breadcrumb li::marker {
   display: none;

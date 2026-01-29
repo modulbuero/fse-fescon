@@ -219,7 +219,7 @@
                     allowTouchMove: false,
                     touchRatio: 0
                 },
-                961: { 
+                1120: { 
                     slidesPerView: 3,
                     allowTouchMove: false,
                     touchRatio: 0

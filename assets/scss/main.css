@@ -1,6 +1,7 @@
 .wp-site-blocks > main {
   --mbfse--details-padding:1rem 0;
   --mbfse--margin-bottom-inline:30px;
+  --mbfse--style--global--image-size: 100%;
   padding-bottom: 0px;
 }
 @media (max-width: 601px) {
@@ -23,6 +24,10 @@
 .wp-site-blocks > main .small-background {
   padding-top: 60px !important;
   padding-bottom: 60px !important;
+}
+.wp-site-blocks > main .wp-block-post-content p > a:where(:not(.wp-element-button)) {
+  color: #000;
+  text-decoration: underline;
 }
 
 /*Standards*/
@@ -448,7 +453,7 @@ body.referenzen-template-default .wp-site-blocks > main .parts-single-template h
   box-shadow: none;
   border-radius: 0;
   background-image: none;
-  padding: 40px 20px !important;
+  padding: 40px !important;
   overflow: initial;
   height: 370px;
 }
@@ -712,5 +717,12 @@ form .nf-form-content > nf-fields-wrap nf-field .listselect-container .nf-field-
 
 .wp-block-post-content .has-background {
   padding-top: var(--mbfse--margin-bottom-block);
+  padding-bottom: var(--mbfse--margin-bottom-block);
+}
+
+body.datenschutz h2, body.impressum h2 {
+  font-size: var(--wp--preset--font-size--h2-x-large);
+}
+body.datenschutz .entry-content, body.impressum .entry-content {
   padding-bottom: var(--mbfse--margin-bottom-block);
 }/*# sourceMappingURL=main.css.map */
