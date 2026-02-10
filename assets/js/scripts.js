@@ -5,6 +5,8 @@
         refSlider()
         webinarSlider()
         contactInfo()
+        openFirstDetailRef()
+        abstandLinks()
 
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
@@ -15,10 +17,6 @@
             // Unter einen anderen Container setzen
             $('.wp-block-image.alignfull.size-full.only-mobile').insertBefore('.contact-cover');   
         }
-
-        abstandLinks()
-        //setTimeout(deaktivateTouchSwiper(), 1000);
-        
     })
 
     /**
@@ -115,7 +113,8 @@
             });
 
             // Zurück zur aktiven Position
-            $menu.on('mouseleave', function () {
+            $('.menu-container').on('mouseleave', function () {
+                console.log('leave')
                 const $active = $menu.find('.'+activeClass);
                 if ($active.length) {
                     setSliderPosition($active);
@@ -298,10 +297,10 @@
     }
 
     function contactInfo(){
-        $('.contac-info-wrapper').on('click', function(){
-
-            $(this).toggleClass("open-info")
-        })
+        let kontaktieren = '.contac-info-wrapper .contact'
+        $(kontaktieren).on('click', function () {
+            $(this).closest('.contac-info-wrapper').toggleClass('open-info');
+        });
     }
 
     function disableSwipeDrag(swiperInstance) {
@@ -329,5 +328,11 @@
             // Klasse zum Body hinzufügen
             $('body').addClass('ninja-form-submitted');
         });
+    }
+
+    function openFirstDetailRef(){
+        if($('.single-referenzen-html').length){
+            $('.entry-content > .wp-block-details:first-child summary').click()
+        }
     }
 })(jQuery)

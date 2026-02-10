@@ -35,8 +35,10 @@ header{
 		}
 		.wp-block-navigation__responsive-container-content {
 			display: flex;
-			justify-content: center !important;
 			align-items: center;
+			@media (min-width: 1120px) {				
+				justify-content: center !important;
+			}
 
 			ul {
 				padding: 5px !important;

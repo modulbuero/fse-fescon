@@ -71,6 +71,13 @@ function mbfse_child_style_Files(){
 		wp_get_theme()->get( 'Version' )
 	);
 
+	wp_enqueue_style(
+		'mb-child-archiv',
+		get_stylesheet_directory_uri().$f_CSS.'archiv.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+
 	/*JS*/
 	wp_enqueue_script(
 		'mb-child-script',

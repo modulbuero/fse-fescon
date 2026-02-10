@@ -1,7 +1,13 @@
+@use 'mixins';
+
 .wp-site-blocks > main {
 	--mbfse--details-padding:1rem 0;
 	--mbfse--margin-bottom-inline:30px;
 	--mbfse--style--global--image-size: 100%;
+	--triangle-height:40px;
+
+	padding-bottom:0px;
+	
 	@media (max-width: 601px) {
     	--mbfse--margin-bottom-inline:10px;	
 		--mbfse--margin-bottom-block:100px;
@@ -17,7 +23,7 @@
 		
     }
 
-	padding-bottom:0px;
+	
 
 	.small-container{
 		max-width: 1200px;
@@ -39,6 +45,7 @@
 	padding-bottom: 0;
 
 	/*p-tag spezial*/
+	.about,
 	>h2+p{
 		padding-right: 200px;
 		box-sizing: border-box;
@@ -50,7 +57,7 @@
 
 /*Fonts*/
 body {
-	--wp--preset--font-size--xx-large:96px;
+	--wp--preset--font-size--xx-large:80px;
 	--wp--preset--font-size--h2-x-large:56px;
 	--wp--preset--font-size--x-large:40px;
 	--wp--preset--font-size--large:28px;
@@ -115,6 +122,10 @@ body {
 
   strong{
 	font-weight: 400 !important
+  }
+
+  .has-x-large-font-size{
+	line-height:1.2
   }
   
   @media (max-width: 601px) {
@@ -426,6 +437,7 @@ body.referenzen-template-default .wp-site-blocks > main {
 		}
 	}
 }
+
 .refrences-wrapper {
 	>.wp-block-group{
 		gap:0;
@@ -456,7 +468,6 @@ body.referenzen-template-default .wp-site-blocks > main {
 	}
 	
 	.wp-block-query {
-		--triangle-height:40px;
 
 		ul.wp-block-post-template {
 			display: block; /*if Swiper*/
@@ -465,99 +476,7 @@ body.referenzen-template-default .wp-site-blocks > main {
 				margin-bottom:calc(var(--triangle-height) + 20px);
 			}
 			li {
-				display: flex;
-    			flex-direction: column;
-				background-color: white;
-				box-shadow: none;
-				border-radius: 0 ;
-				background-image: none;
-				padding: 40px !important;
-				overflow: initial;
-				height: 370px;
-
-				@media (max-width: 768px) {
-					height: 430px;
-				}
-				
-				@media (max-width: 601px) {
-					height: 330px;
-				}
-				
-				.query-text-container{
-					margin-bottom:30px;
-					justify-content: space-between;
-				}
-
-				.bild-details-wrap{
-					justify-content: space-between;
-					margin-bottom: 0;
-					margin-top: auto;
-					.wp-block-post-featured-image{
-						overflow: visible;
-						top:auto;
-						left:auto;
-						width: 100%;
-						max-width: 100px;
-						
-						img{
-							aspect-ratio:auto;
-							max-width: 100%;
-    						vertical-align: bottom;
-							max-height: 46px;
-							object-fit: contain !important;
-						}
-					}
-					.mbgi-block-bootstrap-icon{
-						border: 1px solid var(--wp--preset--color--contrast);
-						border-radius: 50px;
-						width: 100%;
-						height: 44px;
-						max-width: 44px;
-						transition: var(--mbfse--transition);
-						i{
-							padding-left: 6px;
-						}
-						p{
-							position: absolute;
-							opacity: 0.3;
-							min-width: 55px;
-							width: max-content;
-							font-size: 15px;
-							top:-8.5px;
-							color:white
-						}
-						div {
-							height: 6px;
-						}
-					}
-				}
-
-				&:after{
-					content:"";
-					position: absolute;
-					width: 0px;
-					height: 0px;
-					border-style: solid;
-					border-width: 0 var(--triangle-height) var(--triangle-height) 0;
-					border-color: transparent var(--wp--preset--color--base) transparent transparent;
-					transform: rotate(0deg);
-					bottom:calc(var(--triangle-height) * (-1));
-				}
-
-				&:hover{
-					filter: drop-shadow(7px 9px 8px #00000020);
-					.mbgi-block-bootstrap-icon{
-						max-width: 100px;
-    					border-radius: 30px;
-						background-color: var(--wp--preset--color--contrast);
-						.bi-plus::before{
-							color:var(--wp--preset--color--base);
-						}
-						p{
-							opacity: 1;
-						}
-					}
-				}
+				@include mixins.referenzBubble
 			}
 		}
 	}
@@ -668,7 +587,7 @@ form .nf-form-content {
 					-webkit-appearance: none;
   					appearance: none;
 					font-family: var(--wp--preset--font-family--unineue);
-
+					background-color: #fff;
 					background-image: url("../img/chevron-down.svg");
 					background-repeat: no-repeat;
 					background-position: right 0 center;
@@ -678,6 +597,7 @@ form .nf-form-content {
 		}
 	}
 }
+
 .contact-cover {
 	padding-top: 140px;
 	padding-bottom: 140px;

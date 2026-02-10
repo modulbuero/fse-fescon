@@ -1,0 +1,157 @@
+@mixin referenzBubble{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: none;
+	border-radius: 0 ;
+	background-image: none;
+	padding: 40px !important;
+	overflow: initial;
+	height: 370px;
+
+	@media (max-width: 768px) {
+		height: 430px;
+	}
+	
+	@media (max-width: 601px) {
+		height: 330px;
+	}
+	
+	.query-text-container{
+		margin-bottom:30px;
+		justify-content: space-between;
+	}
+
+	.bild-details-wrap{
+		justify-content: space-between;
+		margin-bottom: 0;
+		margin-top: auto;
+		.wp-block-post-featured-image{
+			overflow: visible;
+			top:auto;
+			left:auto;
+			width: 100%;
+			max-width: 100px;
+			
+			img{
+				aspect-ratio:auto;
+				max-width: 100%;
+				vertical-align: bottom;
+				max-height: 46px;
+				object-fit: contain !important;
+			}
+		}
+		.mbgi-block-bootstrap-icon{
+			border: 1px solid var(--wp--preset--color--contrast);
+			border-radius: 50px;
+			width: 100%;
+			height: 44px;
+			max-width: 44px;
+			transition: var(--mbfse--transition);
+			i{
+				padding-left: 6px;
+			}
+			p{
+				position: absolute;
+				opacity: 0.3;
+				min-width: 55px;
+				width: max-content;
+				font-size: 15px;
+				top:-8.5px;
+				color:white
+			}
+			div {
+				height: 6px;
+			}
+		}
+	}
+
+	&:after{
+		content:"";
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 0 var(--triangle-height) var(--triangle-height) 0;
+		border-color: transparent var(--wp--preset--color--base) transparent transparent;
+		transform: rotate(0deg);
+		bottom:calc(var(--triangle-height) * (-1));
+	}
+
+	&:hover{
+		filter: drop-shadow(7px 9px 8px #00000020);
+		.mbgi-block-bootstrap-icon{
+			max-width: 100px;
+			border-radius: 30px;
+			background-color: var(--wp--preset--color--contrast);
+			.bi-plus::before{
+				color:var(--wp--preset--color--base);
+			}
+			p{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@mixin webinarBox{
+    background-color: var(--wp--preset--color--quaternary);
+    box-shadow: none;
+    background-image: none;
+
+    .wp-block-post-excerpt {
+        margin-bottom: 60px !important;
+        @media (max-width: 601px) { 
+            margin-bottom: 30px !important;
+        }
+    }
+    div.wp-block-group.no-distance-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        >div{
+            margin: 0 !important;
+            
+            .wp-block-button{
+                max-width: 160px;
+                .wp-block-button__link{
+                    min-width: 160px
+                }							
+            }
+
+            @media (max-width: 601px) { 
+                .wp-block-button{
+                    max-width: 110px;
+                    .wp-block-button__link{
+                        min-width: 110px
+                    }							
+                }	
+            }
+        }
+    }
+}
+
+@mixin taxitem(){
+    font-size: 18px;
+    background-color: var(--wp--preset--color--tertiary);
+    color: var(--wp--preset--color--contrast) !important;
+    display: inline-flex;
+    gap: 7px;
+    padding: 5px 10px;
+    line-height: 1;
+    border:1px solid var(--wp--preset--color--tertiary);
+
+    &:before{
+        content: '\F3D1';
+        font-family: 'bootstrap-icons';
+        position: relative;
+        top:2px;
+    }
+    &:hover{
+        background-color: transparent;
+        border-color:#000;
+    }
+    @media (max-width: 601px) { 
+        font-size: 14px;
+    }
+}

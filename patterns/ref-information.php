@@ -35,4 +35,10 @@
         <p><?php echo get_field('anwender') ?></p> 
     </div>
     <?php endif; ?>
+    <?php if(get_field('pdf_zum_download')) : ?>
+    <div>
+        <label>Bericht herunterladen</label>
+        <a href="<?php echo get_field('pdf_zum_download') ?>">Download</a>
+    </div>
+    <?php endif; ?>
 </div>

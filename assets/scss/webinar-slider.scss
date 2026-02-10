@@ -1,3 +1,4 @@
+@use 'mixins';
 /*
 	Webinar Slider
 */
@@ -9,40 +10,7 @@
 			margin-bottom:0;
 
 			.swiper-slide{
-				background-color: var(--wp--preset--color--quaternary);
-				box-shadow: none;
-				background-image: none;
-
-				.wp-block-post-excerpt {
-					margin-bottom: 60px !important;
-					@media (max-width: 601px) { 
-						margin-bottom: 30px !important;
-					}
-				}
-				div.wp-block-group.no-distance-bottom{
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					>div{
-						margin: 0 !important;
-						
-						.wp-block-button{
-							max-width: 160px;
-							.wp-block-button__link{
-								min-width: 160px
-							}							
-						}
-
-						@media (max-width: 601px) { 
-							.wp-block-button{
-								max-width: 110px;
-								.wp-block-button__link{
-									min-width: 110px
-								}							
-							}	
-						}
-					}
-				}
+				@include mixins.webinarBox
 				
 			}
 			.swiper-slide-active{
@@ -163,6 +131,10 @@ main .webinar-slider-container.alignfull{
 	padding-right: 0 !important;
 	>div{
 		margin:0 !important;
+
+		@media (max-width: 1024px) {
+			padding:0 !important;
+		}
 	}
 }
 
@@ -189,4 +161,55 @@ main .webinar-slider-container.alignfull{
 			gap:40px;
 		}
 	}
+}
+
+.old-webinars.webinar-shortcode{
+	@media (max-width: 1600px) { 
+		margin-left:0 !important;
+		margin-right:0 !important;
+	}
+	
+	.wp-block-post-template{
+		grid-template-columns: 1fr 1fr;
+		article{
+			padding: 60px !important;
+			@include mixins.webinarBox;
+
+			.query-text-container{
+				margin-bottom: 0;
+			}
+
+			a.wp-block-button__link{
+				border:1px solid #000000;
+				border-radius: 50px;
+			}
+
+			.wp-block-post-terms a{
+				display: flex;
+				border:none;
+				background-color: transparent;
+				align-items: center;
+				z-index: 11;
+				font-size: 18px;
+				@media (max-width: 601px) { 
+					font-size: 14px;
+				}
+				background-color: transparent;
+				border-color:transparent;
+
+				@include mixins.taxitem;
+			}
+
+			.wp-block-read-more{
+				position: absolute;
+				color: transparent;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	
 }

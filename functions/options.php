@@ -86,11 +86,11 @@ function ref_logo_id($block) {
 }
 function referenzLogo($pID){
     $logourl = get_field('firmen-logo', $pID);
-    $html = "<figure class='wp-block-post-featured-image'>";
+    $html = "";
     if($logourl){
-        $html .= '<img src="'.$logourl.'" alt="Referenz Logo"/>';
+        $html .= '<div class="imgcontainer"><img src="'.$logourl.'" alt="Referenz Bild"/></div>';
     }
-    $html .= "</figure>";
+    $html .= "";
     return $html;
 }
 

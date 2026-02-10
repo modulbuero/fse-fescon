@@ -11,32 +11,9 @@ body{
 		display: flex;
 		gap: 10px;
 	}
-	@mixin taxitem(){
-		font-size: 18px;
-		background-color: var(--wp--preset--color--tertiary);
-		color: var(--wp--preset--color--contrast) !important;
-		display: inline-flex;
-		gap: 7px;
-		padding: 5px 10px;
-		line-height: 1;
-		border:1px solid var(--wp--preset--color--tertiary);
-
-		&:before{
-			content: '\F3D1';
-			font-family: 'bootstrap-icons';
-			position: relative;
-			top:2px;
-		}
-		&:hover{
-			background-color: transparent;
-			border-color:#000;
-		}
-		@media (max-width: 601px) { 
-			font-size: 14px;
-		}
-	}
+	@include mixins.taxitem;
 	.taxonomy-item{
-		@include taxitem;
+		@include mixins.taxitem;
 	}
 	.taxonomy-category.wp-block-post-terms{
 		margin-bottom:5px;
@@ -44,7 +21,7 @@ body{
 			margin-bottom:20px;
 		}
 		a{
-			@include taxitem;
+			@include mixins.taxitem;
 		}
 	}
 	.wp-block-categories-list{
@@ -61,7 +38,7 @@ body{
 		padding-inline-start: 0;
 
 		li a{			    
-			@include taxitem;
+			@include mixins.taxitem;
 		}	
 		@media (max-width: 960px) { 
 			width:100%;
@@ -299,3 +276,4 @@ body{
 		line-height: 1.25
 	}
 }
+

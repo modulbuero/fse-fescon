@@ -1,0 +1,55 @@
+@use 'mixins';
+
+.archive{
+
+    //Referenzen
+    &.post-type-archive-referenzen{
+        div.wp-block-query{
+            margin-right: calc(var(--wp--style--root--padding-right) * -1) !important;
+            margin-left: calc(var(--wp--style--root--padding-left) * -1) !important;
+            padding: calc(var(--wp--style--root--padding-right) * 2) var(--wp--style--root--padding-right);
+            background-color: var(--wp--preset--color--quaternary);
+
+            ul.wp-block-post-template{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr;
+                gap:40px;
+                row-gap: 80px;
+                li{
+                    @include mixins.referenzBubble;
+                    height: auto;
+                    .imgcontainer{
+                        aspect-ratio:var(--wp--preset--aspect-ratio--16-9);
+                        top: calc(40px * -1);
+                        left: calc(40px * -1);
+                        width: calc(100% + 2 * 40px);
+                        max-height: fit-content;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            display: block;
+  
+                        }
+                    }
+                    
+                    
+                }
+
+                @media (max-width: 1112px) {
+                    grid-template-columns:1fr 1fr;
+                }
+
+                @media (max-width: 601px) {
+                    grid-template-columns:1fr;
+                }
+            }
+        }
+
+        .is-arrow-arrow{
+            display:none
+        }
+    }
+}

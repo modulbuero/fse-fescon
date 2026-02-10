@@ -37,8 +37,12 @@ header > div nav {
 }
 header > div .wp-block-navigation__responsive-container-content {
   display: flex;
-  justify-content: center !important;
   align-items: center;
+}
+@media (min-width: 1120px) {
+  header > div .wp-block-navigation__responsive-container-content {
+    justify-content: center !important;
+  }
 }
 header > div .wp-block-navigation__responsive-container-content ul {
   padding: 5px !important;

@@ -6,3 +6,4 @@ $theme_directory = 'functions/';
 require_once($theme_directory.'enqueue-scripts.php');
 require_once($theme_directory.'options.php');
 require_once($theme_directory.'breadcrumb.php');
+require_once($theme_directory.'shortcode.php');
