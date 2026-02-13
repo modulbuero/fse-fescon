@@ -15,7 +15,7 @@
 		<!-- wp:post-featured-image {"sizeSlug":"medium_large"} /-->
 				
 		<!-- wp:group -->
-		<div class="wp-block-group query-text-container mbfse-block-termine-text-container deadae">
+		<div class="wp-block-group query-text-container mbfse-block-termine-text-container">
 			<!-- wp:post-title /-->
 			<!-- wp:fse-modulbuero/termin-infos-block /-->
 			<!-- wp:post-excerpt /-->

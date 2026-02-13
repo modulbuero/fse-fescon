@@ -8,6 +8,8 @@
  */
 ?>
 <div class="fescon-meta-fields">
+    
+
     <?php if(get_field('branche')) : ?>
     <div>
         <label>Branche</label>    
@@ -29,6 +31,13 @@
     </div>
     <?php endif; ?>
 
+    <?php if(get_field('branche')) : ?>
+    <div>
+        <label>Beratungsleistung</label>    
+        <p><?php echo get_field('typ') ?></p>
+    </div>
+    <?php endif; ?>
+    
     <?php if(get_field('anwender')) : ?>
     <div>
         <label>Anwender</label>

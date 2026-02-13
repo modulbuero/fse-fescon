@@ -729,4 +729,56 @@ body.datenschutz h2, body.impressum h2 {
 }
 body.datenschutz .entry-content, body.impressum .entry-content {
   padding-bottom: var(--mbfse--margin-bottom-block);
+}
+
+.leistung-referenz-wrap {
+  margin-top: 60px;
+  display: block;
+  width: 100%;
+}
+.leistung-referenz-wrap .referenz-item {
+  display: flex;
+  background-color: #F4F4F4;
+}
+.leistung-referenz-wrap .referenz-item figure {
+  max-width: 191px;
+  aspect-ratio: 16/9;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.leistung-referenz-wrap .referenz-item figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.leistung-referenz-wrap .referenz-item div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+.leistung-referenz-wrap .referenz-item div * {
+  margin: 0;
+  color: #000;
+}
+.leistung-referenz-wrap .referenz-item div span {
+  transition: all 0.3s ease;
+  font-size: 18px;
+  padding: 10px 40px;
+  border: 1px solid #000;
+  border-radius: 50px;
+}
+.leistung-referenz-wrap .referenz-item div span:after {
+  content: "+";
+  position: absolute;
+  padding-left: 20px;
+  color: transparent;
+}
+.leistung-referenz-wrap:hover .referenz-item div span {
+  padding-right: 50px;
+}
+.leistung-referenz-wrap:hover .referenz-item div span::after {
+  color: #000;
 }/*# sourceMappingURL=main.css.map */

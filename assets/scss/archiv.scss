@@ -5,12 +5,14 @@
     //Referenzen
     &.post-type-archive-referenzen{
         div.wp-block-query{
-            margin-right: calc(var(--wp--style--root--padding-right) * -1) !important;
-            margin-left: calc(var(--wp--style--root--padding-left) * -1) !important;
+            max-width: none !important;
             padding: calc(var(--wp--style--root--padding-right) * 2) var(--wp--style--root--padding-right);
             background-color: var(--wp--preset--color--quaternary);
 
             ul.wp-block-post-template{
+                max-width: var(--wp--style--global--content-size);
+                margin-left: auto !important;
+                margin-right: auto !important;
                 display:grid;
                 grid-template-columns:1fr 1fr 1fr;
                 gap:40px;

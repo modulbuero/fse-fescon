@@ -123,4 +123,65 @@ $args = array(
     return ob_get_clean();
 }
 add_shortcode('alte_termine', 'alte_termine_shortcode');
+
+
+function get_latest_referenz_shortcode($atts) {
+    // Shortcode Attribute mit Standardwerten
+    $atts = shortcode_atts(array(
+        'typ' => '', // Der gewünschte Typ-Wert
+    ), $atts);
+    
+    // Wenn kein Typ angegeben wurde, Fehlermeldung zurückgeben
+    if (empty($atts['typ'])) {
+        return '<p>Bitte geben Sie einen Typ an: [latest_referenz typ="X"]</p>';
+    }
+    
+    // Query-Argumente für Custom Post Type "referenz"
+    $args = array(
+        'post_type'      => 'referenzen',
+        'posts_per_page' => 1,
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'meta_query'     => array(
+            array(
+                'key'     => 'typ', // Name deines ACF-Feldes
+                'value'   => $atts['typ'],
+                'compare' => '='
+            )
+        )
+    );
+    
+    // Query ausführen
+    $query = new WP_Query($args);
+    
+    // Ausgabe vorbereiten
+    $output = '';
+    
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $image_url = get_field('firmen-logo');
+            $attachment_id = attachment_url_to_postid($image_url);
+
+            if ($attachment_id) {
+                $bildVorschau = wp_get_attachment_image($attachment_id, 'thumbnail');
+            }
+
+            //$output .= '<p>Referenz.</p>';
+            // Hier kannst du die Ausgabe anpassen
+            $output .= '<a href="'.get_permalink().'" class="leistung-referenz-wrap">';
+            $output .= '<div class="referenz-item">';
+                $output .= '<figure><img src="' .  $bildVorschau . '" /></figure>';
+                $output .= '<div><p>Hier geht es zu einem Anwendungs-Beispiel</p><span>Details</span></div>';
+            $output .= '</div></a>';
+        }
+        wp_reset_postdata();
+    } else {
+        $output = '';
+    }
+    
+    return $output;
+}
+add_shortcode('latest_referenz', 'get_latest_referenz_shortcode');
 ?>

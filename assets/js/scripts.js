@@ -6,7 +6,7 @@
         webinarSlider()
         contactInfo()
         openFirstDetailRef()
-        abstandLinks()
+        setTimeout(abstandLinks, 300)
 
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
@@ -70,9 +70,8 @@
             const $prevBtn   = $(index + ' .swiper-button-prev');
             const $nextBtn   = $(index + ' .swiper-button-next');
             let activeClass  = 'swiper-pagination-bullet-active';
-            let activeAdding = 'active';
-
             let currentIndex = 0;
+            let disableBTN   = 'swiper-button-disabled'
 
             // Slider-Position setzen
             function setSliderPosition($el) {
@@ -87,17 +86,30 @@
 
             // Aktiven Menüpunkt setzen
             function setActiveItem(i) {
-                $menuItems.removeClass(activeClass).removeClass('active');
-                $menuItems.eq(i).addClass(activeClass).addClass('active');
-
+                
+                console.log($menuItems.eq(i).addClass(activeClass))
+                $menuItems.removeClass(activeClass)                
+                setTimeout(function(){$menuItems.eq(i).addClass(activeClass)}, 300)
                 setSliderPosition($menuItems.eq(i));
                 updateButtonStates();
             }
 
             // Button States aktualisieren
             function updateButtonStates() {
-                $prevBtn.prop('disabled', currentIndex === 0);
-                $nextBtn.prop('disabled', currentIndex === $menuItems.length - 1);
+                setTimeout(function(){
+                    if(currentIndex === 0){
+                        $prevBtn.prop('disabled', true).addClass(disableBTN);
+                    }else{
+                        $prevBtn.prop('disabled', false).removeClass(disableBTN);
+                    }
+                    if(currentIndex === ($menuItems.length - 1)){
+                        $nextBtn.prop('disabled', true).addClass(disableBTN);
+                    }else{
+                        $nextBtn.prop('disabled', false).removeClass(disableBTN);
+                    }
+                }, 300)
+
+                console.log(currentIndex)
             }
 
             // Initiale Position setzen
@@ -114,9 +126,11 @@
 
             // Zurück zur aktiven Position
             $('.menu-container').on('mouseleave', function () {
-                console.log('leave')
-                const $active = $menu.find('.'+activeClass);
+                
+                let $active = $menu.find('.'+activeClass);
+                
                 if ($active.length) {
+                    
                     setSliderPosition($active);
                 }
             });
@@ -293,7 +307,7 @@
         let paddingLeft = parseInt($("header > .parts-header").css('paddingLeft'));
         let abstandLeft = marginLeft + paddingLeft
         //Abstand für Hero-Slider
-        $('.webinar-slider-container, .webinar-simple-wrap').css('paddingLeft',abstandLeft + 'px')	
+        $('.webinar-slider-container, .webinar-simple-wrap, .blog .webinar-slider-wrapper').css('paddingLeft',abstandLeft + 'px')	
     }
 
     function contactInfo(){
@@ -332,7 +346,7 @@
 
     function openFirstDetailRef(){
         if($('.single-referenzen-html').length){
-            $('.entry-content > .wp-block-details:first-child summary').click()
+            $('.entry-content > .wp-block-details:nth-child(2) summary').click()
         }
     }
 })(jQuery)

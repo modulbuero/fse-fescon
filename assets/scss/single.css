@@ -198,6 +198,11 @@ body.single:not(.referenzen-template-default) .wp-site-blocks > main .parts-sing
     margin-left: 0;
   }
 }
+@media (max-width: 601px) {
+  .fazit-wrap div > blockquote.wp-block-quote {
+    padding: 20px;
+  }
+}
 .fazit-wrap div > blockquote.wp-block-quote::after {
   content: "";
   position: absolute;

@@ -211,6 +211,10 @@ body.single:not(.referenzen-template-default){
 				margin-left: 0;
 			}
 			
+			@media (max-width: 601px) {
+				padding:20px
+			}
+
 			&::after {
 				content: "";
 				position: absolute;

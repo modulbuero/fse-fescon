@@ -33,7 +33,18 @@
 					}
 					background-color: transparent;
 					border-color:transparent;
+			}
+
+			.mbfse-block-termine-text-container{
+				display: flex;
+    			flex-direction: column;
+				.wp-block-post-excerpt{
+					margin-top:0;
 				}
+				.webinar-btns{
+					margin-top:auto
+				}
+			}
 		}
 	}
 }

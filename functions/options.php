@@ -35,7 +35,7 @@ function register_referenzen(){
 			'exclude_from_search' => false,
 			'hierarchical'        => true,
 			'show_ui'             => true,
-			#'taxonomies'          => array('category') 
+			//'taxonomies'          => array('category') 
 		)
 	);
 }

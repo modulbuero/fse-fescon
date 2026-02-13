@@ -66,6 +66,16 @@
     font-size: 14px;
   }
 }
+.query-loop-termine .webinar-slider .swiper-wrapper .mbfse-block-termine-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .mbfse-block-termine-text-container .wp-block-post-excerpt {
+  margin-top: 0;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .mbfse-block-termine-text-container .webinar-btns {
+  margin-top: auto;
+}
 
 .webinar-arrows {
   display: flex;

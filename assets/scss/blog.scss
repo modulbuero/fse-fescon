@@ -1,4 +1,4 @@
-
+@use 'mixins';
 /**
 *	home - Blog: 
 *	Customized Post-Loop
@@ -11,7 +11,7 @@ body{
 		display: flex;
 		gap: 10px;
 	}
-	@include mixins.taxitem;
+	
 	.taxonomy-item{
 		@include mixins.taxitem;
 	}
@@ -45,8 +45,15 @@ body{
 			padding-top: 0;
 		}
 	}
-	&.blog .wp-block-categories-list{
-		margin-bottom: 0;
+	&.blog {
+		.wp-block-categories-list{
+			margin-bottom: 0;
+		}
+		.webinar-slider-wrapper{
+			>.wp-block-columns{
+				max-width: 100%;
+			}			
+		}
 	}
 
 
@@ -88,6 +95,12 @@ body{
 			background-image: none !important;
 			padding: 60px 0;
 			.query-text-container{
+				>div{
+					width: 100%;
+					>div{
+						margin-bottom: var(--mbfse--margin-bottom-inline);
+					}
+				}
 				justify-content: space-between;
 				h3{
 					font-size: var(--fescon-blog-loop-title-size);
