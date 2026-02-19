@@ -145,14 +145,14 @@ body .wp-block-search {
   background-image: none !important;
   padding: 60px 0;
 }
-.wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container {
-  justify-content: space-between;
-}
 .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container > div {
   width: 100%;
 }
 .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container > div > div {
   margin-bottom: var(--mbfse--margin-bottom-inline);
+}
+.wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container {
+  justify-content: space-between;
 }
 .wp-block-query.mbfse-block-post-template ul.wp-block-post-template li .query-text-container h3 {
   font-size: var(--fescon-blog-loop-title-size);

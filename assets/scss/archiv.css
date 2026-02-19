@@ -22,7 +22,6 @@
   padding: 40px !important;
   overflow: initial;
   height: 370px;
-  height: auto;
 }
 @media (max-width: 768px) {
   .archive.post-type-archive-referenzen div.wp-block-query ul.wp-block-post-template li {
@@ -106,6 +105,9 @@
 }
 .archive.post-type-archive-referenzen div.wp-block-query ul.wp-block-post-template li:hover .mbgi-block-bootstrap-icon p {
   opacity: 1;
+}
+.archive.post-type-archive-referenzen div.wp-block-query ul.wp-block-post-template li {
+  height: auto;
 }
 .archive.post-type-archive-referenzen div.wp-block-query ul.wp-block-post-template li .imgcontainer {
   aspect-ratio: var(--wp--preset--aspect-ratio--16-9);

@@ -14,7 +14,6 @@ header > div {
 }
 header > div .header-logo {
   top: 2px;
-  position: absolute;
 }
 header > div .header-logo a {
   width: 100%;
@@ -26,6 +25,9 @@ header > div .header-logo figure {
   top: 0px;
   filter: invert(1);
   max-width: 140px;
+}
+header > div .header-logo {
+  position: absolute;
 }
 header > div nav {
   top: 7px;

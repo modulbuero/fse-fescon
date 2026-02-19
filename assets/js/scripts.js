@@ -212,6 +212,10 @@
             // Unter einen anderen Container setzen
             $('.webinar-arrows').insertAfter('.webinars-wrapper');   
         }
+
+        setTimeout(function(){
+            $('.query-loop-termine .webinar-slider').addClass('addtransition')
+        },1000)
     }
 
     function refSlider() {

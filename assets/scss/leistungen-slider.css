@@ -1,9 +1,6 @@
 /* Leistungen Slider */
 .leistungen-slider {
   /*Container-Content*/
-  /*Pfeil-Navigation*/
-  --swiper-navigation-sides-offset: 47%;
-  /*Slider Menu*/
 }
 .leistungen-slider .swiper-wrapper .wp-block-columns {
   gap: 0 !important;
@@ -55,12 +52,14 @@
 }
 .leistungen-slider .swiper-wrapper .wp-block-columns > div:last-child figure {
   height: 600px;
-  display: flex;
 }
 @media (max-width: 601px) {
   .leistungen-slider .swiper-wrapper .wp-block-columns > div:last-child figure {
     height: 270px;
   }
+}
+.leistungen-slider .swiper-wrapper .wp-block-columns > div:last-child figure {
+  display: flex;
 }
 .leistungen-slider .swiper-wrapper .wp-block-columns > div:last-child figure img {
   -o-object-fit: cover;
@@ -83,6 +82,9 @@
     max-height: 400px;
   }
 }
+.leistungen-slider {
+  /*Pfeil-Navigation*/
+}
 .leistungen-slider .swiper-button-prev::after {
   font-family: "bootstrap-icons";
   content: "\f12f";
@@ -94,6 +96,9 @@
 .leistungen-slider .swiper-button-prev,
 .leistungen-slider .swiper-button-next {
   top: 100%;
+}
+.leistungen-slider {
+  --swiper-navigation-sides-offset: 47%;
 }
 @media (max-width: 1024px) {
   .leistungen-slider {
@@ -109,6 +114,9 @@
 .leistungen-slider .swiper-button-next::after {
   font-size: 32px;
 }
+.leistungen-slider {
+  /*Slider Menu*/
+}
 .leistungen-slider .menu-container {
   position: absolute;
   top: 50px;
@@ -119,7 +127,6 @@
   padding: 10px;
   z-index: 1;
   /*Slider animation*/
-  /*Menu*/
 }
 .leistungen-slider .menu-container #slider {
   position: absolute;
@@ -129,6 +136,9 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
   top: 10px;
+}
+.leistungen-slider .menu-container {
+  /*Menu*/
 }
 .leistungen-slider .menu-container .swiper-pagination {
   display: flex;
@@ -147,16 +157,18 @@
   padding: 10px 30px;
   opacity: 1;
   font-size: 18px;
-  width: auto;
-  height: auto;
-  color: #000;
-  transition: all 0.3s ease;
 }
 @media (max-width: 601px) {
   .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints {
     font-size: var(--wp--preset--font-size--small);
     padding: 10px;
   }
+}
+.leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints {
+  width: auto;
+  height: auto;
+  color: #000;
+  transition: all 0.3s ease;
 }
 .leistungen-slider .menu-container .swiper-pagination .fescon-bulletpoints.swiper-pagination-bullet-active {
   color: #fff;
@@ -196,13 +208,15 @@
 }
 .leistungen-stapel .wp-block-columns .wp-block-column:first-child {
   padding: 80px;
-  display: flex;
-  flex-direction: column;
 }
 @media (max-width: 1024px) {
   .leistungen-stapel .wp-block-columns .wp-block-column:first-child {
     padding: 40px;
   }
+}
+.leistungen-stapel .wp-block-columns .wp-block-column:first-child {
+  display: flex;
+  flex-direction: column;
 }
 .leistungen-stapel .wp-block-columns .wp-block-column:first-child .wp-block-image {
   margin-top: auto;
@@ -224,4 +238,13 @@
 
 .leistungen-fragen {
   max-width: 600px;
+}
+
+body.unsere-beratungsleistungen h1.wp-block-post-title {
+  left: -5px;
+}
+@media (max-width: 601px) {
+  body.unsere-beratungsleistungen h1.wp-block-post-title {
+    left: -3px;
+  }
 }/*# sourceMappingURL=leistungen-slider.css.map */

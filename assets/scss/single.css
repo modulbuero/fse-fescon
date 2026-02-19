@@ -252,9 +252,11 @@ ol.breadcrumb .breadcrumb-separator {
 @media (max-width: 601px) {
   ol.breadcrumb {
     flex-wrap: wrap;
-    margin-block-start: 0;
   }
   ol.breadcrumb .breadcrumb-separator {
     top: -1px;
+  }
+  ol.breadcrumb {
+    margin-block-start: 0;
   }
 }/*# sourceMappingURL=single.css.map */

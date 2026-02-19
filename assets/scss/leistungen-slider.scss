@@ -231,3 +231,13 @@
 .leistungen-fragen{
     max-width: 600px;
 }
+
+body.unsere-beratungsleistungen{
+    h1.wp-block-post-title{
+        left:-5px;
+        
+        @media (max-width: 601px) { 
+            left:-3px;
+        }
+    }
+}

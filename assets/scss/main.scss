@@ -127,6 +127,11 @@ body {
   .has-x-large-font-size{
 	line-height:1.2
   }
+
+  @media (max-width: 900px) {
+	--wp--preset--font-size--xx-large:70px;
+	--wp--preset--font-size--h2-x-large:38px;
+  }
   
   @media (max-width: 601px) {
 	--wp--style--root--padding-right: 15px;
@@ -733,6 +738,10 @@ body{
 					padding-left:20px;
 					color:transparent;
 				}
+			}
+			@media (max-width: 834px) {
+				flex-direction: column;
+				gap:10px
 			}
 		}
 	}
