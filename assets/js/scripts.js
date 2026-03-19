@@ -7,7 +7,8 @@
         contactInfo()
         openFirstDetailRef()
         setTimeout(abstandLinks, 300)
-
+        
+        
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
             ninjaFormSubmit()
@@ -169,44 +170,51 @@
      */
     function webinarSlider() {
         // default webinar slider
-        let webinarNon = new Swiper('.swiper.webinar-slider:not(.fescon-webinar)', {
-            slidesPerGroup: 1,
-            navigation: {
-            nextEl: '.webinar-arrows .custom-next',
-            prevEl: '.webinar-arrows .custom-prev',
-            },
+        if($('.swiper.webinar-slider:not(.fescon-webinar)').length){
+            let webinarNon = new Swiper('.swiper.webinar-slider:not(.fescon-webinar)', {
+                slidesPerGroup: 1,
+                navigation: {
+                nextEl: '.webinar-arrows .custom-next',
+                prevEl: '.webinar-arrows .custom-prev',
+                },
 
-            // mobile
-            slidesPerView: 1,
-            spaceBetween: 16,
-            allowTouchMove: false,
-            simulateTouch: false,
-            // bigger screens
-            breakpoints: {
-            550: { slidesPerView: 1.5, spaceBetween: 20 },
-            }
-        });
+                // mobile
+                slidesPerView: 1,
+                spaceBetween: 16,
+                allowTouchMove: false,
+                simulateTouch: false,
+                // bigger screens
+                breakpoints: {
+                550: { slidesPerView: 1.5, spaceBetween: 20 },
+                }
+            });
 
-        // fescon-webinar variant
-        let webinarS = new Swiper('.swiper.webinar-slider.fescon-webinar', {
-            slidesPerGroup: 1,
-            navigation: {
-            nextEl: '.webinar-arrows .custom-next',
-            prevEl: '.webinar-arrows .custom-prev',
-            },
-            allowTouchMove: false,
-            simulateTouch: false,
-            /// mobile
-            slidesPerView: 1,
-            spaceBetween: 16,
-            
-            breakpoints: {
-            550: { slidesPerView: 2.5, spaceBetween: 20 },
-            }
-        });
+            disableSwipeDrag(webinarNon);
+        }
+        
+        if($('.swiper.webinar-slider.fescon-webinar').length){
+            // fescon-webinar variant
+            setTimeout(function(){
+                let webinarS = new Swiper('.swiper.webinar-slider.fescon-webinar', {
+                    slidesPerGroup: 1,
+                    navigation: {
+                    nextEl: '.webinar-arrows .custom-next',
+                    prevEl: '.webinar-arrows .custom-prev',
+                    },
+                    allowTouchMove: false,
+                    simulateTouch: false,
+                    /// mobile
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    
+                    breakpoints: {
+                        550: { slidesPerView: 2.5, spaceBetween: 20 },
+                    }
+                });
 
-        disableSwipeDrag(webinarNon);
-        disableSwipeDrag(webinarS);
+                disableSwipeDrag(webinarS);
+            },300)
+        }
         
         if(window.innerWidth <= 601){
             // Unter einen anderen Container setzen
@@ -215,7 +223,7 @@
 
         setTimeout(function(){
             $('.query-loop-termine .webinar-slider').addClass('addtransition')
-        },1000)
+        },600)
     }
 
     function refSlider() {

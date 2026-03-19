@@ -4,7 +4,7 @@
 */
 .query-loop-termine{
 	.webinar-slider{
-		touch-action: none;
+		touch-action: pan-y;
 		&:not(.addtransition) *{
 			transition: none !important;
 		}
@@ -46,6 +46,9 @@
 				}
 				.webinar-btns{
 					margin-top:auto
+				}
+				.online_link{
+					display:none
 				}
 			}
 		}

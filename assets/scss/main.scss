@@ -123,6 +123,9 @@ body {
   strong{
 	font-weight: 400 !important
   }
+  p strong{
+	// font-weight: 700 !important  
+  }
 
   .has-x-large-font-size{
 	line-height:1.2
@@ -279,6 +282,7 @@ body.page{
 
 /*  Buttons General style */
 input[type="submit"],
+.clform-wrapper button,
 .wp-block-button__link.wp-element-button {
 	font-size: 18px;
 	line-height: 34px;
@@ -406,7 +410,7 @@ input[type="submit"],
 
 	.swiper-wrapper{
 		cursor: default;
-		touch-action: none;
+		touch-action: pan-y;
 		cursor: default;
 	}
 	.swiper-slide {
@@ -416,7 +420,7 @@ input[type="submit"],
 }
 .referenz-slider .swiper-wrapper {
     pointer-events: none !important;
-    touch-action: none !important;
+    touch-action: pan-y !important;
 }
 
 .referenz-slider .swiper-slide > * {
@@ -571,7 +575,9 @@ form .nf-form-content {
 				  font-size: 22px;
 			}
 			textarea{
-				height: auto
+				height: auto;
+				min-width: 100%;
+				min-height: 110%;
 			}
 
 			.nf-field >div .nf-field-element input, textarea, select{
@@ -738,11 +744,19 @@ body{
 					padding-left:20px;
 					color:transparent;
 				}
+				@media (max-width: 601px) {
+					padding: 5px 20px;
+        			font-size: 16px;
+				}
 			}
 			@media (max-width: 834px) {
 				flex-direction: column;
 				gap:10px
 			}
+			@media (max-width: 601px) {
+				padding: 20px;
+			}
+			
 		}
 	}
 

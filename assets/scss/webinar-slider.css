@@ -2,7 +2,7 @@
 	Webinar Slider
 */
 .query-loop-termine .webinar-slider {
-  touch-action: none;
+  touch-action: pan-y;
 }
 .query-loop-termine .webinar-slider:not(.addtransition) * {
   transition: none !important;
@@ -80,6 +80,9 @@
 }
 .query-loop-termine .webinar-slider .swiper-wrapper .mbfse-block-termine-text-container .webinar-btns {
   margin-top: auto;
+}
+.query-loop-termine .webinar-slider .swiper-wrapper .mbfse-block-termine-text-container .online_link {
+  display: none;
 }
 
 .webinar-arrows {

@@ -29,3 +29,53 @@ body.ninja-form-submitted{
         }
     }
 }
+
+/*Newsletter*/
+.clform-wrapper{
+    form{
+        max-width: 600px;
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div{
+            margin-bottom:0;
+            padding:0 !important;
+            background-color: transparent;
+            select,
+            input{
+                border-radius: 55px;
+            }
+            label{
+                top: 5px;
+                left: 15px;
+            }
+        }
+
+        .cr-web-stacks{
+            justify-content: space-between;
+            .cr-web-col-50{
+                width: 48%;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        button{
+            border: 1px solid var(--wp--preset--color--contrast);
+            background-color: transparent;
+            color:#000;
+            border-radius: 55px;
+            margin-top: 30px;
+        }
+    }
+}
+.page-id-2000,
+.page-id-1995{
+    h1{
+        max-width: 670px;
+    }
+}

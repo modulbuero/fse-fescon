@@ -260,6 +260,7 @@ body.page.home .wp-site-blocks .wp-block-post-content .mbfse-hero {
 
 /*  Buttons General style */
 input[type=submit],
+.clform-wrapper button,
 .wp-block-button__link.wp-element-button {
   font-size: 18px;
   line-height: 34px;
@@ -270,12 +271,14 @@ input[type=submit],
   color: #000;
 }
 input[type=submit]:hover,
+.clform-wrapper button:hover,
 .wp-block-button__link.wp-element-button:hover {
   background-color: var(--wp--preset--color--contrast) !important;
   color: var(--wp--preset--color--base) !important;
 }
 @media (max-width: 601px) {
   input[type=submit],
+  .clform-wrapper button,
   .wp-block-button__link.wp-element-button {
     font-size: var(--wp--preset--font-size--small);
   }
@@ -388,7 +391,7 @@ input[type=submit]:hover,
 }
 .slider .swiper-wrapper {
   cursor: default;
-  touch-action: none;
+  touch-action: pan-y;
   cursor: default;
 }
 .slider .swiper-slide {
@@ -400,7 +403,7 @@ input[type=submit]:hover,
 
 .referenz-slider .swiper-wrapper {
   pointer-events: none !important;
-  touch-action: none !important;
+  touch-action: pan-y !important;
 }
 
 .referenz-slider .swiper-slide > * {
@@ -627,6 +630,8 @@ form .nf-form-content > nf-fields-wrap nf-field > div .nf-field > div .nf-field-
 }
 form .nf-form-content > nf-fields-wrap nf-field > div textarea {
   height: auto;
+  min-width: 100%;
+  min-height: 110%;
 }
 form .nf-form-content > nf-fields-wrap nf-field > div .nf-field > div .nf-field-element input, form .nf-form-content > nf-fields-wrap nf-field > div textarea, form .nf-form-content > nf-fields-wrap nf-field > div select {
   border: none;
@@ -784,10 +789,21 @@ body.datenschutz .entry-content, body.impressum .entry-content {
   padding-left: 20px;
   color: transparent;
 }
+@media (max-width: 601px) {
+  .leistung-referenz-wrap .referenz-item div span {
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+}
 @media (max-width: 834px) {
   .leistung-referenz-wrap .referenz-item div {
     flex-direction: column;
     gap: 10px;
+  }
+}
+@media (max-width: 601px) {
+  .leistung-referenz-wrap .referenz-item div {
+    padding: 20px;
   }
 }
 .leistung-referenz-wrap:hover .referenz-item div span {

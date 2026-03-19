@@ -50,15 +50,17 @@ $link           = (!empty(get_field('anmeldelink'))) ? get_field('anmeldelink') 
     <?php endif; ?>
 
     <?php if(get_field('anmeldelink')) : ?>
-    <div>
-        <label>Anmeldelink</label>
-        <p>
-            <a href="<?php echo get_field('anmeldelink') ?>">
-                <?php 
-                echo mb_strimwidth(get_field('anmeldelink'), 0, 40, ' ...');
-                ?>
-            </a>
-        </p> 
+    <div class="webinar-link">
+        <div class="wp-block-buttons">
+            <div class="wp-block-button">
+                <a href="<?php echo get_field('anmeldelink') ?>" class="wp-block-button__link wp-element-button" style="border-color:#000000;border-width:1px;border-radius:50px" target="_blank" rel="noopener noreferrer">
+                    <?php 
+                    #echo mb_strimwidth(get_field('anmeldelink'), 0, 40, ' ...');
+                    ?>
+                    Zum Webinar amelden
+                </a>
+            </div>
+        </div>
     </div>
     <?php endif; ?>
 

@@ -47,7 +47,7 @@
     <?php if(get_field('pdf_zum_download')) : ?>
     <div>
         <label>Bericht herunterladen</label>
-        <a href="<?php echo get_field('pdf_zum_download') ?>">Download</a>
+        <a href="<?php echo get_field('pdf_zum_download') ?>" download>Download</a>
     </div>
     <?php endif; ?>
 </div>

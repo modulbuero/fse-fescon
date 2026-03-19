@@ -24,4 +24,50 @@ body.ninja-form-submitted .contact-cover .wp-block-cover__inner-container h2 {
 }
 body.ninja-form-submitted .contact-cover .wp-block-heading {
   display: none;
+}
+
+/*Newsletter*/
+.clform-wrapper form {
+  max-width: 600px;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.clform-wrapper form div {
+  margin-bottom: 0;
+  padding: 0 !important;
+  background-color: transparent;
+}
+.clform-wrapper form div select,
+.clform-wrapper form div input {
+  border-radius: 55px;
+}
+.clform-wrapper form div label {
+  top: 5px;
+  left: 15px;
+}
+.clform-wrapper form .cr-web-stacks {
+  justify-content: space-between;
+}
+.clform-wrapper form .cr-web-stacks .cr-web-col-50 {
+  width: 48%;
+}
+@media (max-width: 768px) {
+  .clform-wrapper form .cr-web-stacks .cr-web-col-50 {
+    width: 100%;
+  }
+}
+.clform-wrapper form button {
+  border: 1px solid var(--wp--preset--color--contrast);
+  background-color: transparent;
+  color: #000;
+  border-radius: 55px;
+  margin-top: 30px;
+}
+
+.page-id-2000 h1,
+.page-id-1995 h1 {
+  max-width: 670px;
 }/*# sourceMappingURL=contacts.css.map */

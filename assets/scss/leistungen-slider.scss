@@ -96,6 +96,9 @@
     .swiper-button-prev,
     .swiper-button-next {
         top: 100%;
+         @media (max-width: 601px) {
+            top: 90%;
+        }
     }
     --swiper-navigation-sides-offset: 47%;
     @media (max-width: 1024px) {
@@ -104,12 +107,13 @@
     @media (max-width: 768px) {
         --swiper-navigation-sides-offset: 42%;
     }
+   
+
     .swiper-button-prev::after,
     .swiper-button-next::after{
         font-size: 32px;
     }
-    
-
+        
     /*Slider Menu*/
     .menu-container{
         position: absolute;

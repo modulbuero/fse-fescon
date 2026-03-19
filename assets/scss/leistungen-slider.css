@@ -97,6 +97,12 @@
 .leistungen-slider .swiper-button-next {
   top: 100%;
 }
+@media (max-width: 601px) {
+  .leistungen-slider .swiper-button-prev,
+  .leistungen-slider .swiper-button-next {
+    top: 90%;
+  }
+}
 .leistungen-slider {
   --swiper-navigation-sides-offset: 47%;
 }

@@ -23,6 +23,15 @@
 			display:flex;
 			flex-direction: column;
 		}
+		.webinar-link{
+			padding-bottom: 20px;
+    		padding-top: 20px;
+			&:last-child{
+				padding-bottom: 0;
+    			padding-top: 40px;
+			}
+		
+		}
 	}
 }
 
