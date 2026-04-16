@@ -7,7 +7,7 @@
         contactInfo()
         openFirstDetailRef()
         setTimeout(abstandLinks, 300)
-        
+        noWebinars()
         
         $(document).on('nfFormReady', function() {
             contactFormLabel(); 
@@ -360,5 +360,15 @@
         if($('.single-referenzen-html').length){
             $('.entry-content > .wp-block-details:nth-child(2) summary').click()
         }
+    }
+
+    function noWebinars(){
+        $('.query-loop-termine').each(function() {
+            // Prüfen: keine Kinder-Elemente UND kein Textinhalt
+            if ($(this).is(':empty') || $.trim($(this).text()) === '') {
+                $(this).html('<p>Aktuell werden keine Webinare angeboten.</p>');
+                $('.webinar-arrows').hide()
+            }
+        });
     }
 })(jQuery)

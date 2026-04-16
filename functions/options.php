@@ -110,3 +110,4 @@ add_filter( 'render_block', function( $block_content, $block ) {
     return $block_content;
 
 }, 10, 3 );
+
