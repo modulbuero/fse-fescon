@@ -45,8 +45,7 @@
 	padding-bottom: 0;
 
 	/*p-tag spezial*/
-	.about,
-	>h2+p{
+	.about{
 		padding-right: 200px;
 		box-sizing: border-box;
 		@media (max-width: 960px) {
