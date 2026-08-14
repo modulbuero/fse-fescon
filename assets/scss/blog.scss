@@ -240,7 +240,7 @@ body{
 	border: 1px solid var(--wp--preset--color--contrast);
 }
 
-.wp-block-query-pagination {
+nav.wp-block-query-pagination {
 	display: flex;
 	justify-content: flex-start;
 	gap: 10px;
@@ -261,6 +261,17 @@ body{
 	}
 }
 
+div.wp-block-query-pagination {
+	ul.page-numbers{
+		display: flex;
+		justify-content: flex-start;
+		gap: 10px;
+		padding-left: 0;
+		>li{
+			@include paginationButton;
+		}
+	}
+}
 
 .wp-block-list {
 	padding-inline-start: 10px;
