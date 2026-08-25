@@ -25,6 +25,9 @@ header{
 				max-width: 140px;
 			}
 			position: absolute;
+			@media (max-width: 414px) {
+				gap:0 !important
+			}
 		}
 
 		nav{

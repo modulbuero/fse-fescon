@@ -29,6 +29,11 @@ header > div .header-logo figure {
 header > div .header-logo {
   position: absolute;
 }
+@media (max-width: 414px) {
+  header > div .header-logo {
+    gap: 0 !important;
+  }
+}
 header > div nav {
   top: 7px;
 }
